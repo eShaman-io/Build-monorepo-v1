@@ -1,0 +1,1 @@
+# General\n.DS_Store\nThumbs.db\n*.log\n.env\n.env.*\nnode_modules/\ndist/\n.build/\ncoverage/\n
