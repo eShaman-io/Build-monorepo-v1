@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { height: 100%; background: radial-gradient(1200px 600px at 50% 0%, #1A1446 0%, #0A0F1F 60%, #05070C 100%); }
+.glass { @apply rounded-3xl border border-white/15 bg-white/10 backdrop-blur-2xl shadow-lg shadow-black/20; }

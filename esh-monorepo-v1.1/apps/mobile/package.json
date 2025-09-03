@@ -1,0 +1,19 @@
+{
+  "name": "esh-mobile",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  },
+  "dependencies": {
+    "expo": "^51.0.0",
+    "expo-router": "^3.5.10",
+    "react": "18.3.1",
+    "react-native": "0.74.3",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-reanimated": "~3.10.1",
+    "firebase": "^10.12.2"
+  }
+}
