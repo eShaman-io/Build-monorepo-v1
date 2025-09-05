@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "mcp-filesystem",
+      "args": [
+        "--root",
+        "${workspaceFolder}"
+      ],
+      "resources": [
+        {
+          "uri": "file://${workspaceFolder}/docs/BLACKBOX_IMPLEMENTATION_BRIEF.md",
+          "name": "Motion & Visuals Brief",
+          "mimeType": "text/markdown"
+        }
+      ]
+    }
+  }
+}

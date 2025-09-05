@@ -1,0 +1,37 @@
+{
+  "name": "eShaman Cloud Dev (Creative Suite)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20.17.0" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" },
+    "ghcr.io/devcontainers/features/java:1": { "version": "17" },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "graphql.vscode-graphql",
+        "ms-azuretools.vscode-docker",
+        "firebase.firebase-tools",
+        "GitHub.copilot",
+        "ms-vscode.vscode-typescript-next",
+        "streetsidesoftware.code-spell-checker",
+        "jock.svg",
+        "bierner.markdown-mermaid",
+        "undertone.nvim-theme-switcher"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.eol": "\n"
+      }
+    }
+  },
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && npx playwright install --with-deps",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}

@@ -1,0 +1,9 @@
+{
+  "name": "eshaman-monorepo",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20.15.0 <21"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

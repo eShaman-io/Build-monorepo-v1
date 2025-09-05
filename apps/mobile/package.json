@@ -1,0 +1,49 @@
+{
+  "name": "esh-mobile",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "expo prebuild",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@esh/firebase-client": "workspace:*",
+    "@esh/schemas": "workspace:*",
+    "@esh/ui": "workspace:*",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-native-community/netinfo": "^11.3.1",
+    "@shopify/react-native-skia": "^1.2.3",
+    "@tanstack/react-query": "^5.51.1",
+    "expo": "^51.0.0",
+    "expo-blur": "~13.0.2",
+    "expo-constants": "~16.0.2",
+    "expo-haptics": "~13.0.1",
+    "expo-linear-gradient": "~13.0.2",
+    "expo-notifications": "~0.28.9",
+    "expo-router": "^3.5.10",
+    "expo-secure-store": "~13.0.2",
+    "firebase": "^10.12.2",
+    "lottie-react-native": "^6.7.0",
+    "nativewind": "^2.0.11",
+    "react": "18.2.0",
+    "react-hook-form": "^7.52.1",
+    "react-native": "0.74.5",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-purchases": "^7.25.2",
+    "react-native-reanimated": "~3.10.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "jest-expo": "^53.0.9",
+    "tailwindcss": "^3.4.9",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  }
+}

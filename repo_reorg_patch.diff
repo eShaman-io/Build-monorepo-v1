@@ -1,0 +1,383 @@
+diff --git a/.editorconfig b/.editorconfig
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/.editorconfig
+@@ -0,0 +1,15 @@
++# EditorConfig is awesome: https://EditorConfig.org
++
++# top-most EditorConfig file
++root = true
++
++[*]
++indent_style = space
++indent_size = 2
++end_of_line = lf
++charset = utf-8
++trim_trailing_whitespace = true
++insert_final_newline = true
++
++[*.md]
++trim_trailing_whitespace = false
+
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1,15 @@
++# Set default behavior to automatically normalize line endings
++* text=auto
++
++# Custom attributes
++*.md text eol=lf
++*.sh text eol=lf
++*.json text eol=lf
++*.yml text eol=lf
++*.yaml text eol=lf
++*.css text eol=lf
++*.html text eol=lf
++*.ts text eol=lf
++*.tsx text eol=lf
++*.js text eol=lf
++*.jsx text eol=lf
++*.mjs text eol=lf
++*.ts text eol=lf
++*.tsx text eol=lf
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,20 @@
++# Node modules
++node_modules/
++.pnp.*
++.pnpm-debug.log
++
++# Build output
++dist/
++build/
++.next/
++out/
++coverage/
++
++# Local env files
++.env
++.env.local
++.env.development.local
++.env.test.local
++.env.production.local
++
++# Logs
++logs
++*.log
++npm-debug.log*
++
++# IDE and editor files
++.idea/
++.vscode/
++*.sublime-workspace
++*.sublime-project
++
++# Temporary files
++*.tmp
++*.temp
++*.bak
++*.swp
++*.DS_Store
+
+diff --git a/configs/prettier.config.js b/configs/prettier.config.js
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/configs/prettier.config.js
+@@ -0,0 +1,10 @@
++module.exports = {
++  semi: true,
++  singleQuote: true,
++  trailingComma: 'all',
++  printWidth: 80,
++  tabWidth: 2,
++  endOfLine: 'lf',
++};
++
+
+diff --git a/configs/eslint.config.js b/configs/eslint.config.js
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/configs/eslint.config.js
+@@ -0,0 +1,20 @@
++module.exports = {
++  env: {
++    browser: true,
++    es2021: true,
++    node: true,
++  },
++  extends: [
++    'eslint:recommended',
++    'plugin:react/recommended',
++    'plugin:@typescript-eslint/recommended',
++    'next/core-web-vitals',
++  ],
++  parser: '@typescript-eslint/parser',
++  parserOptions: {
++    ecmaFeatures: {
++      jsx: true,
++    },
++    ecmaVersion: 12,
++    sourceType: 'module',
++  },
++  plugins: ['react', '@typescript-eslint'],
++  rules: {
++    'react/react-in-jsx-scope': 'off',
++    'no-unused-vars': 'warn',
++  },
++};
++
+
+diff --git a/tsconfig.base.json b/tsconfig.base.json
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/tsconfig.base.json
+@@ -0,0 +1,30 @@
++{
++  "compilerOptions": {
++    "target": "esnext",
++    "module": "esnext",
++    "lib": ["dom", "dom.iterable", "esnext"],
++    "allowJs": true,
++    "skipLibCheck": true,
++    "strict": true,
++    "noEmit": true,
++    "incremental": true,
++    "moduleResolution": "node",
++    "resolveJsonModule": true,
++    "isolatedModules": true,
++    "jsx": "preserve",
++    "baseUrl": ".",
++    "paths": {
++      "@/*": ["./*"]
++    }
++  },
++  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
++  "exclude": ["node_modules"]
++}
++
+
+diff --git a/pnpm-workspace.yaml b/pnpm-workspace.yaml
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/pnpm-workspace.yaml
+@@ -0,0 +1,4 @@
++packages:
++  - 'packages/*'
++  - 'apps/*'
++
+diff --git a/apps/landing/package.json b/apps/landing/package.json
+index 0c1c2e3..e69de29 100644
+--- a/apps/landing/package.json
++++ b/apps/landing/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "esh-landing",
+   "private": true,
+   "type": "module",
+   "scripts": {
+     "dev": "next dev",
+     "build": "next build",
+     "start": "next start",
+     "lint": "next lint"
+   },
+   "dependencies": {
+-    "@esh/firebase-client": "workspace:*",
+-    "@esh/schemas": "workspace:*",
++    "@esh/firebase-client": "workspace:*", // Centralized usage
++    "@esh/schemas": "workspace:*", // Centralized usage
+     "@headlessui/react": "^2.1.2",
+     "@hookform/resolvers": "^3.7.0",
+     "@react-email/components": "^0.0.22",
+     "@vercel/analytics": "^1.3.1",
+     "firebase": "^10.12.2",
+     "framer-motion": "^11.0.0",
+     "lottie-react": "^2.4.1",
+     "next": "^14.2.5",
+     "react": "^18.3.1",
+     "react-dom": "^18.3.1",
+     "react-hook-form": "^7.52.1",
+     "zod": "^3.23.8"
+   },
+   "devDependencies": {
+     "@types/node": "^20.14.12",
+     "@types/react": "^18.3.3",
+     "@types/react-dom": "^18.3.0",
+     "autoprefixer": "^10.4.20",
+     "eslint": "^8.57.0",
+     "eslint-config-next": "^14.2.5",
+     "postcss": "^8.4.45",
+     "tailwindcss": "^3.4.9",
+     "typescript": "^5.5.4"
+   }
+ }
+
+diff --git a/apps/mobile/package.json b/apps/mobile/package.json
+index 0c1c2e3..e69de29 100644
+--- a/apps/mobile/package.json
++++ b/apps/mobile/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "esh-mobile",
+   "private": true,
+   "main": "index.js",
+   "scripts": {
+     "start": "expo start",
+     "android": "expo run:android",
+     "ios": "expo run:ios",
+     "prebuild": "expo prebuild"
+   },
+   "dependencies": {
+     "expo": "^51.0.0",
+     "expo-router": "^3.5.10",
+     "react": "18.3.1",
+     "react-native": "0.74.3",
+     "react-native-gesture-handler": "~2.16.1",
+     "react-native-reanimated": "~3.10.1",
+     "firebase": "^10.12.2", // Centralized usage
+     "@shopify/react-native-skia": "^1.3.0",
+     "lottie-react-native": "^6.7.0",
+     "expo-notifications": "~0.28.9",
+     "expo-haptics": "~13.0.1",
+     "expo-secure-store": "~13.0.2",
+     "@react-native-community/netinfo": "^11.3.1",
+     "react-hook-form": "^7.52.1",
+     "zod": "^3.23.8",
+     "@tanstack/react-query": "^5.51.1",
+     "nativewind": "^2.0.11",
+     "react-native-purchases": "^7.25.2",
+     "@react-native-async-storage/async-storage": "^1.23.1",
+     "expo-linear-gradient": "~13.0.2",
+     "expo-blur": "~13.0.2",
+     "expo-constants": "~16.0.2",
+     "@esh/ui": "workspace:*",
+     "@esh/firebase-client": "workspace:*",
+     "@esh/schemas": "workspace:*"
+   },
+   "devDependencies": {
+     "@babel/core": "^7.24.0",
+     "typescript": "^5.5.4",
+     "tailwindcss": "^3.4.9"
+   }
+ }
+
+diff --git a/packages/firebase-client/package.json b/packages/firebase-client/package.json
+index 0c1c2e3..e69de29 100644
+--- a/packages/firebase-client/package.json
++++ b/packages/firebase-client/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "@esh/firebase-client",
+   "version": "0.1.0",
+   "private": true,
+   "type": "module",
+   "main": "dist/index.js",
+   "types": "dist/index.d.ts",
+   "scripts": { "build": "tsc -p tsconfig.json" },
+-  "dependencies": { "firebase": "^10.12.2" },
++  "dependencies": { // Centralized usage
++    "firebase": "^10.12.2"
++  },
+   "devDependencies": { "typescript": "^5.5.4" }
+ }
+
+diff --git a/packages/functions/package.json b/packages/functions/package.json
+index 0c1c2e3..e69de29 100644
+--- a/packages/functions/package.json
++++ b/packages/functions/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "@esh/functions",
+   "version": "0.1.0",
+   "private": true,
+   "type": "module",
+   "main": "dist/index.js",
+   "scripts": {
+     "build": "tsc -p tsconfig.json",
+     "serve:emulate": "firebase emulators:start --only functions",
+     "deploy": "firebase deploy --only functions"
+   },
+   "dependencies": {
+     "@esh/schemas": "workspace:*",
+     "@google-cloud/secret-manager": "^5.5.0",
+     "cors": "^2.8.5",
+     "dotenv": "^16.4.5",
+     "express": "^5.1.0",
+     "firebase-admin": "^12.5.0",
+     "firebase-functions": "^5.0.1",
+     "node-fetch": "^3.3.2",
+     "openai": "^4.52.7",
+     "pino": "^9.3.2",
+     "stripe": "^16.2.0",
+     "zod": "^3.23.8"
+   },
+   "devDependencies": {
+     "@types/cors": "^2.8.19",
+     "@types/express": "^5.0.3",
+     "@types/node": "^20.14.12",
+     "typescript": "^5.5.4"
+   }
+ }
+
+diff --git a/packages/schemas/package.json b/packages/schemas/package.json
+index 0c1c2e3..e69de29 100644
+--- a/packages/schemas/package.json
++++ b/packages/schemas/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "@esh/schemas",
+   "version": "0.1.0",
+   "private": true,
+   "type": "module",
+   "main": "dist/index.js",
+   "types": "dist/index.d.ts",
+   "scripts": { "build": "tsc -p tsconfig.json" },
+-  "dependencies": { "zod": "^3.23.8" },
++  "dependencies": { // Centralized usage
++    "zod": "^3.23.8"
++  },
+   "devDependencies": { "typescript": "^5.5.4" }
+ }
+
+diff --git a/packages/ui/package.json b/packages/ui/package.json
+index 0c1c2e3..e69de29 100644
+--- a/packages/ui/package.json
++++ b/packages/ui/package.json
+@@ -1,20 +1,20 @@
+ {
+   "name": "@esh/ui",
+   "version": "0.1.0",
+   "private": true,
+   "main": "src/index.ts",
+   "types": "src/index.ts",
+   "scripts": {
+     "build": "tsc",
+     "dev": "tsc --watch"
+   },
+   "dependencies": {
+     "react": "^18.3.1",
+     "react-native": "0.74.3",
+     "react-native-web": "^0.19.12",
+     "nativewind": "^2.0.11",
+     "tailwindcss": "^3.4.9"
+   },
+   "devDependencies": {
+     "typescript": "^5.5.4",
+     "@types/react": "^18.3.3"
+   },
+   "peerDependencies": {
+     "react": "^18.3.1"
+   }
+ }

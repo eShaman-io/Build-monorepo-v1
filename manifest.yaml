@@ -1,0 +1,15 @@
+project: eshaman-dev-environment
+version: 1.0.0
+description: >
+  Full-stack development + creative build environment for eShaman.io,
+  including runtimes, package managers, frameworks, SDKs, and creative tools.
+
+dependencies:
+  runtimes:
+    - name: node
+      version: "20.17.0"
+    - name: nvm-windows
+    - name: python
+      version: "3.11"
+    - name: java
+      version: "17"

@@ -1,0 +1,47 @@
+{
+  "name": "@esh/functions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "serve:emulate": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@esh/schemas": "workspace:*",
+    "@google-cloud/secret-manager": "^5.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "firebase-admin": "^12.5.0",
+    "firebase-functions": "^5.0.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.52.7",
+    "pino": "^9.3.2",
+    "stripe": "^16.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    },
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
+  }
+}

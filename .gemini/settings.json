@@ -1,0 +1,15 @@
+{
+  // Project-scoped Gemini CLI settings
+  // 'includeDirectories' defines extra directories to include in the workspace; leave empty to restrict Gemini to the project root.
+  "includeDirectories": [],
+  // Respect your .gitignore when scanning files.
+  "fileFiltering": {
+    "respectGitIgnore": true
+  },
+  // Require confirmation before running potentially destructive commands.
+  "autoAccept": false,
+  // Enable checkpointing to allow /restore after file changes.
+  "checkpointing": {
+    "enabled": true
+  }
+}

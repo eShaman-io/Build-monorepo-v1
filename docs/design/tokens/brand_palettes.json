@@ -1,0 +1,22 @@
+{
+  "palettes": {
+    "E_MysticQuartz_ALT": {
+      "name": "E_MysticQuartz_ALT",
+      "primary": "#5CE1E6",
+      "primary_700": "#0EA5A6",
+      "secondary": "#C084FC",
+      "accent": "#F472B6",
+      "highlight": "#F59E0B",
+      "neutral_900": "#0B1020",
+      "neutral_50": "#FFF7F9",
+      "gradient": [
+        "#0EA5A6",
+        "#DB2777"
+      ],
+      "gradient_base": [
+        "#0EA5A6",
+        "#C084FC"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "eshaman-monorepo",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0 <21.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -w -r dev",
+    "build": "pnpm -w -r build",
+    "lint": "pnpm -w -r lint",
+    "format": "pnpm -w -r format",
+    "fb:use:prod": "firebase use prod",
+    "fb:deploy": "firebase deploy --project prod"
+  }
+}
+

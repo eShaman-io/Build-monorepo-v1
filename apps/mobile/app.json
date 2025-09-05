@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "eShaman",
+    "slug": "eshaman",
+    "scheme": "eshaman",
+    "version": "0.1.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#0A0F1F" },
+    "extra": {
+      "firebaseApiKey": "YOUR_API_KEY",
+      "firebaseAuthDomain": "YOUR_PROJECT.firebaseapp.com",
+      "firebaseProjectId": "YOUR_PROJECT_ID",
+      "firebaseStorageBucket": "YOUR_PROJECT.appspot.com",
+      "firebaseSenderId": "000000000000",
+      "firebaseAppId": "1:000000000000:web:abc123"
+    },
+    "android": { "package": "io.eshaman.app" },
+    "ios": { "bundleIdentifier": "io.eshaman.app" }
+  }
+}
