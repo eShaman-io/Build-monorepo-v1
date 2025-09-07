@@ -28,7 +28,8 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/node": "^20.14.12",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.19.13",
     "typescript": "^5.5.4"
   },
   "jest": {
@@ -42,6 +43,9 @@
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   }
 }
