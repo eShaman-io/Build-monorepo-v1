@@ -1,6 +1,6 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import * as admin from 'firebase-admin';
-import { SignupSchema, UserProfileSchema } from '@esh/schemas';
+import { SignupSchema, UserProfile } from '@esh/schemas';
 
 // Ensure Firebase is initialized (idempotent)
 if (admin.apps.length === 0) {
@@ -26,7 +26,11 @@ export const createUser = onCall({ cors: true }, async (request) => {
     });
 
     // 2. Create the user profile in Firestore
-    const userProfile: UserProfileSchema = { name };
+    const userProfile: UserProfile = { 
+      name,
+      prefersReducedMotion: false,
+      subscriptionStatus: 'inactive'
+    };
     await db.collection('users').doc(userRecord.uid).set(userProfile);
 
     return { success: true, uid: userRecord.uid };

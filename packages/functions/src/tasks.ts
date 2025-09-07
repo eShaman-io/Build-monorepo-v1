@@ -1,7 +1,7 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import * as admin from 'firebase-admin';
 import { CloudTasksClient } from '@google-cloud/tasks';
-import { SignupSchema, UserProfileSchema } from '@esh/schemas';
+import { SignupSchema, UserProfile } from '@esh/schemas';
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {
@@ -59,7 +59,11 @@ export const processSignup = async (req: any, res: any) => {
   const { uid, name } = req.body;
 
   try {
-    const userProfile: UserProfileSchema = { name };
+    const userProfile: UserProfile = { 
+      name,
+      prefersReducedMotion: false,
+      subscriptionStatus: 'inactive'
+    };
     await db.collection('users').doc(uid).set(userProfile);
     res.status(200).send('Successfully processed user signup.');
   } catch (error) {

@@ -1,18 +1,44 @@
 import { onRequest, HttpsError } from 'firebase-functions/v2/https';
 import * as admin from 'firebase-admin';
-import { RevenueCat } from 'revenuecat';
+import * as crypto from 'crypto';
 
-// NOTE: In a real app, use Firebase secrets for these keys
-const revenueCat = new RevenueCat(process.env.REVENUECAT_API_KEY!);
+// Manual webhook signature validation for RevenueCat
+function validateWebhookSignature(
+  rawBody: Buffer,
+  signature: string,
+  secret: string
+): boolean {
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(rawBody)
+    .digest('hex');
+  
+  // RevenueCat signatures are in format "sha256=<hash>"
+  const receivedSignature = signature.replace('sha256=', '');
+  
+  return crypto.timingSafeEqual(
+    Buffer.from(expectedSignature),
+    Buffer.from(receivedSignature)
+  );
+}
 
 export const revenueCatWebhook = onRequest(async (req, res) => {
   try {
-    const event = revenueCat.webhooks.constructEvent(
-      req.rawBody,
-      req.headers['revenuecat-signature'] as string,
-      process.env.REVENUECAT_WEBHOOK_SECRET!
-    );
+    // Validate webhook signature manually (since revenuecat v1.0.0 doesn't support webhook validation)
+    const signature = req.headers['revenuecat-signature'] as string;
+    const secret = process.env.REVENUECAT_WEBHOOK_SECRET!;
+    
+    if (!signature || !secret) {
+      throw new HttpsError('unauthenticated', 'Missing signature or secret');
+    }
+    
+    const isValid = validateWebhookSignature(req.rawBody, signature, secret);
+    if (!isValid) {
+      throw new HttpsError('unauthenticated', 'Invalid webhook signature');
+    }
 
+    // Parse the webhook payload
+    const event = JSON.parse(req.rawBody.toString());
     const { app_user_id, entitlements } = event.event;
     
     // Assuming you have an "premium" entitlement in RevenueCat
