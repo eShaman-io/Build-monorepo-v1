@@ -6,29 +6,7 @@ type OrbButtonProps = {
   disabled?: boolean;
 };
 
-// Check if we're in a React Native environment
-const isReactNative = typeof window === "undefined" && typeof navigator !== "undefined" && navigator.product === "ReactNative";
-
 export function OrbButton({ onPress, title, disabled = false }: OrbButtonProps) {
-  if (isReactNative) {
-    // React Native version with dynamic imports
-    const { Pressable, Text } = require("react-native");
-    
-    return React.createElement(
-      Pressable,
-      {
-        onPress: disabled ? undefined : onPress,
-        className: `rounded-full p-4 ${
-          disabled 
-            ? "bg-gray-400" 
-            : "bg-brand-secondary"
-        }`
-      },
-      React.createElement(Text, { className: "text-center text-lg font-bold text-white" }, title)
-    );
-  }
-
-  // Web version using regular button
   return (
     <button
       onClick={disabled ? undefined : onPress}
