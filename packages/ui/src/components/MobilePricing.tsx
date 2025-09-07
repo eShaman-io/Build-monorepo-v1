@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, Pressable, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 import Purchases, { PurchasesOffering } from 'react-native-purchases';
 import { GlassCard } from './GlassCard';
 import { OrbButton } from './OrbButton';
@@ -18,7 +18,7 @@ export function MobilePricing() {
         if (offerings.current) {
           setOffering(offerings.current);
         }
-      } catch (e) {
+      } catch {
         setError('Could not fetch subscription plans.');
       }
     };

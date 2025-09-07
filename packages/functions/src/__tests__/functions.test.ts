@@ -1,5 +1,4 @@
 import { generateReadingHandler } from '../ai.testable';
-import * as admin from 'firebase-admin';
 
 jest.mock('firebase-admin', () => ({
   initializeApp: jest.fn(),
