@@ -1,4 +1,4 @@
-import { HttpsError, onCall, CallableRequest } from 'firebase-functions/v2/https'
+import { HttpsError, CallableRequest } from 'firebase-functions/v2/https'
 import { logger } from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import { z } from 'zod'

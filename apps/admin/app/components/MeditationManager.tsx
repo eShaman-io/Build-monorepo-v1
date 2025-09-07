@@ -10,7 +10,7 @@ import { collection, addDoc, onSnapshot, query, deleteDoc, doc } from 'firebase/
 
 export function MeditationManager() {
   const [meditations, setMeditations] = useState<Meditation[]>([]);
-  const { register, handleSubmit, reset } = useForm<Meditation>({ resolver: zodResolver(MeditationSchema) });
+    const { handleSubmit, reset } = useForm<Meditation>({ resolver: zodResolver(MeditationSchema) });
 
   useEffect(() => {
     const db = getFirebaseDb();
