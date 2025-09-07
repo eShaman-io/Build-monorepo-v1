@@ -1,22 +1,19 @@
 # Future Work Backlog
 
-This document outlines a high-level roadmap for the future development of the eShaman platform.
+This document outlines a high-level roadmap for the future development of the eShaman platform. The previous backlog has been completed; this represents the next set of priorities.
 
-## Q3 2024: Core Feature Expansion
+## High Priority
 
--   **(L)** **Implement Waitlist & Onboarding:** Develop the full user waitlist, signup, and onboarding flow.
--   **(L)** **Develop the Oracle Chat:** Build out the real-time Oracle chat interface with streaming responses.
--   **(M)** **Implement User Profiles:** Create user profiles with customizable settings and avatars.
--   **(S)** **Add Push Notifications:** Integrate Firebase Cloud Messaging for push notifications in the mobile app.
+-   **(L)** **Implement Premium Motion & Visuals:** Implement the premium motion and visual designs as outlined in the `docs/BLACKBOX_IMPLEMENTATION_BRIEF.md`. This includes animations, cinematic feel, and responsive design for both web and mobile.
+-   **(L)** **Integrate Stripe for Subscriptions:** Add a subscription model for premium features using Stripe, including creating pricing plans, checkout flows, and managing user subscription status.
 
-## Q4 2024: Monetization & Personalization
+## Core Features (Next Up)
 
--   **(L)** **Integrate Stripe for Subscriptions:** Add a subscription model for premium features using Stripe.
--   **(M)** **Personalized Rituals:** Develop a system for creating and scheduling personalized spiritual rituals.
--   **(M)** **Journaling Feature:** Implement a private journaling feature for users to record their thoughts and experiences.
+-   **(M)** **Personalized Rituals:** Develop a system for creating, scheduling, and tracking personalized spiritual rituals.
+-   **(M)** **Journaling Feature:** Implement a private, secure journaling feature for users to record their thoughts and experiences.
 
-## Q1 2025: Community & Content
+## Future Enhancements
 
--   **(L)** **Build a Community Forum:** Create a space for users to connect and share their experiences.
+-   **(L)** **Build a Community Forum:** Create a space for users to connect, share experiences, and support each other.
 -   **(M)** **Introduce Guided Meditations:** Add a library of guided meditations and mindfulness exercises.
--   **(S)** **Implement a Content Management System (CMS):** Set up a CMS to manage articles, guides, and other content.
+-   **(S)** **Internationalization (i18n):** Add support for multiple languages across both the web and mobile apps.
