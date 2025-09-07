@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import { JournalEditor, JournalFeed } from '@esh/ui';
