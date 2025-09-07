@@ -26,7 +26,8 @@
     "openai": "^4.52.7",
     "pino": "^9.3.2",
     "stripe": "^16.2.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@google-cloud/tasks": "^5.4.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

@@ -1,0 +1,21 @@
+{
+  "name": "esh-admin",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@esh/ui": "workspace:*",
+    "@esh/firebase-client": "workspace:*",
+    "@esh/schemas": "workspace:*",
+    "next": "^14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}

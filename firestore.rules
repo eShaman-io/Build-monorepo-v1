@@ -21,21 +21,23 @@ service cloud.firestore {
     match /forumThreads/{threadId} {
       allow read: if request.auth != null;
       allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+      // Admins can update or delete any thread
+      allow update, delete: if request.auth != null && (resource.data.userId == request.auth.uid || request.auth.token.admin == true);
     }
     
     match /forumThreads/{threadId}/posts/{postId} {
       allow read: if request.auth != null;
       allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+      // Admins can update or delete any post
+      allow update, delete: if request.auth != null && (resource.data.userId == request.auth.uid || request.auth.token.admin == true);
     }
 
     // --- Meditations Rules ---
     // All authenticated users can read meditations
     match /meditations/{meditationId} {
       allow read: if request.auth != null;
-      // Write access can be restricted to admins in the future
-      allow write: if false;
+      // Admins have full write access
+      allow write: if request.auth != null && request.auth.token.admin == true;
     }
 
     // Example: Publicly readable content

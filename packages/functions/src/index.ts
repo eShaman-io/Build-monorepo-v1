@@ -5,6 +5,8 @@ import { registerPushToken } from './notifications';
 import { createCheckoutSession } from './stripe';
 import { createRitual, scheduleRitual } from './rituals';
 import { seedMeditations } from './meditations';
+import { onUserSignup, processSignup } from './tasks';
+import { setAdminClaim } from './admin';
 
 export {
   addToWaitlist,
@@ -15,4 +17,7 @@ export {
   createRitual,
   scheduleRitual,
   seedMeditations,
+  onUserSignup,
+  processSignup,
+  setAdminClaim,
 };

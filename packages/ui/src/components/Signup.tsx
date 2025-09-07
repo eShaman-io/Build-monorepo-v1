@@ -25,8 +25,8 @@ export function Signup() {
 
     try {
       const functions = getFirebaseFunctions();
-      const createUser = httpsCallable(functions, 'createUser');
-      await createUser(data);
+      const onUserSignup = httpsCallable(functions, 'onUserSignup');
+      await onUserSignup(data);
       setFormStatus('success');
     } catch (error: any) {
       setFormStatus('error');
@@ -38,7 +38,7 @@ export function Signup() {
     return (
       <div className="text-center">
         <h2 className="text-2xl font-bold">Welcome to eShaman!</h2>
-        <p className="text-brand-neutral-dark">Your account has been created successfully. Please log in to continue.</p>
+        <p className="text-brand-neutral-dark">Your account is being created. You will be able to log in shortly.</p>
       </div>
     );
   }
