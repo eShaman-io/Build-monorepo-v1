@@ -203,9 +203,8 @@ export default function Home() {
         ].map((action, index) => (
           <Pressable
             key={action.title}
-            style={({ pressed }) => ({
+                        style={({ pressed }) => ({
               flex: 1,
-              marginHorizontal: index === 0 ? 0 : 8,
               marginHorizontal: index === 1 ? 8 : 0,
               transform: [{ scale: pressed ? 0.95 : 1 }]
             })}

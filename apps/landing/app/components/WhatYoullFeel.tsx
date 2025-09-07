@@ -7,11 +7,11 @@ export function WhatYoullFeel() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-4xl font-bold">What You'll Feel</h2>
+                <h2 className="mb-12 text-center text-4xl font-bold">What You&rsquo;ll Feel</h2>
         <div className="grid gap-8 md:grid-cols-3">
           <GlassCard className="p-6">
             <MysticPill text="Clarity" />
-            <p className="mt-4 text-brand-neutral-dark">Gain a deeper understanding of your life's path and purpose.</p>
+                        <p className="mt-4 text-brand-neutral-dark">Gain a deeper understanding of your life&rsquo;s path and purpose.</p>
           </GlassCard>
           <GlassCard className="p-6">
             <MysticPill text="Connection" />

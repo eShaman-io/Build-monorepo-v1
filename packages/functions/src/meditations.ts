@@ -1,6 +1,6 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import * as admin from 'firebase-admin';
-import { MeditationSchema } from '@esh/schemas';
+import { Meditation } from '@esh/schemas';
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {
@@ -32,7 +32,8 @@ const seedData: Meditation[] = [
   },
 ];
 
-export const seedMeditations = onCall({ enforceAppCheck: true }, async (request) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export const seedMeditations = onCall({ enforceAppCheck: true }, async (_request) => {
   // NOTE: In a real app, you would add an admin check here
   // if (!request.auth || !request.auth.token.admin) {
   //   throw new HttpsError('permission-denied', 'You must be an admin to seed data.');

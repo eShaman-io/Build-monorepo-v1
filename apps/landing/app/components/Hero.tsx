@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import Lottie from "lottie-react";
+import Image from "next/image";
 import { useRef } from "react";
 import heroAnim from "../../public/hero.json";
 
@@ -14,7 +15,7 @@ export default function Hero() {
       {!shouldReduce && inView ? (
         <Lottie animationData={heroAnim} loop autoplay className="absolute inset-0 -z-10" />
       ) : (
-        <img src="/no-motion.png" alt="" className="absolute inset-0 -z-10 w-full h-full object-cover" />
+                <Image src="/no-motion.png" alt="" fill className="object-cover -z-10" />
       )}
 
       <div className="mx-auto max-w-7xl px-6 py-28 text-center">
