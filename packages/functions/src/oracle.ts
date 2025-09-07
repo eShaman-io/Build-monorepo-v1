@@ -1,7 +1,11 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
+import { OpenAI } from 'openai';
 
-// Ensure Firebase is initialized (idempotent)
+// NOTE: In a real app, use Firebase secrets for the OpenAI API key
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+// Ensure Firebase is initialized
 if (admin.apps.length === 0) {
   admin.initializeApp();
 }
@@ -13,21 +17,34 @@ export const onMessageCreate = functions.firestore
     const { chatId } = context.params;
     const message = snapshot.data();
 
-    // Only respond to user messages
     if (message.role !== 'user') {
       return;
     }
 
     const assistantRef = db.collection('chats').doc(chatId).collection('messages').doc();
-    const mockResponse = "The journey ahead is one of self-discovery. Embrace the unknown, for it is where you will find your greatest strengths. Trust in your intuition; it is your most reliable guide.".split(' ');
+    
+    try {
+      const stream = await openai.chat.completions.create({
+        model: 'gpt-4', // Or your desired model
+        messages: [{ role: 'user', content: message.content }],
+        stream: true,
+      });
 
-    let currentContent = '';
-    for (let i = 0; i < mockResponse.length; i++) {
-      currentContent += `${mockResponse[i]} `;
-      await new Promise(resolve => setTimeout(resolve, 150)); // Simulate streaming delay
+      let fullResponse = '';
+      for await (const chunk of stream) {
+        fullResponse += chunk.choices[0]?.delta?.content || '';
+        // Update the Firestore document with the streaming content
+        await assistantRef.set({
+          role: 'assistant',
+          content: fullResponse,
+          timestamp: admin.firestore.FieldValue.serverTimestamp(),
+        });
+      }
+    } catch (error) {
+      console.error('Error with OpenAI API:', error);
       await assistantRef.set({
         role: 'assistant',
-        content: currentContent.trim(),
+        content: 'Sorry, I encountered an error. Please try again.',
         timestamp: admin.firestore.FieldValue.serverTimestamp(),
       });
     }
