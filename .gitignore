@@ -34,3 +34,10 @@ npm-debug.log*
 *.bak
 *.swp
 *.DS_Store
+# env files
+.env
+.env.*
+*.env
+*.env.local
+*.env.local.*
+.env.local.txt
