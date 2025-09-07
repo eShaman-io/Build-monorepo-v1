@@ -7,6 +7,7 @@ import { createRitual, scheduleRitual } from './rituals';
 import { seedMeditations } from './meditations';
 import { onUserSignup, processSignup } from './tasks';
 import { setAdminClaim } from './admin';
+import { revenueCatWebhook } from './revenuecat';
 
 export {
   addToWaitlist,
@@ -20,4 +21,5 @@ export {
   onUserSignup,
   processSignup,
   setAdminClaim,
+  revenueCatWebhook,
 };
