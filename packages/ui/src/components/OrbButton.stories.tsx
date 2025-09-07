@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { OrbButton } from '../components/OrbButton';
+import type { Meta, StoryObj } from "@storybook/react";
+import { OrbButton } from "../components/OrbButton";
 
 const meta: Meta<typeof OrbButton> = {
-  title: 'components/OrbButton',
+  title: "components/OrbButton",
   component: OrbButton,
   argTypes: {
-    onPress: { action: 'pressed' },
+    onPress: { action: "pressed" },
   },
 };
 
@@ -15,6 +15,6 @@ type Story = StoryObj<typeof OrbButton>;
 
 export const Primary: Story = {
   args: {
-    title: 'Click Me',
+    title: "Click Me",
   },
 };

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useAuth } from '@esh/ui';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useAuth } from "@esh/ui";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -11,12 +11,12 @@ export function AdminAuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!loading && !user) {
       // Redirect to login if not authenticated
-      router.push('/login');
+      router.push("/login");
     } else if (user) {
       user.getIdTokenResult().then((idTokenResult) => {
         if (!idTokenResult.claims.admin) {
           // Redirect if not an admin
-          router.push('/unauthorized');
+          router.push("/unauthorized");
         }
       });
     }

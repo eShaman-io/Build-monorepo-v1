@@ -1,4 +1,4 @@
-import { OracleChat } from '@esh/ui';
+import { OracleChat } from "@esh/ui";
 
 export default function OraclePage() {
   return (

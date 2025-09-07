@@ -3,13 +3,15 @@
 ## Dependency Map
 
 ### Root Dependencies
+
 - No dependencies listed.
 
 ### Apps
+
 1. **Landing App (`@esh/landing`)**
    - **Dependencies**:
-     - `@esh/firebase-client`: workspace:*
-     - `@esh/schemas`: workspace:*
+     - `@esh/firebase-client`: workspace:\*
+     - `@esh/schemas`: workspace:\*
      - `@headlessui/react`: ^2.1.2
      - `@hookform/resolvers`: ^3.7.0
      - `@react-email/components`: ^0.0.22
@@ -57,9 +59,9 @@
      - `expo-linear-gradient`: ~13.0.2
      - `expo-blur`: ~13.0.2
      - `expo-constants`: ~16.0.2
-     - `@esh/ui`: workspace:*
-     - `@esh/firebase-client`: workspace:*
-     - `@esh/schemas`: workspace:*
+     - `@esh/ui`: workspace:\*
+     - `@esh/firebase-client`: workspace:\*
+     - `@esh/schemas`: workspace:\*
    - **DevDependencies**:
      - `@babel/core`: ^7.24.0
      - `typescript`: ^5.5.4
@@ -67,7 +69,7 @@
 
 3. **Functions Package (`@esh/functions`)**
    - **Dependencies**:
-     - `@esh/schemas`: workspace:*
+     - `@esh/schemas`: workspace:\*
      - `@google-cloud/secret-manager`: ^5.5.0
      - `cors`: ^2.8.5
      - `dotenv`: ^16.4.5
@@ -105,6 +107,7 @@
      - `react`: ^18.3.1
 
 ## Findings & Recommendations
+
 - **Duplications**:
   - `firebase` appears in three places: consider consolidating its usage into the `@esh/firebase-client` package.
   - `typescript`, `tailwindcss`, and `eslint` are repeated across all packages: these could be moved to root devDependencies in the `/configs` directory.

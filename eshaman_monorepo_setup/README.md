@@ -2,11 +2,11 @@
 
 This zip package contains a starter setup for your **eshaman-monorepo** project. It includes:
 
-* `profile.ps1` - A PowerShell profile script to set up your environment automatically when using PowerShell. Copy its content into your `$PROFILE` file (e.g., `C:\Users\YourUser\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`).
-* `.nvmrc` - Defines the Node version (20.15.0) to be used via nvm.
-* `.vscode/` - Contains recommended settings (`settings.json`), a sample task (`tasks.json`), and a launch configuration (`launch.json`).
-* `package.json` - Contains the `packageManager` field to enforce pnpm usage and the `engines` field for Node. Merge this with your existing `package.json`.
-* `src/env.ts` - A helper script for loading environment variables using dotenv.
+- `profile.ps1` - A PowerShell profile script to set up your environment automatically when using PowerShell. Copy its content into your `$PROFILE` file (e.g., `C:\Users\YourUser\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`).
+- `.nvmrc` - Defines the Node version (20.15.0) to be used via nvm.
+- `.vscode/` - Contains recommended settings (`settings.json`), a sample task (`tasks.json`), and a launch configuration (`launch.json`).
+- `package.json` - Contains the `packageManager` field to enforce pnpm usage and the `engines` field for Node. Merge this with your existing `package.json`.
+- `src/env.ts` - A helper script for loading environment variables using dotenv.
 
 ## How to Use
 

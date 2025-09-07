@@ -1,26 +1,29 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 
 const feelings = [
   {
     title: "Calm",
-    description: "Find peace in the present moment through guided breathwork and meditation",
+    description:
+      "Find peace in the present moment through guided breathwork and meditation",
     icon: "🌊",
-    gradient: "from-crystalBlue/20 to-moonstone/20"
+    gradient: "from-crystalBlue/20 to-moonstone/20",
   },
   {
-    title: "Clarity", 
-    description: "Receive insights and guidance through Oracle conversations and tarot wisdom",
+    title: "Clarity",
+    description:
+      "Receive insights and guidance through Oracle conversations and tarot wisdom",
     icon: "✨",
-    gradient: "from-auroraTeal/20 to-crystalBlue/20"
+    gradient: "from-auroraTeal/20 to-crystalBlue/20",
   },
   {
     title: "Synchronicity",
-    description: "Align with lunar cycles and cosmic rhythms for deeper spiritual connection",
+    description:
+      "Align with lunar cycles and cosmic rhythms for deeper spiritual connection",
     icon: "🌙",
-    gradient: "from-etherPurple/20 to-auroraTeal/20"
-  }
-]
+    gradient: "from-etherPurple/20 to-auroraTeal/20",
+  },
+];
 
 export default function WhatYoullFeel() {
   return (
@@ -43,7 +46,8 @@ export default function WhatYoullFeel() {
             What You&apos;ll Feel
           </h2>
           <p className="text-moonstone/75 text-lg max-w-2xl mx-auto">
-            Experience transformation through ancient wisdom and modern technology
+            Experience transformation through ancient wisdom and modern
+            technology
           </p>
         </motion.div>
 
@@ -60,17 +64,19 @@ export default function WhatYoullFeel() {
             >
               <div className="glass-card h-full p-8 text-center relative overflow-hidden">
                 {/* Hover gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feeling.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${feeling.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+
                 <div className="relative z-10">
                   <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     {feeling.icon}
                   </div>
-                  
+
                   <h3 className="text-2xl font-serif text-moonstone mb-4 group-hover:text-white transition-colors duration-300">
                     {feeling.title}
                   </h3>
-                  
+
                   <p className="text-moonstone/70 leading-relaxed group-hover:text-moonstone/90 transition-colors duration-300">
                     {feeling.description}
                   </p>
@@ -105,5 +111,5 @@ export default function WhatYoullFeel() {
         </div>
       </div>
     </section>
-  )
+  );
 }

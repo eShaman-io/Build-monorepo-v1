@@ -1,6 +1,6 @@
-import { onCall, HttpsError } from 'firebase-functions/v2/https';
-import * as admin from 'firebase-admin';
-import { SignupSchema, UserProfileSchema } from '@esh/schemas';
+import { onCall, HttpsError } from "firebase-functions/v2/https";
+import * as admin from "firebase-admin";
+import { SignupSchema, UserProfile } from "@esh/schemas";
 
 // Ensure Firebase is initialized (idempotent)
 if (admin.apps.length === 0) {
@@ -12,7 +12,7 @@ export const createUser = onCall({ cors: true }, async (request) => {
   const validationResult = SignupSchema.safeParse(request.data);
 
   if (!validationResult.success) {
-    throw new HttpsError('invalid-argument', validationResult.error.message);
+    throw new HttpsError("invalid-argument", validationResult.error.message);
   }
 
   const { name, email, password } = validationResult.data;
@@ -26,15 +26,25 @@ export const createUser = onCall({ cors: true }, async (request) => {
     });
 
     // 2. Create the user profile in Firestore
-    const userProfile: UserProfileSchema = { name };
-    await db.collection('users').doc(userRecord.uid).set(userProfile);
+    const userProfile: UserProfile = { 
+      name,
+      prefersReducedMotion: false,
+      subscriptionStatus: "inactive" as const
+    };
+    await db.collection("users").doc(userRecord.uid).set(userProfile);
 
     return { success: true, uid: userRecord.uid };
   } catch (error: any) {
-    console.error('Error creating user:', error);
-    if (error.code === 'auth/email-already-exists') {
-      throw new HttpsError('already-exists', 'This email address is already in use.');
+    console.error("Error creating user:", error);
+    if (error.code === "auth/email-already-exists") {
+      throw new HttpsError(
+        "already-exists",
+        "This email address is already in use.",
+      );
     }
-    throw new HttpsError('internal', 'An unexpected error occurred while creating the user.');
+    throw new HttpsError(
+      "internal",
+      "An unexpected error occurred while creating the user.",
+    );
   }
 });

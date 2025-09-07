@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
-import { getFirebaseDb } from '@esh/firebase-client';
-import { useAuth } from './AuthProvider';
-import type { ForumThread } from '@esh/schemas';
-import { GlassCard } from './GlassCard';
+import React, { useState, useEffect } from "react";
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { getFirebaseDb } from "@esh/firebase-client";
+import { useAuth } from "./AuthProvider";
+import type { ForumThread } from "@esh/schemas";
+import { GlassCard } from "./GlassCard";
 
 export function ForumThreadList() {
   const { user } = useAuth();
@@ -14,11 +14,13 @@ export function ForumThreadList() {
 
   useEffect(() => {
     const db = getFirebaseDb();
-    const threadsRef = collection(db, 'forumThreads');
-    const q = query(threadsRef, orderBy('lastReplyAt', 'desc'));
+    const threadsRef = collection(db, "forumThreads");
+    const q = query(threadsRef, orderBy("lastReplyAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const allThreads = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as ForumThread));
+      const allThreads = snapshot.docs.map(
+        (doc) => ({ id: doc.id, ...doc.data() } as ForumThread),
+      );
       setThreads(allThreads);
       setLoading(false);
     });

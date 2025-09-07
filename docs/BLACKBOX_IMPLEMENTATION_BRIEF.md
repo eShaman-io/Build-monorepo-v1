@@ -6,20 +6,20 @@
 
 ## 0) Deliverables (Definition of Done)
 
-1) **Web (Next.js)** hero section with premium motion:
+1. **Web (Next.js)** hero section with premium motion:
    - Framer Motion entrance + stagger.
    - Lottie animated background (auto-pauses offscreen; static fallback for reduced motion).
    - Responsive, accessible CTA.
    - CLS < 0.1; keyboard/focus a11y; `prefers-reduced-motion` respected.
 
-2) **Mobile (Expo/React Native)** welcome screen:
+2. **Mobile (Expo/React Native)** welcome screen:
    - Reanimated micro-interactions (press scale) + parallax pattern ready.
    - Lottie confetti trigger on button tap.
    - Haptic feedback.
    - Screen-reader labels + large-text support.
    - 60 FPS on mid-tier Android.
 
-3) **Repo updates:**
+3. **Repo updates:**
    - Dependencies installed.
    - Config files updated (Tailwind on web, Babel plugin for Reanimated on mobile).
    - Usage examples wired and runnable with provided commands.
@@ -29,11 +29,13 @@
 ## 1) Tech Choices
 
 ### Web (Next.js 14 + App Router)
+
 - **UI/Motion:** `framer-motion`, `lottie-react`
 - **Styling:** `tailwindcss`, `postcss`, `autoprefixer`
 - **Optional Enhancements:** `@studio-freight/lenis` (smooth scroll), `gsap`, `@rive-app/react-canvas`, `three`, `@react-three/fiber`, `@react-three/drei`, `maath`
 
 ### Mobile (Expo / React Native)
+
 - **Motion/Core:** `react-native-reanimated`, `react-native-gesture-handler`
 - **Animation:** `lottie-react-native`, `lottie-ios` (iOS native dep handled by Expo)
 - **UX:** `expo-haptics`
@@ -47,7 +49,9 @@
 > Use **one** package manager. Provide both `npm` and `pnpm` for convenience.
 
 ### Web (Next.js)
+
 **npm**
+
 ```bash
 npm i framer-motion lottie-react
 npm i -D tailwindcss postcss autoprefixer
@@ -56,6 +60,7 @@ npm i @studio-freight/lenis gsap @rive-app/react-canvas three @react-three/fiber
 ```
 
 **pnpm**
+
 ```bash
 pnpm add framer-motion lottie-react
 pnpm add -D tailwindcss postcss autoprefixer
@@ -64,6 +69,7 @@ pnpm add @studio-freight/lenis gsap @rive-app/react-canvas three @react-three/fi
 ```
 
 ### Mobile (Expo)
+
 ```bash
 expo install react-native-reanimated react-native-gesture-handler lottie-react-native lottie-ios expo-haptics react-native-safe-area-context
 # optional:
@@ -75,10 +81,13 @@ expo install rive-react-native
 ## 3) Web: Project Setup & Files
 
 ### 3.1 Tailwind Init (if not present)
+
 ```bash
 npx tailwindcss init -p
 ```
+
 **tailwind.config.js**
+
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -87,7 +96,9 @@ module.exports = {
   plugins: [],
 };
 ```
+
 **app/globals.css**
+
 ```css
 @tailwind base;
 @tailwind components;
@@ -95,15 +106,20 @@ module.exports = {
 ```
 
 ### 3.2 Lottie Asset Placeholders
+
 Place assets at:
+
 ```
 /public/hero.json           // looping background animation
 /public/no-motion.png       // static fallback image for reduced motion
 ```
+
 > Blackbox: If no real asset yet, add a minimal placeholder JSON and a neutral PNG.
 
 ### 3.3 Hero Component (Framer Motion + Lottie)
+
 `app/components/Hero.tsx`
+
 ```tsx
 "use client";
 import { motion, useInView, useReducedMotion } from "framer-motion";
@@ -119,9 +135,18 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative isolate overflow-hidden">
       {!shouldReduce && inView ? (
-        <Lottie animationData={heroAnim} loop autoplay className="absolute inset-0 -z-10" />
+        <Lottie
+          animationData={heroAnim}
+          loop
+          autoplay
+          className="absolute inset-0 -z-10"
+        />
       ) : (
-        <img src="/no-motion.png" alt="" className="absolute inset-0 -z-10 w-full h-full object-cover" />
+        <img
+          src="/no-motion.png"
+          alt=""
+          className="absolute inset-0 -z-10 w-full h-full object-cover"
+        />
       )}
 
       <div className="mx-auto max-w-7xl px-6 py-28 text-center">
@@ -160,7 +185,9 @@ export default function Hero() {
 ```
 
 ### 3.4 Use the Component
+
 `app/page.tsx`
+
 ```tsx
 import Hero from "./components/Hero";
 
@@ -182,9 +209,11 @@ export default function Page() {
 ## 4) Mobile: Project Setup & Files (Expo)
 
 ### 4.1 Babel Config for Reanimated
+
 `babel.config.js`
+
 ```js
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
   return {
     presets: ["babel-preset-expo"],
@@ -194,9 +223,15 @@ module.exports = function(api) {
 ```
 
 ### 4.2 Welcome Screen (Reanimated + Lottie + Haptics)
+
 `app/Welcome.tsx` (or `screens/Welcome.tsx`)
+
 ```tsx
-import Animated, { useSharedValue, useAnimatedStyle, withSpring } from "react-native-reanimated";
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from "react-native-reanimated";
 import LottieView from "lottie-react-native";
 import * as Haptics from "expo-haptics";
 import { useRef } from "react";
@@ -206,10 +241,16 @@ export default function Welcome() {
   const scale = useSharedValue(1);
   const confetti = useRef<LottieView>(null);
 
-  const style = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
+  const style = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }],
+  }));
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} accessible accessibilityLabel="Welcome screen">
+    <View
+      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      accessible
+      accessibilityLabel="Welcome screen"
+    >
       <Animated.View style={[{ padding: 24, borderRadius: 20 }, style]}>
         <Pressable
           accessibilityRole="button"
@@ -219,7 +260,12 @@ export default function Welcome() {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             confetti.current?.play();
           }}
-          style={{ paddingHorizontal: 24, paddingVertical: 14, borderRadius: 16, borderWidth: 1 }}
+          style={{
+            paddingHorizontal: 24,
+            paddingVertical: 14,
+            borderRadius: 16,
+            borderWidth: 1,
+          }}
         >
           <Text style={{ fontSize: 18 }}>Let’s go</Text>
         </Pressable>
@@ -238,6 +284,7 @@ export default function Welcome() {
 ```
 
 ### 4.3 Assets
+
 Place a confetti file at: `./assets/confetti.json`
 
 > Blackbox: If missing, add a small placeholder Lottie file.
@@ -247,6 +294,7 @@ Place a confetti file at: `./assets/confetti.json`
 ## 5) Prompts for Blackbox (verbatim)
 
 ### Web (Next.js + Framer Motion + Lottie)
+
 ```
 You are a senior UI engineer. Build a Next.js 14 landing hero with Tailwind + Framer Motion + Lottie.
 Requirements:
@@ -260,6 +308,7 @@ Output: Hero.tsx, usage notes, and exact npm/pnpm install commands.
 ```
 
 ### Mobile (Expo + Reanimated 3 + Lottie)
+
 ```
 You are a senior RN engineer. Create a React Native welcome screen using Reanimated 3 + Lottie.
 Requirements:
@@ -308,6 +357,7 @@ Provide component code + install commands (Expo).
 ## 8) Commands Cheat Sheet
 
 ### Web
+
 ```bash
 # with npm
 npm i framer-motion lottie-react && npm i -D tailwindcss postcss autoprefixer
@@ -316,6 +366,7 @@ pnpm add framer-motion lottie-react && pnpm add -D tailwindcss postcss autoprefi
 ```
 
 ### Mobile (Expo)
+
 ```bash
 expo install react-native-reanimated react-native-gesture-handler lottie-react-native lottie-ios expo-haptics react-native-safe-area-context
 ```
@@ -334,4 +385,4 @@ expo install react-native-reanimated react-native-gesture-handler lottie-react-n
 
 ---
 
-**End of brief.** 
+**End of brief.**

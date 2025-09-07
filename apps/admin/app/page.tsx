@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { AdminAuthProvider } from './components/AdminAuthProvider';
-import { SetAdminForm } from './components/SetAdminForm';
-import { MeditationManager } from './components/MeditationManager';
+import { AdminAuthProvider } from "./components/AdminAuthProvider";
+import { SetAdminForm } from "./components/SetAdminForm";
+import { MeditationManager } from "./components/MeditationManager";
 
 export default function AdminPage() {
   return (

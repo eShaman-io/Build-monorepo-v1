@@ -1,15 +1,15 @@
-import { initFirebase, getFirebaseServices } from '../';
+import { initFirebase, getFirebaseServices } from "../";
 
-describe('Firebase Client', () => {
+describe("Firebase Client", () => {
   beforeEach(() => {
     jest.resetModules();
   });
 
-  it('should initialize firebase', () => {
+  it("should initialize firebase", () => {
     const config = {
-      apiKey: 'test',
-      authDomain: 'test',
-      projectId: 'test',
+      apiKey: "test",
+      authDomain: "test",
+      projectId: "test",
     };
     const services = initFirebase(config);
     expect(services).toBeDefined();
@@ -20,7 +20,9 @@ describe('Firebase Client', () => {
     expect(services.storage).toBeDefined();
   });
 
-  it('should throw an error if firebase is not initialized', () => {
-    expect(() => getFirebaseServices()).toThrow('Firebase not initialized. Call initFirebase() first.');
+  it("should throw an error if firebase is not initialized", () => {
+    expect(() => getFirebaseServices()).toThrow(
+      "Firebase not initialized. Call initFirebase() first.",
+    );
   });
 });

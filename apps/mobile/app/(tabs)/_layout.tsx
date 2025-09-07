@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Feather } from '@expo/vector-icons';
+import { Feather } from "@expo/vector-icons";
 
 export default function TabsLayout() {
   return (
@@ -13,47 +13,59 @@ export default function TabsLayout() {
         },
       }}
     >
-      <Tabs.Screen 
-        name="home" 
-        options={{ 
+      <Tabs.Screen
+        name="home"
+        options={{
           title: "Home",
-          tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="home" size={24} color={color} />
+          ),
+        }}
       />
-      <Tabs.Screen 
-        name="oracle" 
-        options={{ 
+      <Tabs.Screen
+        name="oracle"
+        options={{
           title: "Oracle",
-          tabBarIcon: ({ color }) => <Feather name="message-circle" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="message-circle" size={24} color={color} />
+          ),
+        }}
       />
-      <Tabs.Screen 
-        name="rituals" 
-        options={{ 
+      <Tabs.Screen
+        name="rituals"
+        options={{
           title: "Rituals",
-          tabBarIcon: ({ color }) => <Feather name="moon" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="moon" size={24} color={color} />
+          ),
+        }}
       />
-      <Tabs.Screen 
-        name="journal" 
-        options={{ 
+      <Tabs.Screen
+        name="journal"
+        options={{
           title: "Journal",
-          tabBarIcon: ({ color }) => <Feather name="book-open" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="book-open" size={24} color={color} />
+          ),
+        }}
       />
-       <Tabs.Screen 
-        name="forum" 
-        options={{ 
+      <Tabs.Screen
+        name="forum"
+        options={{
           title: "Forum",
-          tabBarIcon: ({ color }) => <Feather name="message-square" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="message-square" size={24} color={color} />
+          ),
+        }}
       />
-      <Tabs.Screen 
-        name="profile" 
-        options={{ 
+      <Tabs.Screen
+        name="profile"
+        options={{
           title: "Profile",
-          tabBarIcon: ({ color }) => <Feather name="user" size={24} color={color} />,
-        }} 
+          tabBarIcon: ({ color }) => (
+            <Feather name="user" size={24} color={color} />
+          ),
+        }}
       />
 
       {/* dev-only mockups tab */}

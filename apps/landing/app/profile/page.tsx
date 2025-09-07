@@ -1,4 +1,4 @@
-import { Profile } from '@esh/ui';
+import { Profile } from "@esh/ui";
 
 export default function ProfilePage() {
   return (

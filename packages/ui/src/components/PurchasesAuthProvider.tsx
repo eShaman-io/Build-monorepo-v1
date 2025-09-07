@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import Purchases from 'react-native-purchases';
-import { Platform } from 'react-native';
-import { AuthProvider, useAuth } from './AuthProvider';
+import React, { useEffect } from "react";
+import Purchases from "react-native-purchases";
+import { Platform } from "react-native";
+import { AuthProvider, useAuth } from "./AuthProvider";
 
 // NOTE: In a real app, use environment variables for these keys
-const REVENUECAT_API_KEY = Platform.OS === 'ios' 
-  ? process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY!
-  : process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY!;
+const REVENUECAT_API_KEY =
+  Platform.OS === "ios"
+    ? process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY!
+    : process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY!;
 
 const PurchasesInitializer = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuth();
@@ -29,12 +30,14 @@ const PurchasesInitializer = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-export const PurchasesAuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const PurchasesAuthProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   return (
     <AuthProvider>
-      <PurchasesInitializer>
-        {children}
-      </PurchasesInitializer>
+      <PurchasesInitializer>{children}</PurchasesInitializer>
     </AuthProvider>
   );
 };

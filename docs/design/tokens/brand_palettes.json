@@ -9,14 +9,8 @@
       "highlight": "#F59E0B",
       "neutral_900": "#0B1020",
       "neutral_50": "#FFF7F9",
-      "gradient": [
-        "#0EA5A6",
-        "#DB2777"
-      ],
-      "gradient_base": [
-        "#0EA5A6",
-        "#C084FC"
-      ]
+      "gradient": ["#0EA5A6", "#DB2777"],
+      "gradient_base": ["#0EA5A6", "#C084FC"]
     }
   }
 }

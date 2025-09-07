@@ -1,6 +1,9 @@
-import { onCall, HttpsError } from 'firebase-functions/v2/https';
-import * as admin from 'firebase-admin';
-import { Meditation } from '@esh/schemas';
+import { onCall, HttpsError } from "firebase-functions/v2/https";
+import * as admin from "firebase-admin";
+import { MeditationSchema } from "@esh/schemas";
+import { z } from "zod";
+
+type MeditationSeed = z.infer<typeof MeditationSchema>;
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {
@@ -8,50 +11,58 @@ if (admin.apps.length === 0) {
 }
 const db = admin.firestore();
 
-const seedData: Meditation[] = [
+const seedData: MeditationSeed[] = [
   {
-    title: 'Morning Mindfulness',
-    description: 'Start your day with a clear and focused mind.',
-    audioUrl: 'https://example.com/morning_mindfulness.mp3',
+    title: "Morning Mindfulness",
+    description: "Start your day with a clear and focused mind.",
+    audioUrl: "https://example.com/morning_mindfulness.mp3",
     duration: 300, // 5 minutes
-    category: 'Mindfulness',
+    category: "Mindfulness",
   },
   {
-    title: 'Deep Sleep Relaxation',
-    description: 'A guided meditation to help you fall into a deep and restful sleep.',
-    audioUrl: 'https://example.com/deep_sleep.mp3',
+    title: "Deep Sleep Relaxation",
+    description:
+      "A guided meditation to help you fall into a deep and restful sleep.",
+    audioUrl: "https://example.com/deep_sleep.mp3",
     duration: 900, // 15 minutes
-    category: 'Sleep',
+    category: "Sleep",
   },
   {
-    title: 'Anxiety Relief',
-    description: 'Calm your mind and release anxiety with this soothing meditation.',
-    audioUrl: 'https://example.com/anxiety_relief.mp3',
+    title: "Anxiety Relief",
+    description:
+      "Calm your mind and release anxiety with this soothing meditation.",
+    audioUrl: "https://example.com/anxiety_relief.mp3",
     duration: 600, // 10 minutes
-    category: 'Anxiety',
+    category: "Anxiety",
   },
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-export const seedMeditations = onCall({ enforceAppCheck: true }, async (_request) => {
-  // NOTE: In a real app, you would add an admin check here
-  // if (!request.auth || !request.auth.token.admin) {
-  //   throw new HttpsError('permission-denied', 'You must be an admin to seed data.');
-  // }
+export const seedMeditations = onCall(
+  { enforceAppCheck: true },
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+  async (_request) => {
+    // NOTE: In a real app, you would add an admin check here
+    // if (!request.auth || !request.auth.token.admin) {
+    //   throw new HttpsError('permission-denied', 'You must be an admin to seed data.');
+    // }
 
-  const batch = db.batch();
-  const meditationsRef = db.collection('meditations');
+    const batch = db.batch();
+    const meditationsRef = db.collection("meditations");
 
-  seedData.forEach((meditation) => {
-    const docRef = meditationsRef.doc();
-    batch.set(docRef, meditation);
-  });
+    seedData.forEach((meditation) => {
+      const docRef = meditationsRef.doc();
+      batch.set(docRef, meditation);
+    });
 
-  try {
-    await batch.commit();
-    return { success: true, message: 'Successfully seeded meditations.' };
-  } catch (error) {
-    console.error('Error seeding meditations:', error);
-    throw new HttpsError('internal', 'An unexpected error occurred while seeding data.');
-  }
-});
+    try {
+      await batch.commit();
+      return { success: true, message: "Successfully seeded meditations." };
+    } catch (error) {
+      console.error("Error seeding meditations:", error);
+      throw new HttpsError(
+        "internal",
+        "An unexpected error occurred while seeding data.",
+      );
+    }
+  },
+);

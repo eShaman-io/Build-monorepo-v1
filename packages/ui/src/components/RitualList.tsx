@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { collection, query, where, onSnapshot } from 'firebase/firestore';
-import { getFirebaseDb } from '@esh/firebase-client';
-import { useAuth } from './AuthProvider';
-import type { Ritual } from '@esh/schemas';
-import { GlassCard } from './GlassCard';
+import React, { useState, useEffect } from "react";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { getFirebaseDb } from "@esh/firebase-client";
+import { useAuth } from "./AuthProvider";
+import type { Ritual } from "@esh/schemas";
+import { GlassCard } from "./GlassCard";
 
 export function RitualList() {
   const { user } = useAuth();
@@ -19,11 +19,13 @@ export function RitualList() {
     }
 
     const db = getFirebaseDb();
-    const ritualsRef = collection(db, 'rituals');
-    const q = query(ritualsRef, where('userId', '==', user.uid));
+    const ritualsRef = collection(db, "rituals");
+    const q = query(ritualsRef, where("userId", "==", user.uid));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const userRituals = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Ritual));
+      const userRituals = snapshot.docs.map(
+        (doc) => ({ id: doc.id, ...doc.data() } as Ritual),
+      );
       setRituals(userRituals);
       setLoading(false);
     });

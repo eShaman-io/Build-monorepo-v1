@@ -1,39 +1,42 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { OrbButton } from './OrbButton';
+import React, { useState } from "react";
+import { OrbButton } from "./OrbButton";
 
 export function WaitlistForm() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
-    setMessage('');
+    setError("");
+    setMessage("");
 
     try {
-      const res = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
 
       if (!res.ok) {
-        throw new Error('Something went wrong. Please try again.');
+        throw new Error("Something went wrong. Please try again.");
       }
 
       const data = await res.json();
       setMessage(data.message);
-      setEmail('');
+      setEmail("");
     } catch (err: any) {
       setError(err.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md flex-col space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      className="flex w-full max-w-md flex-col space-y-4"
+    >
       <input
         type="email"
         placeholder="Enter your email"

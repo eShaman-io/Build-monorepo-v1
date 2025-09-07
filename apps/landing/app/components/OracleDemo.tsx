@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { GlassCard } from '@esh/ui';
+import React from "react";
+import { GlassCard } from "@esh/ui";
 
 export function OracleDemo() {
   return (
@@ -12,10 +12,14 @@ export function OracleDemo() {
           {/* This is a simplified representation. The actual demo would be interactive. */}
           <div className="flex flex-col space-y-4">
             <div className="self-start rounded-lg bg-brand-primary-light p-4">
-                            <p className="text-white">&ldquo;What is my path forward?&rdquo;</p>
+              <p className="text-white">
+                &ldquo;What is my path forward?&rdquo;
+              </p>
             </div>
             <div className="self-end rounded-lg bg-brand-secondary p-4">
-                            <p className="text-white">&ldquo;The path forward requires courage and patience...&rdquo;</p>
+              <p className="text-white">
+                &ldquo;The path forward requires courage and patience...&rdquo;
+              </p>
             </div>
           </div>
         </GlassCard>

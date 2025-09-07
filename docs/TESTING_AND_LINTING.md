@@ -12,6 +12,7 @@ This document outlines the setup of testing and linting infrastructure, the proc
 ## Linting
 
 All linting errors in the monorepo have been fixed. This involved:
+
 - Correcting syntax errors.
 - Removing unused variables.
 - Fixing issues with unescaped entities in React components.
@@ -21,6 +22,7 @@ All linting errors in the monorepo have been fixed. This involved:
 ## Testing
 
 Tests have been written and are passing for the following packages:
+
 - `packages/schemas`
 - `packages/firebase-client`
 - `packages/functions`
@@ -31,6 +33,7 @@ Tests have been written and are passing for the following packages:
 The tests for the `react-native` packages (`apps/mobile` and `packages/ui`) are currently failing. The error is `SyntaxError: Unexpected identifier 'ErrorHandler'`, which indicates an issue with transforming the `react-native` code.
 
 Several approaches were attempted to fix this issue, including:
+
 - Using `ts-jest` with various configurations.
 - Using `babel-jest` with various configurations.
 - Using the `jest-expo` preset.
