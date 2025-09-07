@@ -5,6 +5,8 @@ export const UserProfileSchema = z.object({
   avatarUrl: z.string().url({ message: 'Please enter a valid URL.' }).optional().or(z.literal('')),
   prefersReducedMotion: z.boolean().default(false),
   pushTokens: z.array(z.string()).optional(),
+  stripeCustomerId: z.string().optional(),
+  subscriptionStatus: z.enum(['active', 'inactive', 'trialing']).default('inactive'),
 });
 
 export type UserProfile = z.infer<typeof UserProfileSchema>;
