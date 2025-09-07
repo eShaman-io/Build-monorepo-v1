@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",
+  "scripts": {
+    "build": "echo 'No build needed for i18n package'",
+    "lint": "echo 'No linting configured for i18n package'",
+    "test": "echo 'No tests configured for i18n package'"
+  },
   "dependencies": {
     "i18next": "^23.11.5",
     "react-i18next": "^14.1.2"

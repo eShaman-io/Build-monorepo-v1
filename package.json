@@ -10,10 +10,10 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "pnpm -w -r dev",
-    "build": "pnpm -w -r build",
-    "lint": "pnpm -w -r lint",
-    "format": "pnpm -w -r format",
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
     "test": "jest",
     "test:e2e": "playwright test",
     "fb:use:prod": "firebase use prod",
@@ -21,24 +21,27 @@
     "storybook": "storybook dev -p 6006"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "eslint": "^8.57.1",
-    "jest": "^30.1.3",
-    "ts-jest": "^29.4.1",
-    "@storybook/react-vite": "^8.2.4",
+    "@playwright/test": "^1.45.1",
     "@storybook/addon-essentials": "^8.2.4",
     "@storybook/addon-interactions": "^8.2.4",
     "@storybook/addon-links": "^8.2.4",
     "@storybook/addon-onboarding": "^8.2.4",
     "@storybook/blocks": "^8.2.4",
     "@storybook/react": "^8.2.4",
+    "@storybook/react-vite": "^8.2.4",
     "@storybook/test": "^8.2.4",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.5.2",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "firebase-tools": "^13.13.0",
+    "jest": "^30.1.3",
     "react-native-web": "^0.19.12",
     "storybook": "^8.2.4",
-    "@testing-library/react-native": "^12.5.2",
-    "@testing-library/jest-native": "^5.4.3",
-    "@playwright/test": "^1.45.1",
-    "firebase-tools": "^13.13.0"
+    "ts-jest": "^29.4.1"
   },
   "packageManager": "pnpm@10.15.1+sha5-12.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
