@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { GlassCard } from '@esh/ui';
 
 const faqData = [
   {
@@ -25,10 +24,10 @@ export function FAQ() {
         <h2 className="mb-12 text-center text-4xl font-bold">Frequently Asked Questions</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {faqData.map((item, index) => (
-            <GlassCard key={index} className="p-6">
+            <div key={index} className="overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-6">
               <h3 className="mb-4 text-2xl font-bold">{item.question}</h3>
               <p className="text-brand-neutral-dark">{item.answer}</p>
-            </GlassCard>
+            </div>
           ))}
         </div>
       </div>
