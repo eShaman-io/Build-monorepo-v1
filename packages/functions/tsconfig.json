@@ -7,7 +7,7 @@
     "target": "ES2022",
     "lib": ["ES2022"],
     "moduleResolution": "node",
-    "types": ["node"],
+    "types": ["node", "jest"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true
