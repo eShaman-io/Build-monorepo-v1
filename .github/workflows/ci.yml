@@ -57,7 +57,7 @@ jobs:
     needs: ci
     steps:
       - name: Checkout
-        uses: actions/checkout@vv4
+        uses: actions/checkout@v4
 
       - name: Install Node.js
         uses: actions/setup-node@v4
