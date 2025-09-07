@@ -9,3 +9,14 @@ export default function TabsLayout() {
     </Tabs>
   )
 }
+// app/(tabs)/_layout.tsx
+import { Tabs } from "expo-router";
+
+export default function Layout() {
+  return (
+    <Tabs>
+      {/* your normal tabs */}
+      {__DEV__ && <Tabs.Screen name="mockups" options={{ title: "Mockups" }} />}
+    </Tabs>
+  );
+}
