@@ -2,7 +2,7 @@
   "name": "eshaman-monorepo",
   "private": true,
   "engines": {
-    "node": ">=20.0.0 <21.0.0",
+    "node": "20.17.0",
     "pnpm": ">=9.0.0"
   },
   "workspaces": [

@@ -1,51 +1,16 @@
-import React from 'react'
-import { View, ViewProps } from 'react-native'
+import React from 'react';
+import { View, Text } from 'react-native';
+import { BlurView } from 'expo-blur';
 
-export interface GlassCardProps extends ViewProps {
-  children: React.ReactNode
-  variant?: 'default' | 'hover' | 'active'
-  className?: string
-}
+type GlassCardProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
-export function GlassCard({ 
-  children, 
-  variant = 'default', 
-  className = '',
-  style,
-  ...props 
-}: GlassCardProps) {
-  const baseStyles = {
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.15)',
-    backgroundColor: 'rgba(255, 255, 255, 0.10)',
-    padding: 24,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.2,
-    shadowRadius: 16,
-    elevation: 8,
-  }
-
-  const variantStyles = {
-    default: {},
-    hover: {
-      backgroundColor: 'rgba(255, 255, 255, 0.12)',
-      borderColor: 'rgba(255, 255, 255, 0.20)',
-    },
-    active: {
-      backgroundColor: 'rgba(255, 255, 255, 0.14)',
-      borderColor: 'rgba(255, 255, 255, 0.24)',
-    }
-  }
-
+export function GlassCard({ children, className }: GlassCardProps) {
   return (
-    <View 
-      style={[baseStyles, variantStyles[variant], style]}
-      className={`glass-card ${className}`}
-      {...props}
-    >
-      {children}
-    </View>
-  )
+    <BlurView intensity={20} tint="dark" className={`overflow-hidden rounded-2xl ${className}`}>
+      <View className="p-4">{children}</View>
+    </BlurView>
+  );
 }

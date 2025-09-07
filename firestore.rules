@@ -2,17 +2,17 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Deny all reads and writes by default
+    // By default, deny all reads and writes
     match /{document=**} {
       allow read, write: if false;
     }
 
-    // Logged-in users can manage their own data
+    // Allow authenticated users to read and write their own data
     match /users/{userId}/{document=**} {
-      allow read, write: if request.auth.uid == userId;
+      allow read, write: if request.auth != null && request.auth.uid == userId;
     }
 
-    // Allow public read for specific collections (e.g., FAQs)
+    // Example: Publicly readable content
     match /content/{docId} {
       allow get: if true;
     }
