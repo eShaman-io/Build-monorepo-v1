@@ -1,7 +1,7 @@
 import { initializeApp, getApps, FirebaseApp } from "firebase/app"
 import { getAuth, Auth } from "firebase/auth"
 import { getFirestore, Firestore } from "firebase/firestore"
-import { getFunctions, Functions } from "firebase/functions"
+import { getFunctions, Functions, httpsCallable } from "firebase/functions"
 import { getStorage, FirebaseStorage } from "firebase/storage"
 
 export type FirebaseClientConfig = {
@@ -73,4 +73,4 @@ export function getFirebaseStorage(): FirebaseStorage {
 }
 
 // Legacy export for backward compatibility
-export { getAuth, getFirestore }
+export { getAuth, getFirestore, httpsCallable }

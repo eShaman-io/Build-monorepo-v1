@@ -1,5 +1,4 @@
 import { WaitlistPayload } from '../';
-import { z } from 'zod';
 
 describe('Schemas', () => {
   it('should validate a correct waitlist payload', () => {

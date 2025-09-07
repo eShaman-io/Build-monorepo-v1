@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Pressable, Text } from 'react-native';
+import { Pressable, Text } from 'react-native';
 
 type OrbButtonProps = {
   onPress: () => void;
