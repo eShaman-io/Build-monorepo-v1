@@ -1,10 +1,10 @@
-import Hero from "./(components)/Hero"
-import WhatYoullFeel from "./(components)/WhatYoullFeel"
-import OracleDemo from "./(components)/OracleDemo"
-import RitualsAndCycles from "./(components)/RitualsAndCycles"
-import FounderNote from "./(components)/FounderNote"
-import FAQ from "./(components)/FAQ"
-import Footer from "./(components)/Footer"
+import { Hero } from "./components/Hero";
+import { WhatYoullFeel } from "./components/WhatYoullFeel";
+import { OracleDemo } from "./components/OracleDemo";
+import { RitualsAndCycles } from "./components/RitualsAndCycles";
+import { FounderNote } from "./components/FounderNote";
+import { FAQ } from "./components/FAQ";
+import { Footer } from "./components/Footer";
 
 export default function Page() {
   return (
@@ -17,5 +17,5 @@ export default function Page() {
       <FAQ />
       <Footer />
     </main>
-  )
+  );
 }
