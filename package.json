@@ -18,7 +18,8 @@
     "test:e2e": "playwright test",
     "fb:use:prod": "firebase use prod",
     "fb:deploy": "firebase deploy --project prod",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "deploy": "pnpm install && git add . && git commit -m 'deploy' && git push origin main"
   },
   "devDependencies": {
     "@playwright/test": "^1.45.1",
