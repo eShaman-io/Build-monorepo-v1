@@ -1,3 +1,6 @@
+// Import type augmentations to ensure they are applied globally
+import './types/react-native-classname'
+
 // Export all UI components
 export { GlassCard } from './components/GlassCard'
 export { OrbButton } from './components/OrbButton'

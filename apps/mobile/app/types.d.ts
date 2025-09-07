@@ -1,4 +1,4 @@
-// Augment react-native types to accept `className`
+// Global type definitions for mobile app
 import "react-native";
 
 declare module "react-native" {
