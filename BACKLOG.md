@@ -1,21 +1,22 @@
-# Project Backlog
+# Future Work Backlog
 
-This document contains a prioritized list of tasks for the next development cycle.
+This document outlines a high-level roadmap for the future development of the eShaman platform.
 
-## High Priority
+## Q3 2024: Core Feature Expansion
 
--   **(L)** **Implement Authentication:** Add a full authentication flow for both the web and mobile apps using Firebase Auth.
--   **(M)** **Complete All UI Pages:** Fully implement the JSX and logic for all placeholder pages in the `landing` app.
--   **(M)** **Write Comprehensive Tests:** Add unit and integration tests for all new UI components and Firebase functions.
--   **(S)** **Set up Storybook:** Implement Storybook for the `@esh/ui` package to facilitate component development and testing.
+-   **(L)** **Implement Waitlist & Onboarding:** Develop the full user waitlist, signup, and onboarding flow.
+-   **(L)** **Develop the Oracle Chat:** Build out the real-time Oracle chat interface with streaming responses.
+-   **(M)** **Implement User Profiles:** Create user profiles with customizable settings and avatars.
+-   **(S)** **Add Push Notifications:** Integrate Firebase Cloud Messaging for push notifications in the mobile app.
 
-## Medium Priority
+## Q4 2024: Monetization & Personalization
 
--   **(L)** **Implement E2E Tests:** Add end-to-end tests for the `landing` app using Playwright or Cypress.
--   **(M)** **Set up Firebase Preview Channels:** Configure the CI/CD pipeline to deploy preview channels for every pull request.
--   **(S)** **Purge Unused Tailwind CSS:** Ensure that the production builds are purging all unused Tailwind CSS classes.
+-   **(L)** **Integrate Stripe for Subscriptions:** Add a subscription model for premium features using Stripe.
+-   **(M)** **Personalized Rituals:** Develop a system for creating and scheduling personalized spiritual rituals.
+-   **(M)** **Journaling Feature:** Implement a private journaling feature for users to record their thoughts and experiences.
 
-## Low Priority
+## Q1 2025: Community & Content
 
--   **(M)** **Implement i18n:** Add internationalization support to both the web and mobile apps.
--   **(S)** **Add a Code Coverage Workflow:** Implement a CI job to report on code coverage.
+-   **(L)** **Build a Community Forum:** Create a space for users to connect and share their experiences.
+-   **(M)** **Introduce Guided Meditations:** Add a library of guided meditations and mindfulness exercises.
+-   **(S)** **Implement a Content Management System (CMS):** Set up a CMS to manage articles, guides, and other content.
