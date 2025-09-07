@@ -3,7 +3,6 @@ import LottieView from "lottie-react-native";
 import * as Haptics from "expo-haptics";
 import { useRef } from "react";
 import { Pressable, Text, View } from "react-native";
-import confettiJson from "../assets/confetti.json";
 
 export default function Welcome() {
   const scale = useSharedValue(1);
@@ -30,7 +29,7 @@ export default function Welcome() {
 
       <LottieView
         ref={confetti}
-        source={confettiJson}
+        source={require("../assets/confetti.json")}
         autoPlay={false}
         loop={false}
         style={{ width: 220, height: 220 }}
