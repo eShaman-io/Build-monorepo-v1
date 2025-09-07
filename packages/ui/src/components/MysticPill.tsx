@@ -1,5 +1,4 @@
 import React from "react";
-import { View, Text } from "react-native";
 
 type MysticPillProps = {
   text: string;
@@ -7,8 +6,8 @@ type MysticPillProps = {
 
 export function MysticPill({ text }: MysticPillProps) {
   return (
-    <View className="rounded-full border border-brand-secondary px-4 py-2">
-      <Text className="text-brand-secondary">{text}</Text>
-    </View>
+    <div className="rounded-full border border-brand-secondary px-4 py-2">
+      <span className="text-brand-secondary">{text}</span>
+    </div>
   );
 }

@@ -1,13 +1,12 @@
 import React from "react";
-import { View, Text, ViewStyle, TextStyle } from "react-native";
 
 export interface ChatBubbleProps {
   message: string;
   role: "user" | "assistant";
   timestamp?: Date;
   className?: string;
-  style?: ViewStyle;
-  textStyle?: TextStyle;
+  style?: React.CSSProperties;
+  textStyle?: React.CSSProperties;
 }
 
 export function ChatBubble({
@@ -20,84 +19,33 @@ export function ChatBubble({
 }: ChatBubbleProps) {
   const isUser = role === "user";
 
-  const containerStyles: ViewStyle = {
-    alignSelf: isUser ? "flex-end" : "flex-start",
-    maxWidth: "80%",
-    marginVertical: 4,
-  };
-
-  const bubbleStyles: ViewStyle = {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 20,
-    borderWidth: 1,
-  };
-
-  const userBubbleStyles: ViewStyle = {
-    backgroundColor: "rgba(0, 212, 255, 0.9)",
-    borderColor: "rgba(0, 212, 255, 0.3)",
-    borderTopRightRadius: 8,
-  };
-
-  const assistantBubbleStyles: ViewStyle = {
-    backgroundColor: "rgba(255, 255, 255, 0.08)",
-    borderColor: "rgba(255, 255, 255, 0.16)",
-    borderTopLeftRadius: 8,
-  };
-
-  const textStyles: TextStyle = {
-    fontSize: 16,
-    lineHeight: 22,
-  };
-
-  const userTextStyles: TextStyle = {
-    color: "#0A0F1F",
-  };
-
-  const assistantTextStyles: TextStyle = {
-    color: "#DFE7FF",
-  };
-
-  const timestampStyles: TextStyle = {
-    fontSize: 12,
-    marginTop: 4,
-    opacity: 0.6,
-  };
-
   return (
-    <View
-      style={[containerStyles, style]}
-      className={`chat-bubble ${role} ${className}`}
+    <div
+      className={`chat-bubble ${role} ${className} ${isUser ? 'self-end' : 'self-start'} max-w-[80%] my-1`}
+      style={style}
     >
-      <View
-        style={[
-          bubbleStyles,
-          isUser ? userBubbleStyles : assistantBubbleStyles,
-        ]}
+      <div
+        className={`px-4 py-3 rounded-3xl border ${
+          isUser
+            ? "bg-blue-500/90 border-blue-400/30 rounded-tr-lg text-slate-900"
+            : "bg-white/8 border-white/16 rounded-tl-lg text-slate-100"
+        }`}
       >
-        <Text
-          style={[
-            textStyles,
-            isUser ? userTextStyles : assistantTextStyles,
-            textStyle,
-          ]}
+        <p
+          className="text-base leading-relaxed"
+          style={textStyle}
         >
           {message}
-        </Text>
+        </p>
         {timestamp && (
-          <Text
-            style={[
-              timestampStyles,
-              isUser ? userTextStyles : assistantTextStyles,
-            ]}
-          >
+          <p className="text-xs mt-1 opacity-60">
             {timestamp.toLocaleTimeString([], {
               hour: "2-digit",
               minute: "2-digit",
             })}
-          </Text>
+          </p>
         )}
-      </View>
-    </View>
+      </div>
+    </div>
   );
 }

@@ -1,30 +1,19 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Purchases from "react-native-purchases";
-import { Platform } from "react-native";
 import { AuthProvider, useAuth } from "./AuthProvider";
-
-// NOTE: In a real app, use environment variables for these keys
-const REVENUECAT_API_KEY =
-  Platform.OS === "ios"
-    ? process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY!
-    : process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY!;
 
 const PurchasesInitializer = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuth();
 
+  // For web, this is a no-op component since React Native Purchases is not available
+  // In a real mobile implementation, this would initialize RevenueCat
   useEffect(() => {
-    Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
-    Purchases.configure({ apiKey: REVENUECAT_API_KEY });
+    // No-op for web - would configure RevenueCat in mobile environment
   }, []);
 
   useEffect(() => {
-    if (user) {
-      Purchases.logIn(user.uid);
-    } else {
-      Purchases.logOut();
-    }
+    // No-op for web - would handle user login/logout in mobile environment
   }, [user]);
 
   return <>{children}</>;

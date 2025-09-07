@@ -1,23 +1,20 @@
 import React from "react";
-import { View } from "react-native";
-import { BlurView } from "expo-blur";
 
 type GlassCardProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-export function GlassCard({ children, className }: GlassCardProps) {
+export function GlassCard({ children, className = "" }: GlassCardProps) {
   return (
-    <BlurView
-      intensity={20}
-      tint="dark"
+    <div
+      className={`backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 ${className}`}
       style={{
-        borderRadius: 16,
-        overflow: "hidden",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
       }}
     >
-      <View className={`p-4 ${className}`}>{children}</View>
-    </BlurView>
+      {children}
+    </div>
   );
 }

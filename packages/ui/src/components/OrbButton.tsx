@@ -1,5 +1,4 @@
 import React from "react";
-import { Pressable, Text } from "react-native";
 
 type OrbButtonProps = {
   onPress: () => void;
@@ -9,15 +8,16 @@ type OrbButtonProps = {
 
 export function OrbButton({ onPress, title, disabled = false }: OrbButtonProps) {
   return (
-    <Pressable
-      onPress={disabled ? undefined : onPress}
-      className={`rounded-full p-4 ${
+    <button
+      onClick={disabled ? undefined : onPress}
+      disabled={disabled}
+      className={`rounded-full p-4 text-center text-lg font-bold text-white ${
         disabled 
-          ? "bg-gray-400" 
-          : "bg-brand-secondary"
+          ? "bg-gray-400 cursor-not-allowed" 
+          : "bg-brand-secondary hover:bg-brand-secondary/80 cursor-pointer"
       }`}
     >
-      <Text className="text-center text-lg font-bold text-white">{title}</Text>
-    </Pressable>
+      {title}
+    </button>
   );
 }
