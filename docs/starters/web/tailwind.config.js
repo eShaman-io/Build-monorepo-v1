@@ -11,10 +11,10 @@ module.exports = {
           secondary: "var(--brand-secondary)",
           accent: "var(--brand-accent)",
           bg: "var(--brand-neutral-50)",
-          fg: "var(--brand-neutral-900)"
-        }
-      }
-    }
+          fg: "var(--brand-neutral-900)",
+        },
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };

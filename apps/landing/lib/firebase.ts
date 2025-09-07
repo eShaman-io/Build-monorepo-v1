@@ -1,4 +1,4 @@
-import { initFirebase } from '@esh/firebase-client'
+import { initFirebase } from "@esh/firebase-client";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
@@ -8,17 +8,28 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-}
+};
 
 // Validate required config
-const requiredKeys = ['apiKey', 'authDomain', 'projectId', 'storageBucket', 'messagingSenderId', 'appId']
-const missingKeys = requiredKeys.filter(key => !firebaseConfig[key as keyof typeof firebaseConfig])
+const requiredKeys = [
+  "apiKey",
+  "authDomain",
+  "projectId",
+  "storageBucket",
+  "messagingSenderId",
+  "appId",
+];
+const missingKeys = requiredKeys.filter(
+  (key) => !firebaseConfig[key as keyof typeof firebaseConfig],
+);
 
 if (missingKeys.length > 0) {
-  throw new Error(`Missing Firebase configuration: ${missingKeys.join(', ')}. Please check your environment variables.`)
+  throw new Error(
+    `Missing Firebase configuration: ${missingKeys.join(", ")}. Please check your environment variables.`,
+  );
 }
 
 // Initialize Firebase
-const { auth, db, functions, storage } = initFirebase(firebaseConfig)
+const { auth, db, functions, storage } = initFirebase(firebaseConfig);
 
-export { auth, db, functions, storage }
+export { auth, db, functions, storage };

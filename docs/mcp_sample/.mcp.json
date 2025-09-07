@@ -2,10 +2,7 @@
   "mcpServers": {
     "filesystem": {
       "command": "mcp-filesystem",
-      "args": [
-        "--root",
-        "${workspaceFolder}"
-      ],
+      "args": ["--root", "${workspaceFolder}"],
       "resources": [
         {
           "uri": "file://${workspaceFolder}/docs/BLACKBOX_IMPLEMENTATION_BRIEF.md",

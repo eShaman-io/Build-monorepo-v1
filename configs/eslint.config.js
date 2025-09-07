@@ -9,8 +9,8 @@ module.exports = {
       files: ["*.ts", "*.tsx"],
       rules: {
         "@typescript-eslint/no-unused-vars": "warn",
-        "no-undef": "off"
-      }
-    }
-  ]
+        "no-undef": "off",
+      },
+    },
+  ],
 };

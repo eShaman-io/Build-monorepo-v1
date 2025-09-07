@@ -1,4 +1,4 @@
-import { Signup } from '@esh/ui';
+import { Signup } from "@esh/ui";
 
 export default function SignupPage() {
   return (

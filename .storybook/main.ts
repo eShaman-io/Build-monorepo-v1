@@ -1,4 +1,4 @@
-import { mergeConfig } from 'vite';
+import { mergeConfig } from "vite";
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -6,7 +6,7 @@ export default {
     return mergeConfig(config, {
       resolve: {
         alias: {
-          'react-native': 'react-native-web',
+          "react-native": "react-native-web",
         },
       },
     });

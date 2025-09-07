@@ -1,4 +1,4 @@
-import { Login } from '@esh/ui';
+import { Login } from "@esh/ui";
 
 export default function LoginPage() {
   return (

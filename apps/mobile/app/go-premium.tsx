@@ -1,6 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import { MobilePricing } from '@esh/ui';
+import React from "react";
+import { View } from "react-native";
+import { MobilePricing } from "@esh/ui";
 
 export default function GoPremiumScreen() {
   return (

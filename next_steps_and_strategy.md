@@ -1,6 +1,7 @@
 # Next Steps and Updated Strategy
 
 ## Actions to Address Feedback
+
 1. **Centralize Firebase Usage**:
    - Update the `landing` and `mobile` applications to import Firebase from `@esh/firebase-client` instead of having their own `firebase` dependencies.
 
@@ -15,4 +16,5 @@
    - Consider moving TypeScript, TailwindCSS, and ESLint into the root `package.json` under `devDependencies` using workspaces to avoid duplication across packages.
 
 ## Summary
+
 These steps will help streamline the repository, reduce duplication, and ensure that the project adheres to best practices for dependency management and configuration standardization.

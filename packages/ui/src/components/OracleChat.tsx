@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import {
   collection,
   query,
@@ -8,28 +8,28 @@ import {
   onSnapshot,
   addDoc,
   serverTimestamp,
-} from 'firebase/firestore';
-import { getFirebaseDb } from '@esh/firebase-client';
-import { ChatBubble } from './ChatBubble';
-import { OrbButton } from './OrbButton';
-import type { ChatMessage } from '@esh/schemas';
+} from "firebase/firestore";
+import { getFirebaseDb } from "@esh/firebase-client";
+import { ChatBubble } from "./ChatBubble";
+import { OrbButton } from "./OrbButton";
+import type { ChatMessage } from "@esh/schemas";
 
 // In a real app, the chatId would be dynamic (e.g., from the URL or user's session)
-const CHAT_ID = '_test_chat_session_';
+const CHAT_ID = "_test_chat_session_";
 
 export function OracleChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const db = getFirebaseDb();
-    const messagesRef = collection(db, 'chats', CHAT_ID, 'messages');
-    const q = query(messagesRef, orderBy('timestamp'));
+    const messagesRef = collection(db, "chats", CHAT_ID, "messages");
+    const q = query(messagesRef, orderBy("timestamp"));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const msgs = snapshot.docs.map(doc => doc.data() as ChatMessage);
+      const msgs = snapshot.docs.map((doc) => doc.data() as ChatMessage);
       setMessages(msgs);
       setIsLoading(false);
     });
@@ -39,7 +39,10 @@ export function OracleChat() {
 
   useEffect(() => {
     // Scroll to the bottom on new messages
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+    scrollRef.current?.scrollTo({
+      top: scrollRef.current.scrollHeight,
+      behavior: "smooth",
+    });
   }, [messages]);
 
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -48,15 +51,15 @@ export function OracleChat() {
 
     setIsLoading(true);
     const db = getFirebaseDb();
-    const messagesRef = collection(db, 'chats', CHAT_ID, 'messages');
+    const messagesRef = collection(db, "chats", CHAT_ID, "messages");
 
     await addDoc(messagesRef, {
-      role: 'user',
+      role: "user",
       content: inputText,
       timestamp: serverTimestamp(),
     });
 
-    setInputText('');
+    setInputText("");
   };
 
   return (
@@ -67,11 +70,16 @@ export function OracleChat() {
         ))}
         {isLoading && (
           <div className="self-start rounded-lg bg-brand-primary p-3">
-             <p className="animate-pulse text-brand-neutral-dark">The oracle is typing...</p>
+            <p className="animate-pulse text-brand-neutral-dark">
+              The oracle is typing...
+            </p>
           </div>
         )}
       </div>
-      <form onSubmit={handleSendMessage} className="mt-4 flex items-center space-x-2">
+      <form
+        onSubmit={handleSendMessage}
+        className="mt-4 flex items-center space-x-2"
+      >
         <input
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}

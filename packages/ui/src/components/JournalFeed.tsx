@@ -1,11 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { collection, query, where, orderBy, onSnapshot } from 'firebase/firestore';
-import { getFirebaseDb } from '@esh/firebase-client';
-import { useAuth } from './AuthProvider';
-import type { JournalEntry } from '@esh/schemas';
-import { GlassCard } from './GlassCard';
+import React, { useState, useEffect } from "react";
+import {
+  collection,
+  query,
+  where,
+  orderBy,
+  onSnapshot,
+} from "firebase/firestore";
+import { getFirebaseDb } from "@esh/firebase-client";
+import { useAuth } from "./AuthProvider";
+import type { JournalEntry } from "@esh/schemas";
+import { GlassCard } from "./GlassCard";
 
 export function JournalFeed() {
   const { user } = useAuth();
@@ -19,11 +25,17 @@ export function JournalFeed() {
     }
 
     const db = getFirebaseDb();
-    const entriesRef = collection(db, 'journalEntries');
-    const q = query(entriesRef, where('userId', '==', user.uid), orderBy('createdAt', 'desc'));
+    const entriesRef = collection(db, "journalEntries");
+    const q = query(
+      entriesRef,
+      where("userId", "==", user.uid),
+      orderBy("createdAt", "desc"),
+    );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const userEntries = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as JournalEntry));
+      const userEntries = snapshot.docs.map(
+        (doc) => ({ id: doc.id, ...doc.data() }) as JournalEntry,
+      );
       setEntries(userEntries);
       setLoading(false);
     });

@@ -1,19 +1,34 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 
 const rituals = [
   { name: "Morning Clarity", duration: "5 min", icon: "🌅", phase: "New Moon" },
-  { name: "Lunar Meditation", duration: "15 min", icon: "🌙", phase: "Full Moon" },
-  { name: "Evening Reflection", duration: "10 min", icon: "✨", phase: "Waning Moon" },
-  { name: "Energy Cleansing", duration: "8 min", icon: "🕯️", phase: "Waxing Moon" }
-]
+  {
+    name: "Lunar Meditation",
+    duration: "15 min",
+    icon: "🌙",
+    phase: "Full Moon",
+  },
+  {
+    name: "Evening Reflection",
+    duration: "10 min",
+    icon: "✨",
+    phase: "Waning Moon",
+  },
+  {
+    name: "Energy Cleansing",
+    duration: "8 min",
+    icon: "🕯️",
+    phase: "Waxing Moon",
+  },
+];
 
 const lunarCalendar = [
   { phase: "New", emoji: "🌑", date: "Dec 15" },
   { phase: "Waxing", emoji: "🌒", date: "Dec 22" },
   { phase: "Full", emoji: "🌕", date: "Dec 30" },
-  { phase: "Waning", emoji: "🌘", date: "Jan 6" }
-]
+  { phase: "Waning", emoji: "🌘", date: "Jan 6" },
+];
 
 export default function RitualsAndCycles() {
   return (
@@ -35,7 +50,8 @@ export default function RitualsAndCycles() {
             Rituals & Cycles
           </h2>
           <p className="text-moonstone/75 text-lg max-w-2xl mx-auto">
-            Align with lunar rhythms and cosmic cycles for deeper spiritual practice
+            Align with lunar rhythms and cosmic cycles for deeper spiritual
+            practice
           </p>
         </motion.div>
 
@@ -47,12 +63,16 @@ export default function RitualsAndCycles() {
           viewport={{ once: true }}
           className="glass-card p-6 mb-12"
         >
-          <h3 className="text-xl font-serif text-moonstone mb-6 text-center">Upcoming Lunar Phases</h3>
+          <h3 className="text-xl font-serif text-moonstone mb-6 text-center">
+            Upcoming Lunar Phases
+          </h3>
           <div className="flex justify-between items-center">
             {lunarCalendar.map((lunar) => (
               <div key={lunar.phase} className="text-center">
                 <div className="text-3xl mb-2">{lunar.emoji}</div>
-                <div className="text-moonstone text-sm font-medium">{lunar.phase}</div>
+                <div className="text-moonstone text-sm font-medium">
+                  {lunar.phase}
+                </div>
                 <div className="text-moonstone/60 text-xs">{lunar.date}</div>
               </div>
             ))}
@@ -73,20 +93,20 @@ export default function RitualsAndCycles() {
             >
               <div className="glass-card p-6 text-center h-full relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-etherPurple/10 to-auroraTeal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative z-10">
                   <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {ritual.icon}
                   </div>
-                  
+
                   <h3 className="text-lg font-serif text-moonstone mb-2 group-hover:text-white transition-colors duration-300">
                     {ritual.name}
                   </h3>
-                  
+
                   <div className="text-auroraTeal text-sm font-medium mb-2">
                     {ritual.duration}
                   </div>
-                  
+
                   <div className="text-moonstone/60 text-xs">
                     Best during {ritual.phase}
                   </div>
@@ -109,5 +129,5 @@ export default function RitualsAndCycles() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

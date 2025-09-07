@@ -1,14 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { WaitlistSchema } from '@esh/schemas';
-import { OrbButton } from './OrbButton';
-import { getFirebaseFunctions, httpsCallable } from '@esh/firebase-client';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { WaitlistSchema } from "@esh/schemas";
+import { OrbButton } from "./OrbButton";
+import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
 
 export function Waitlist() {
-  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const {
@@ -20,24 +22,26 @@ export function Waitlist() {
   });
 
   const onSubmit = async (data: { email: string }) => {
-    setFormStatus('loading');
+    setFormStatus("loading");
     setErrorMessage(null);
 
     try {
       const functions = getFirebaseFunctions();
-      const addToWaitlist = httpsCallable(functions, 'addToWaitlist');
+      const addToWaitlist = httpsCallable(functions, "addToWaitlist");
       await addToWaitlist(data);
-      setFormStatus('success');
+      setFormStatus("success");
     } catch (error: any) {
-      setFormStatus('error');
+      setFormStatus("error");
       setErrorMessage(error.message);
     }
   };
 
-  if (formStatus === 'success') {
+  if (formStatus === "success") {
     return (
       <div className="text-center">
-        <h2 className="text-2xl font-bold">Thank you for joining the waitlist!</h2>
+        <h2 className="text-2xl font-bold">
+          Thank you for joining the waitlist!
+        </h2>
         <p className="text-brand-neutral-dark">We'll be in touch soon.</p>
       </div>
     );
@@ -46,16 +50,18 @@ export function Waitlist() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
       <input
-        {...register('email')}
+        {...register("email")}
         placeholder="Enter your email"
         className="rounded-lg bg-brand-primary-light p-4 text-white"
       />
-      {errors.email && <p className="text-red-500">{errors.email.message as string}</p>}
+      {errors.email && (
+        <p className="text-red-500">{errors.email.message as string}</p>
+      )}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
       <OrbButton
         type="submit"
-        title={formStatus === 'loading' ? 'Joining...' : 'Join the Waitlist'}
-        disabled={formStatus === 'loading'}
+        title={formStatus === "loading" ? "Joining..." : "Join the Waitlist"}
+        disabled={formStatus === "loading"}
       />
     </form>
   );

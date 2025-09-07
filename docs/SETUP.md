@@ -16,10 +16,10 @@ This guide provides instructions for setting up the eShaman monorepo for local d
 
 ## Running Locally
 
--   **Start Web & Mobile Apps:** `pnpm dev`
--   **Start Firebase Emulators:** `firebase emulators:start`
+- **Start Web & Mobile Apps:** `pnpm dev`
+- **Start Firebase Emulators:** `firebase emulators:start`
 
 ## Common Issues
 
--   **Authentication Errors:** Ensure the Firebase Emulators are running before you start the applications.
--   **Missing Dependencies:** Run `pnpm install` from the root of the monorepo.
+- **Authentication Errors:** Ensure the Firebase Emulators are running before you start the applications.
+- **Missing Dependencies:** Run `pnpm install` from the root of the monorepo.

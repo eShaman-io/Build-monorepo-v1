@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import "dotenv/config";
 
 const required = (k: string) => {
   const v = process.env[k];
@@ -7,5 +7,5 @@ const required = (k: string) => {
 };
 
 export const CONFIG = {
-  OPENAI_API_KEY: required('OPENAI_API_KEY'),
+  OPENAI_API_KEY: required("OPENAI_API_KEY"),
 };

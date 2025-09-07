@@ -1,15 +1,15 @@
-:root{
-  --brand-primary:#5CE1E6;
-  --brand-primary-700:#0EA5A6;
-  --brand-secondary:#C084FC;
-  --brand-accent:#F472B6;
-  --brand-neutral-900:#0B1020;
-  --brand-neutral-50:#FFF7F9;
-  --brand-grad-0:#0EA5A6; /* ALT default */
-  --brand-grad-1:#DB2777;
+:root {
+  --brand-primary: #5ce1e6;
+  --brand-primary-700: #0ea5a6;
+  --brand-secondary: #c084fc;
+  --brand-accent: #f472b6;
+  --brand-neutral-900: #0b1020;
+  --brand-neutral-50: #fff7f9;
+  --brand-grad-0: #0ea5a6; /* ALT default */
+  --brand-grad-1: #db2777;
 }
 /* Switch back to base gradient by toggling 'base-gradient' on <html> */
-:root.base-gradient{
-  --brand-grad-0:#0EA5A6;
-  --brand-grad-1:#C084FC;
+:root.base-gradient {
+  --brand-grad-0: #0ea5a6;
+  --brand-grad-1: #c084fc;
 }

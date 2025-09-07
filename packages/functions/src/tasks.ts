@@ -1,7 +1,7 @@
-import { onCall, HttpsError } from 'firebase-functions/v2/https';
-import * as admin from 'firebase-admin';
-import { CloudTasksClient } from '@google-cloud/tasks';
-import { SignupSchema, UserProfileSchema } from '@esh/schemas';
+import { onCall, HttpsError } from "firebase-functions/v2/https";
+import * as admin from "firebase-admin";
+import { CloudTasksClient } from "@google-cloud/tasks";
+import { SignupSchema, UserProfile } from "@esh/schemas";
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {
@@ -11,15 +11,15 @@ const db = admin.firestore();
 const tasksClient = new CloudTasksClient();
 
 const project = process.env.GCLOUD_PROJECT!;
-const location = 'us-central1'; // Or your desired location
-const queue = 'user-signup-queue';
+const location = "us-central1"; // Or your desired location
+const queue = "user-signup-queue";
 
 // 1. The function that ENQUEUES the task
 export const onUserSignup = onCall({ cors: true }, async (request) => {
   const validationResult = SignupSchema.safeParse(request.data);
 
   if (!validationResult.success) {
-    throw new HttpsError('invalid-argument', validationResult.error.message);
+    throw new HttpsError("invalid-argument", validationResult.error.message);
   }
 
   const { name, email, password } = validationResult.data;
@@ -38,10 +38,12 @@ export const onUserSignup = onCall({ cors: true }, async (request) => {
 
     const task = {
       httpRequest: {
-        httpMethod: 'POST' as const,
+        httpMethod: "POST" as const,
         url,
-        body: Buffer.from(JSON.stringify({ uid: userRecord.uid, name })).toString('base64'),
-        headers: { 'Content-Type': 'application/json' },
+        body: Buffer.from(
+          JSON.stringify({ uid: userRecord.uid, name }),
+        ).toString("base64"),
+        headers: { "Content-Type": "application/json" },
       },
     };
 
@@ -49,8 +51,11 @@ export const onUserSignup = onCall({ cors: true }, async (request) => {
 
     return { success: true, uid: userRecord.uid };
   } catch (error: any) {
-    console.error('Error during signup:', error);
-    throw new HttpsError('internal', 'An unexpected error occurred during signup.');
+    console.error("Error during signup:", error);
+    throw new HttpsError(
+      "internal",
+      "An unexpected error occurred during signup.",
+    );
   }
 });
 
@@ -59,11 +64,15 @@ export const processSignup = async (req: any, res: any) => {
   const { uid, name } = req.body;
 
   try {
-    const userProfile: UserProfileSchema = { name };
-    await db.collection('users').doc(uid).set(userProfile);
-    res.status(200).send('Successfully processed user signup.');
+    const userProfile: UserProfile = { 
+      name,
+      prefersReducedMotion: false,
+      subscriptionStatus: "inactive" as const
+    };
+    await db.collection("users").doc(uid).set(userProfile);
+    res.status(200).send("Successfully processed user signup.");
   } catch (error) {
-    console.error('Error processing signup task:', error);
-    res.status(500).send('An error occurred while processing the signup.');
+    console.error("Error processing signup task:", error);
+    res.status(500).send("An error occurred while processing the signup.");
   }
 };

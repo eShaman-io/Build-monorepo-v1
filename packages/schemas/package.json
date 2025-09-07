@@ -10,8 +10,12 @@
     "test": "jest",
     "lint": "eslint ."
   },
-  "dependencies": { "zod": "^3.23.8" },
-  "devDependencies": { "typescript": "^5.5.4" },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
   "jest": {
     "preset": "ts-jest/presets/default-esm",
     "globals": {
@@ -23,6 +27,9 @@
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   }
 }

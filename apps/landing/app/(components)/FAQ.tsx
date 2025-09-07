@@ -1,32 +1,37 @@
-"use client"
-import { motion } from "framer-motion"
-import { useState } from "react"
+"use client";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const faqs = [
   {
     question: "What makes eShaman different from other spiritual apps?",
-    answer: "eShaman combines AI-powered Oracle guidance with authentic spiritual practices, lunar cycle tracking, and personalized ritual recommendations. Our crystal-inspired design creates a truly immersive spiritual experience."
+    answer:
+      "eShaman combines AI-powered Oracle guidance with authentic spiritual practices, lunar cycle tracking, and personalized ritual recommendations. Our crystal-inspired design creates a truly immersive spiritual experience.",
   },
   {
     question: "How does the Oracle Chat work?",
-    answer: "Our Oracle uses advanced AI trained on spiritual wisdom traditions, tarot meanings, and astrological insights to provide personalized guidance. Each conversation is tailored to your unique spiritual journey."
+    answer:
+      "Our Oracle uses advanced AI trained on spiritual wisdom traditions, tarot meanings, and astrological insights to provide personalized guidance. Each conversation is tailored to your unique spiritual journey.",
   },
   {
     question: "Can I use eShaman without any spiritual background?",
-    answer: "Absolutely! eShaman is designed for both beginners and experienced practitioners. We provide gentle introductions to spiritual concepts and practices, making ancient wisdom accessible to everyone."
+    answer:
+      "Absolutely! eShaman is designed for both beginners and experienced practitioners. We provide gentle introductions to spiritual concepts and practices, making ancient wisdom accessible to everyone.",
   },
   {
     question: "What's included in the premium subscription?",
-    answer: "Premium includes unlimited Oracle conversations, access to all rituals and meditations, personalized astrological insights, lunar cycle notifications, and exclusive content from spiritual teachers."
+    answer:
+      "Premium includes unlimited Oracle conversations, access to all rituals and meditations, personalized astrological insights, lunar cycle notifications, and exclusive content from spiritual teachers.",
   },
   {
     question: "Is my personal information kept private?",
-    answer: "Yes, we take privacy seriously. Your conversations and personal data are encrypted and never shared. You have full control over your data and can export or delete it at any time."
-  }
-]
+    answer:
+      "Yes, we take privacy seriously. Your conversations and personal data are encrypted and never shared. You have full control over your data and can export or delete it at any time.",
+  },
+];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="py-24 px-6 relative">
@@ -42,7 +47,8 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-moonstone/75 text-lg">
-            Everything you need to know about your spiritual journey with eShaman
+            Everything you need to know about your spiritual journey with
+            eShaman
           </p>
         </motion.div>
 
@@ -71,12 +77,12 @@ export default function FAQ() {
                   ↓
                 </motion.div>
               </button>
-              
+
               <motion.div
                 initial={false}
                 animate={{
                   height: openIndex === index ? "auto" : 0,
-                  opacity: openIndex === index ? 1 : 0
+                  opacity: openIndex === index ? 1 : 0,
                 }}
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
@@ -92,5 +98,5 @@ export default function FAQ() {
         </div>
       </div>
     </section>
-  )
+  );
 }

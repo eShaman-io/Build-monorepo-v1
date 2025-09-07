@@ -1,35 +1,47 @@
-"use client"
-import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
+"use client";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const demoMessages = [
-  { role: "user", content: "I'm feeling uncertain about my career path. What guidance can you offer?" },
-  { role: "assistant", content: "✨ The Star card appears in your reading today. This is a time of hope and renewal. Trust that you are being guided toward your true purpose." },
+  {
+    role: "user",
+    content:
+      "I'm feeling uncertain about my career path. What guidance can you offer?",
+  },
+  {
+    role: "assistant",
+    content:
+      "✨ The Star card appears in your reading today. This is a time of hope and renewal. Trust that you are being guided toward your true purpose.",
+  },
   { role: "user", content: "How can I find more clarity?" },
-  { role: "assistant", content: "🌙 The moon suggests looking within. Consider what brings you joy and energy. Your intuition knows the way forward." }
-]
+  {
+    role: "assistant",
+    content:
+      "🌙 The moon suggests looking within. Consider what brings you joy and energy. Your intuition knows the way forward.",
+  },
+];
 
 export default function OracleDemo() {
-  const [currentMessage, setCurrentMessage] = useState(0)
-  const [isTyping, setIsTyping] = useState(false)
+  const [currentMessage, setCurrentMessage] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTyping(true)
+      setIsTyping(true);
       setTimeout(() => {
-        setCurrentMessage((prev) => (prev + 1) % demoMessages.length)
-        setIsTyping(false)
-      }, 1000)
-    }, 3000)
+        setCurrentMessage((prev) => (prev + 1) % demoMessages.length);
+        setIsTyping(false);
+      }, 1000);
+    }, 3000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="py-24 px-6 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo/5 to-transparent" />
-      
+
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +54,8 @@ export default function OracleDemo() {
             Oracle Chat Demo
           </h2>
           <p className="text-moonstone/75 text-lg max-w-2xl mx-auto">
-            Experience personalized guidance through AI-powered Oracle conversations
+            Experience personalized guidance through AI-powered Oracle
+            conversations
           </p>
         </motion.div>
 
@@ -50,7 +63,9 @@ export default function OracleDemo() {
           <div className="p-6 border-b border-white/10">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-emeraldGlint animate-pulse" />
-              <span className="text-moonstone/70 text-sm">Oracle is online</span>
+              <span className="text-moonstone/70 text-sm">
+                Oracle is online
+              </span>
             </div>
           </div>
 
@@ -61,13 +76,13 @@ export default function OracleDemo() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
-                className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
                   className={`max-w-[80%] p-4 rounded-2xl ${
-                    message.role === 'user'
-                      ? 'bg-auroraTeal/20 border border-auroraTeal/30 text-moonstone'
-                      : 'bg-white/5 border border-white/10 text-moonstone'
+                    message.role === "user"
+                      ? "bg-auroraTeal/20 border border-auroraTeal/30 text-moonstone"
+                      : "bg-white/5 border border-white/10 text-moonstone"
                   }`}
                 >
                   <p className="text-sm leading-relaxed">{message.content}</p>
@@ -91,7 +106,7 @@ export default function OracleDemo() {
                         transition={{
                           duration: 1,
                           repeat: Infinity,
-                          delay: i * 0.2
+                          delay: i * 0.2,
                         }}
                       />
                     ))}
@@ -134,5 +149,5 @@ export default function OracleDemo() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
