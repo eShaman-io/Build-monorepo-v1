@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SignupSchema } from "@esh/schemas";
+import { SignupSchema, SignupData } from "@esh/schemas";
 import { OrbButton } from "./OrbButton";
 import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
 
@@ -17,11 +17,11 @@ export function Signup() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<SignupData>({
     resolver: zodResolver(SignupSchema),
   });
 
-  const onSubmit = async (data: SignupSchema) => {
+  const onSubmit = async (data: SignupData) => {
     setFormStatus("loading");
     setErrorMessage(null);
 
@@ -76,7 +76,7 @@ export function Signup() {
       )}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
       <OrbButton
-        type="submit"
+        onPress={handleSubmit(onSubmit)}
         title={
           formStatus === "loading" ? "Creating Account..." : "Create Account"
         }

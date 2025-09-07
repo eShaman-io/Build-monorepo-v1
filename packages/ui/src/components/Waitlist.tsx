@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { WaitlistSchema } from "@esh/schemas";
+import { WaitlistSchema, WaitlistData } from "@esh/schemas";
 import { OrbButton } from "./OrbButton";
 import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
 
@@ -17,11 +17,11 @@ export function Waitlist() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<WaitlistData>({
     resolver: zodResolver(WaitlistSchema),
   });
 
-  const onSubmit = async (data: { email: string }) => {
+  const onSubmit = async (data: WaitlistData) => {
     setFormStatus("loading");
     setErrorMessage(null);
 
@@ -59,7 +59,7 @@ export function Waitlist() {
       )}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
       <OrbButton
-        type="submit"
+        onPress={handleSubmit(onSubmit)}
         title={formStatus === "loading" ? "Joining..." : "Join the Waitlist"}
         disabled={formStatus === "loading"}
       />

@@ -1,6 +1,9 @@
 import { onCall, HttpsError } from "firebase-functions/v2/https";
 import * as admin from "firebase-admin";
-import { Meditation } from "@esh/schemas";
+import { MeditationSchema } from "@esh/schemas";
+import { z } from "zod";
+
+type MeditationSeed = z.infer<typeof MeditationSchema>;
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {
@@ -8,7 +11,7 @@ if (admin.apps.length === 0) {
 }
 const db = admin.firestore();
 
-const seedData: Meditation[] = [
+const seedData: MeditationSeed[] = [
   {
     title: "Morning Mindfulness",
     description: "Start your day with a clear and focused mind.",

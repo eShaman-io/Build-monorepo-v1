@@ -94,7 +94,7 @@ export function JournalEditor({ onEntrySaved }: JournalEditorProps) {
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
         <OrbButton
-          type="submit"
+          onPress={handleSubmit(onSubmit)}
           title={formStatus === "loading" ? "Saving..." : "Save Entry"}
           disabled={formStatus === "loading"}
         />

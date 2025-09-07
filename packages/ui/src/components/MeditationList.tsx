@@ -22,7 +22,7 @@ export function MeditationList() {
       q,
       (snapshot) => {
         const allMeditations = snapshot.docs.map(
-          (doc) => ({ id: doc.id, ...doc.data() }) as Meditation,
+          (doc) => ({ id: doc.id, ...doc.data() } as Meditation),
         );
         setMeditations(allMeditations);
         setLoading(false);

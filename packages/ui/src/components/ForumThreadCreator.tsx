@@ -105,7 +105,7 @@ export function ForumThreadCreator({
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
         <OrbButton
-          type="submit"
+          onPress={handleSubmit(onSubmit)}
           title={formStatus === "loading" ? "Posting..." : "Post Thread"}
           disabled={formStatus === "loading"}
         />

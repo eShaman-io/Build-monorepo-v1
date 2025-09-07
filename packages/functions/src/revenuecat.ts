@@ -1,6 +1,6 @@
 import { onRequest, HttpsError } from "firebase-functions/v2/https";
-import * as admin from "firebase-admin";
-import { Revenuecat } from "revenuecat";
+// import * as admin from "firebase-admin";
+// import { Revenuecat } from "revenuecat";
 
 // NOTE: In a real app, use Firebase secrets for these keys
 // const revenueCat = new Revenuecat(process.env.REVENUECAT_API_KEY!);

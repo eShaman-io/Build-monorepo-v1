@@ -92,7 +92,7 @@ export function Profile() {
       )}
 
       <OrbButton
-        type="submit"
+        onPress={handleSubmit(onSubmit)}
         title={formStatus === "loading" ? "Saving..." : "Save Profile"}
         disabled={formStatus === "loading"}
       />

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RitualSchema } from "@esh/schemas";
+import { RitualSchema, Ritual } from "@esh/schemas";
 import { OrbButton } from "./OrbButton";
 import { GlassCard } from "./GlassCard";
 import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
@@ -71,7 +71,7 @@ export function RitualCreator({ onRitualCreated }: RitualCreatorProps) {
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
         <OrbButton
-          type="submit"
+          onPress={handleSubmit(onSubmit)}
           title={formStatus === "loading" ? "Creating..." : "Create Ritual"}
           disabled={formStatus === "loading"}
         />

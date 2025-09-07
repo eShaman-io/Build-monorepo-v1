@@ -47,7 +47,7 @@ export function Pricing() {
           sessionId: (data as any).sessionId,
         });
         if (error) {
-          setError(error.message);
+          setError(error.message || "Payment error occurred");
         }
       }
     } catch (err: any) {

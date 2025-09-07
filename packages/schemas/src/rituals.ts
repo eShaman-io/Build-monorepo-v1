@@ -19,5 +19,5 @@ export const ScheduledRitualSchema = z.object({
   status: z.enum(["upcoming", "completed"]).default("upcoming"),
 });
 
-export type Ritual = z.infer<typeof RitualSchema>;
+export type Ritual = z.infer<typeof RitualSchema> & { id: string };
 export type ScheduledRitual = z.infer<typeof ScheduledRitualSchema>;

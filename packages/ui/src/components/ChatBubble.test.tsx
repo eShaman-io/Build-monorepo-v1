@@ -4,14 +4,12 @@ import { ChatBubble } from "./ChatBubble";
 
 describe("ChatBubble", () => {
   it("renders a user message", () => {
-    const message = { role: "user" as const, content: "User message" };
-    const { getByText } = render(<ChatBubble message={message} />);
+    const { getByText } = render(<ChatBubble message="User message" role="user" />);
     expect(getByText("User message")).toBeTruthy();
   });
 
   it("renders an oracle message", () => {
-    const message = { role: "oracle" as const, content: "Oracle message" };
-    const { getByText } = render(<ChatBubble message={message} />);
+    const { getByText } = render(<ChatBubble message="Oracle message" role="assistant" />);
     expect(getByText("Oracle message")).toBeTruthy();
   });
 });

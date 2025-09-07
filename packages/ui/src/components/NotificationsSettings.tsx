@@ -24,7 +24,7 @@ export function NotificationsSettings() {
   const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    Notifications.getPermissionsAsync().then(setStatus);
+    Notifications.getPermissionsAsync().then((result) => setStatus(result.status));
   }, []);
 
   const requestPermissions = async () => {

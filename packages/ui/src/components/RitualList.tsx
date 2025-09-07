@@ -24,7 +24,7 @@ export function RitualList() {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const userRituals = snapshot.docs.map(
-        (doc) => ({ id: doc.id, ...doc.data() }) as Ritual,
+        (doc) => ({ id: doc.id, ...doc.data() } as Ritual),
       );
       setRituals(userRituals);
       setLoading(false);

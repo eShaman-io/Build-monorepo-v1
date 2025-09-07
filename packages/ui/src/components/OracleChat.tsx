@@ -45,8 +45,7 @@ export function OracleChat() {
     });
   }, [messages]);
 
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSendMessage = async () => {
     if (!inputText.trim()) return;
 
     setIsLoading(true);
@@ -66,7 +65,7 @@ export function OracleChat() {
     <div className="flex h-[70vh] w-full max-w-2xl flex-col rounded-lg bg-brand-primary-light p-4 shadow-lg">
       <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-2">
         {messages.map((msg, index) => (
-          <ChatBubble key={index} message={msg} />
+          <ChatBubble key={index} message={msg.content} role={msg.role} timestamp={msg.timestamp} />
         ))}
         {isLoading && (
           <div className="self-start rounded-lg bg-brand-primary p-3">
@@ -86,7 +85,7 @@ export function OracleChat() {
           placeholder="Ask the oracle..."
           className="flex-1 rounded-lg bg-brand-primary p-4 text-white"
         />
-        <OrbButton type="submit" title="Send" disabled={isLoading} />
+        <OrbButton onPress={handleSendMessage} title="Send" disabled={isLoading} />
       </form>
     </div>
   );

@@ -8,4 +8,4 @@ export const MeditationSchema = z.object({
   category: z.enum(["Mindfulness", "Sleep", "Anxiety"]),
 });
 
-export type Meditation = z.infer<typeof MeditationSchema>;
+export type Meditation = z.infer<typeof MeditationSchema> & { id: string };

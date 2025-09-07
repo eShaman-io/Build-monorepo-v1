@@ -34,7 +34,7 @@ export function JournalFeed() {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const userEntries = snapshot.docs.map(
-        (doc) => ({ id: doc.id, ...doc.data() }) as JournalEntry,
+        (doc) => ({ id: doc.id, ...doc.data() } as JournalEntry),
       );
       setEntries(userEntries);
       setLoading(false);

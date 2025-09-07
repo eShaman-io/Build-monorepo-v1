@@ -12,9 +12,12 @@ export function GlassCard({ children, className }: GlassCardProps) {
     <BlurView
       intensity={20}
       tint="dark"
-      className={`overflow-hidden rounded-2xl ${className}`}
+      style={{
+        borderRadius: 16,
+        overflow: "hidden",
+      }}
     >
-      <View className="p-4">{children}</View>
+      <View className={`p-4 ${className}`}>{children}</View>
     </BlurView>
   );
 }

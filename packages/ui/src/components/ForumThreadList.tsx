@@ -19,7 +19,7 @@ export function ForumThreadList() {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const allThreads = snapshot.docs.map(
-        (doc) => ({ id: doc.id, ...doc.data() }) as ForumThread,
+        (doc) => ({ id: doc.id, ...doc.data() } as ForumThread),
       );
       setThreads(allThreads);
       setLoading(false);

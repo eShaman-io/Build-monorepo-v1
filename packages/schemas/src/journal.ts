@@ -8,4 +8,4 @@ export const JournalEntrySchema = z.object({
   updatedAt: z.any(), // Firestore server timestamp
 });
 
-export type JournalEntry = z.infer<typeof JournalEntrySchema>;
+export type JournalEntry = z.infer<typeof JournalEntrySchema> & { id: string };

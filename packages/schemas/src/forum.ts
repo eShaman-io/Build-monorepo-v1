@@ -18,4 +18,4 @@ export const ForumThreadSchema = z.object({
 });
 
 export type ForumPost = z.infer<typeof ForumPostSchema>;
-export type ForumThread = z.infer<typeof ForumThreadSchema>;
+export type ForumThread = z.infer<typeof ForumThreadSchema> & { id: string };
