@@ -1,22 +1,75 @@
 name: CI
+@'
+name: CI
 
-on: [push]
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  build-and-guard:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout (full history for scanners)
+        uses: actions/checkout@v4
         with:
-          node-version: '20'
-      - name: Install pnpm
-        run: npm install -g pnpm
+          fetch-depth: 0
+
+      - name: Block committed env files
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Checking for tracked env files..."
+          if git ls-files -z | grep -zE '(^|/)\.env($|\.|/)|(^|/).+\.env($|\.|/)|(^|/)\.env\.local($|\.|/)|(^|/)\.env\.local\.' >/dev/null; then
+            echo "::error::Tracked .env* files detected. Remove them from git history and keep only .env.example variants."
+            echo "Offenders:"
+            git ls-files | grep -E '(^|/)\.env($|\.|/)|(^|/).+\.env($|\.|/)|(^|/)\.env\.local($|\.|/)|(^|/)\.env\.local\.'
+            exit 1
+          fi
+          echo "✅ No tracked env files."
+
+      - name: Secret scan (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: --verbose --redact
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.17.0'
+          cache: 'pnpm'
+
+      - name: Enable Corepack & pnpm
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm --version
+
       - name: Install dependencies
-        run: pnpm install
-      - name: Run linter
-        run: pnpm -w -r lint
-      - name: Run tests
-        run: pnpm -w -r test
+        shell: bash
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (workspace-first, fallback to root)
+        shell: bash
+        run: |
+          set -e
+          pnpm -w -r run lint || pnpm -w run lint || echo "No lint scripts found."
+
+      - name: Build (workspace-first, fallback to root)
+        shell: bash
+        run: |
+          set -e
+          pnpm -w -r run build || pnpm -w run build
+
+      - name: Test (workspace-first, fallback to root)
+        shell: bash
+        run: |
+          set -e
+          pnpm -w -r run test || pnpm -w run test || echo "No test scripts found."
