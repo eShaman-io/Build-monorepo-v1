@@ -1,3 +1,6 @@
-import * as functions from "firebase-functions"
-import { waitlistAdd } from "./waitlist"
-export const waitlist_add = functions.https.onRequest(waitlistAdd)
+import { addToWaitlist } from './waitlist';
+import { createUser } from './user';
+import { updateUserProfile } from './profile';
+import { registerPushToken } from './notifications';
+
+export { addToWaitlist, createUser, updateUserProfile, registerPushToken };
