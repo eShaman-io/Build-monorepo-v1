@@ -7,7 +7,7 @@ This document outlines the next phase of development for the eShaman platform, f
 -   **(L)** **Integrate Core Features into Mobile App:**
     -   Build native mobile screens for all major features currently on the web: Personalized Rituals, Journaling, Community Forum, and User Profiles.
     -   Ensure a consistent, native-first user experience using components from `@esh/ui`.
--   **(M)** **Mobile Subscription Flow:** Implement the Stripe subscription flow within the mobile app, likely using RevenueCat or `react-native-purchases` to handle in-app purchases and connect them to the Stripe backend.
+-   **(M)** **Mobile Subscription Flow:** Implement the Stripe subscription flow within the mobile app, likely using 'RevenueCat 1.0.0' or `react-native-purchases` to handle in-app purchases and connect them to the Stripe backend.
 
 ## Medium Priority - Scalability & Architecture
 
