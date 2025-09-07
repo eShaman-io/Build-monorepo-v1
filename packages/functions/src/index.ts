@@ -4,6 +4,7 @@ import { updateUserProfile } from './profile';
 import { registerPushToken } from './notifications';
 import { createCheckoutSession } from './stripe';
 import { createRitual, scheduleRitual } from './rituals';
+import { seedMeditations } from './meditations';
 
 export {
   addToWaitlist,
@@ -13,4 +14,5 @@ export {
   createCheckoutSession,
   createRitual,
   scheduleRitual,
+  seedMeditations,
 };

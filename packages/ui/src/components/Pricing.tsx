@@ -1,11 +1,12 @@
 'use client';
 
-import React, auseState } from 'react';
+import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { getFirebaseFunctions, httpsCallable } from '@esh/firebase-client';
 import { OrbButton } from './OrbButton';
 import { GlassCard } from './GlassCard';
 import { useAuth } from './AuthProvider';
+import { useTranslation } from 'react-i18next';
 
 // NOTE: In a real app, the Stripe public key and price ID would be in environment variables.
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!);
@@ -13,6 +14,7 @@ const PREMIUM_PRICE_ID = 'price_1PQRgRDEa5giQ3_example_premium'; // Example Pric
 
 export function Pricing() {
   const { user } = useAuth();
+  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -52,11 +54,11 @@ export function Pricing() {
 
   return (
     <GlassCard className="p-8">
-      <h2 className="mb-4 text-center text-4xl font-bold">Premium Subscription</h2>
+      <h2 className="mb-4 text-center text-4xl font-bold">{t('premium_subscription')}</h2>
       <p className="mb-8 text-center text-brand-neutral-dark">Unlock the full eShaman experience.</p>
       
       <ul className="mb-8 space-y-2">
-        <li>✓ Unlimited Oracle conversations</li>
+        <li>✓ {t('unlimited_oracle')}</li>
         <li>✓ Access to all rituals and meditations</li>
         <li>✓ Personalized astrological insights</li>
         <li>✓ Lunar cycle notifications</li>
@@ -65,7 +67,7 @@ export function Pricing() {
 
       <OrbButton
         onPress={handleCheckout}
-        title={isLoading ? 'Redirecting...' : 'Subscribe Now'}
+        title={isLoading ? 'Redirecting...' : t('subscribe_now')}
         disabled={isLoading}
       />
       {error && <p className="mt-4 text-center text-red-500">{error}</p>}
