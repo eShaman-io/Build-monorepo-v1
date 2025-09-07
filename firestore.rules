@@ -1,0 +1,46 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // By default, deny all reads and writes
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Allow authenticated users to manage their own user data
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Allow authenticated users to manage their own journal entries
+    match /journalEntries/{entryId} {
+      allow read, create, update, delete: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+    
+    // --- Forum Rules ---
+    match /forumThreads/{threadId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    match /forumThreads/{threadId}/posts/{postId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Meditations Rules ---
+    // All authenticated users can read meditations
+    match /meditations/{meditationId} {
+      allow read: if request.auth != null;
+      // Write access can be restricted to admins in the future
+      allow write: if false;
+    }
+
+    // Example: Publicly readable content
+    match /content/{docId} {
+      allow get: if true;
+    }
+  }
+}

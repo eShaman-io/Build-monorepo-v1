@@ -6,7 +6,6 @@ describe('Firebase Client', () => {
   });
 
   it('should initialize firebase', () => {
-    const { initFirebase } = require('../');
     const config = {
       apiKey: 'test',
       authDomain: 'test',
@@ -22,7 +21,6 @@ describe('Firebase Client', () => {
   });
 
   it('should throw an error if firebase is not initialized', () => {
-    const { getFirebaseServices } = require('../');
     expect(() => getFirebaseServices()).toThrow('Firebase not initialized. Call initFirebase() first.');
   });
 });

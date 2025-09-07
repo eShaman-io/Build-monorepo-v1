@@ -1,6 +1,10 @@
 import type { Config } from "tailwindcss"
 
 export default {
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  },
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -14,7 +18,7 @@ export default {
         moonstone: "#DFE7FF",
         roseQuartz: "#FFC1E3",
         amberBloom: "#FFD58A",
-        emeraldGlint: "#00FFA3"
+        emeraldGlin: "#00FFA3"
       },
       fontFamily: {
         serif: ["Playfair Display", "serif"],

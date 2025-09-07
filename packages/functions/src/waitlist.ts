@@ -1,27 +1,29 @@
-import type { Request, Response } from "express"
-import cors from "cors"
-import * as admin from "firebase-admin"
-import crypto from "crypto"
-import { WaitlistPayload } from "@esh/schemas/src"
+import { onCall, HttpsError } from 'firebase-functions/v2/https';
+import * as admin from 'firebase-admin';
+import { WaitlistSchema } from '@esh/schemas';
 
-if (admin.apps.length === 0) {
-  admin.initializeApp()
-}
+admin.initializeApp();
+const db = admin.firestore();
 
-export const waitlistAdd = async (req: Request, res: Response) => {
-  cors({ origin: true })(req, res, async () => {
-    if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-    try {
-      const body = req.body ?? {}
-      const data = WaitlistPayload.parse(body)
-      const emailHash = crypto.createHash("sha256").update(data.email.toLowerCase()).digest("hex")
-      await admin.firestore().collection("waitlist").doc(emailHash).set({
-        email: data.email, source: data.source, createdAt: admin.firestore.FieldValue.serverTimestamp()
-      }, { merge: true })
-      return res.status(200).json({ ok: true })
-    } catch (e: unknown) {
-      const message = e instanceof Error ? e.message : "Invalid payload"
-      return res.status(400).json({ ok: false, error: message })
-    }
-  })
-}
+export const addToWaitlist = onCall({ cors: true }, async (request) => {
+  const validationResult = WaitlistSchema.safeParse(request.data);
+
+  if (!validationResult.success) {
+    throw new HttpsError('invalid-argument', validationResult.error.message);
+  }
+
+  const { email } = validationResult.data;
+
+  try {
+    const waitlistRef = db.collection('waitlist');
+    await waitlistRef.doc(email).set({
+      email,
+      timestamp: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    return { success: true, message: 'Successfully added to waitlist.' };
+  } catch (error) {
+    console.error('Error adding to waitlist:', error);
+    throw new HttpsError('internal', 'An unexpected error occurred.');
+  }
+});

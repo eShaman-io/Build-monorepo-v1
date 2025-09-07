@@ -20,16 +20,17 @@
     "framer-motion": "^11.0.0",
     "lottie-react": "^2.4.1",
     "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-hook-form": "^7.52.1",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@stripe/stripe-js": "^4.1.0"
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
     "@types/node": "^20.14.12",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.20",
     "babel-jest": "^30.1.2",
     "eslint": "^8.57.0",

@@ -10,8 +10,13 @@
     "test": "jest",
     "lint": "eslint ."
   },
-  "dependencies": { "firebase": "^10.12.2" },
-  "devDependencies": { "typescript": "^5.5.4" },
+  "dependencies": {
+    "firebase": "^10.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.13",
+    "typescript": "^5.5.4"
+  },
   "jest": {
     "preset": "ts-jest/presets/default-esm",
     "globals": {
@@ -23,6 +28,9 @@
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   }
 }

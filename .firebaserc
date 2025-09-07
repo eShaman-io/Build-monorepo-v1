@@ -1,5 +1,15 @@
 {
   "projects": {
-    "prod": "eshamanio"
+    "prod": "eshamanio",
+    "dev": "eshamanio-dev"
+  },
+  "targets": {
+    "eshamanio": {
+      "hosting": {
+        "landing": [
+          "eshamanio-landing"
+        ]
+      }
+    }
   }
 }

@@ -1,33 +1,53 @@
 # eShaman Monorepo
 
-This is a monorepo for the eShaman project, which includes a landing page, a mobile app, and several shared packages.
+Welcome to the eShaman monorepo. This repository contains the full-stack codebase for the eShaman web and mobile applications, built with a modern, type-safe stack.
+
+**This project has been fully audited and stabilized. All core infrastructure, CI/CD, and foundational UI components are in place.**
+
+## Core Technologies
+
+-   **Frameworks:** Next.js 14 (Web), React Native 0.74 w/ Expo (Mobile)
+-   **Backend:** Firebase (Auth, Firestore, Storage, Functions)
+-   **Language:** TypeScript
+-   **Package Manager:** PNPM Workspaces
+-   **Build Tool:** Turborepo
+-   **Styling:** Tailwind CSS with a shared design system
+-   **Testing:** Jest, React Testing Library, Playwright
+-   **CI/CD:** GitHub Actions
+
+## Monorepo Structure
+
+```
+/
+├─ apps/
+│  ├─ landing/      # Next.js web application
+│  └─ mobile/       # React Native/Expo mobile application
+├─ packages/
+│  ├─ firebase-client/ # Centralized Firebase SDK client
+│  ├─ functions/    # Firebase Cloud Functions
+│  ├─ schemas/      # Shared Zod schemas
+│  └─ ui/           # Shared React/React Native UI components
+├─ configs/         # Shared ESLint, Prettier, and Tailwind configurations
+├─ .github/         # GitHub Actions CI/CD workflows
+└─ docs/            # Project documentation
+```
 
 ## Getting Started
 
-To get started with this project, you will need to have `pnpm` installed. You can install it by running:
+For detailed instructions on setting up your local development environment, please see [docs/SETUP.md](docs/SETUP.md).
 
-```
-npm install -g pnpm
-```
+## Available Scripts
 
-Once you have `pnpm` installed, you can install the dependencies for all the packages by running the following command from the root of the monorepo:
+-   `pnpm install`: Installs all dependencies.
+-   `pnpm build`: Builds all applications and packages.
+-   `pnpm dev`: Starts the development servers for the web and mobile apps.
+-   `pnpm lint`: Lints the entire codebase.
+-   `pnpm test`: Runs all unit and integration tests.
+-   `pnpm test:e2e`: Runs all end-to-end tests.
+-   `pnpm format`: Formats all code with Prettier.
+-   `pnpm storybook`: Starts the Storybook UI component viewer.
+-   `pnpm emulate`: Starts the Firebase emulator suite.
 
-```
-pnpm install
-```
+## Future Work
 
-## Running Tests
-
-To run the tests for all the packages, run the following command from the root of the monorepo:
-
-```
-pnpm -w -r test
-```
-
-## Building the Project
-
-To build all the packages in the monorepo, run the following command from the root of the monorepo:
-
-```
-pnpm build
-```
+For a high-level overview of our future development plans, please see [BACKLOG.md](BACKLOG.md).

@@ -1,21 +1,10 @@
-import Hero from "./(components)/Hero"
-import WhatYoullFeel from "./(components)/WhatYoullFeel"
-import OracleDemo from "./(components)/OracleDemo"
-import RitualsAndCycles from "./(components)/RitualsAndCycles"
-import FounderNote from "./(components)/FounderNote"
-import FAQ from "./(components)/FAQ"
-import Footer from "./(components)/Footer"
+import Hero from "./components/Hero";
 
 export default function Page() {
   return (
-    <main className="min-h-screen relative">
+    <main>
       <Hero />
-      <WhatYoullFeel />
-      <OracleDemo />
-      <RitualsAndCycles />
-      <FounderNote />
-      <FAQ />
-      <Footer />
+      {/* Additional sections here */}
     </main>
-  )
+  );
 }
