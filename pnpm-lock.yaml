@@ -246,7 +246,7 @@ importers:
         version: 7.28.4
       jest-expo:
         specifier: ^53.0.9
-        version: 53.0.9(@babel/core@7.28.4)(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-dom@18.3.1(react@18.2.0))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0)(webpack@5.101.3(esbuild@0.25.9))
+        version: 53.0.9(@babel/core@7.28.4)(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-dom@18.3.1(react@18.2.0))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0)(webpack@5.101.3(esbuild@0.25.9))
       tailwindcss:
         specifier: ^3.4.9
         version: 3.4.17
@@ -343,12 +343,42 @@ importers:
 
   packages/ui:
     dependencies:
+      '@esh/firebase-client':
+        specifier: workspace:*
+        version: link:../firebase-client
+      '@esh/schemas':
+        specifier: workspace:*
+        version: link:../schemas
+      '@hookform/resolvers':
+        specifier: ^3.10.0
+        version: 3.10.0(react-hook-form@7.62.0(react@18.2.0))
+      '@stripe/stripe-js':
+        specifier: ^4.10.0
+        version: 4.10.0
+      '@types/node':
+        specifier: ^24.3.1
+        version: 24.3.1
+      expo-blur:
+        specifier: ~13.0.3
+        version: 13.0.3(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))
+      expo-device:
+        specifier: ~6.0.2
+        version: 6.0.2(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))
+      expo-notifications:
+        specifier: ~0.28.19
+        version: 0.28.19(encoding@0.1.13)(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))
+      firebase:
+        specifier: ^10.14.1
+        version: 10.14.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0)))
       nativewind:
         specifier: ^2.0.11
         version: 2.0.11(react@18.2.0)(tailwindcss@3.4.17)
       react:
         specifier: 18.2.0
         version: 18.2.0
+      react-hook-form:
+        specifier: ^7.62.0
+        version: 7.62.0(react@18.2.0)
       react-native:
         specifier: 0.74.5
         version: 0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0)
@@ -361,7 +391,7 @@ importers:
     devDependencies:
       '@testing-library/react-native':
         specifier: ^13.3.3
-        version: 13.3.3(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 13.3.3(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/react':
         specifier: ^18.2.6
         version: 18.3.24
@@ -3148,6 +3178,9 @@ packages:
 
   '@types/node@22.18.1':
     resolution: {integrity: sha512-rzSDyhn4cYznVG+PCzGe1lwuMYJrcBS1fc3JqSa2PvtABwWo+dZ1ij5OVok3tqfpEBCBoaR4d7upFJk73HRJDw==}
+
+  '@types/node@24.3.1':
+    resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
 
   '@types/prop-types@15.7.15':
     resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
@@ -9111,6 +9144,9 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici-types@7.10.0:
+    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+
   undici@6.19.7:
     resolution: {integrity: sha512-HR3W/bMGPSr90i8AAp2C4DM3wChFdJPLrWYpIS++LxS8K+W535qftjt+4MyjNYHeWabMj1nvtmLIi7l++iq91A==}
     engines: {node: '>=18.17'}
@@ -13261,7 +13297,7 @@ snapshots:
     optionalDependencies:
       jest: 30.1.3(@types/node@20.19.13)(esbuild-register@3.6.0(esbuild@0.25.9))
 
-  '@testing-library/react-native@13.3.3(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@testing-library/react-native@13.3.3(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       jest-matcher-utils: 30.1.2
       picocolors: 1.1.1
@@ -13271,7 +13307,7 @@ snapshots:
       react-test-renderer: 18.2.0(react@18.2.0)
       redent: 3.0.0
     optionalDependencies:
-      jest: 30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9))
+      jest: 30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9))
 
   '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -13460,6 +13496,10 @@ snapshots:
   '@types/node@22.18.1':
     dependencies:
       undici-types: 6.21.0
+
+  '@types/node@24.3.1':
+    dependencies:
+      undici-types: 7.10.0
 
   '@types/prop-types@15.7.15': {}
 
@@ -15317,7 +15357,7 @@ snapshots:
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-react: 7.37.5(eslint@8.57.1)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.57.1)
@@ -15351,7 +15391,7 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -15366,7 +15406,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.42.0(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -17210,7 +17250,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-cli@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
+  jest-cli@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
     dependencies:
       '@jest/core': 30.1.3(esbuild-register@3.6.0(esbuild@0.25.9))
       '@jest/test-result': 30.1.3
@@ -17218,7 +17258,7 @@ snapshots:
       chalk: 4.1.2
       exit-x: 0.2.2
       import-local: 3.2.0
-      jest-config: 30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9))
+      jest-config: 30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9))
       jest-util: 30.0.5
       jest-validate: 30.1.0
       yargs: 17.7.2
@@ -17262,7 +17302,7 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-config@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
+  jest-config@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
     dependencies:
       '@babel/core': 7.28.4
       '@jest/get-type': 30.1.0
@@ -17289,7 +17329,7 @@ snapshots:
       slash: 3.0.0
       strip-json-comments: 3.1.1
     optionalDependencies:
-      '@types/node': 22.18.1
+      '@types/node': 24.3.1
       esbuild-register: 3.6.0(esbuild@0.25.9)
     transitivePeerDependencies:
       - babel-plugin-macros
@@ -17367,7 +17407,7 @@ snapshots:
       jest-util: 30.0.5
       jest-validate: 30.1.0
 
-  jest-expo@53.0.9(@babel/core@7.28.4)(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-dom@18.3.1(react@18.2.0))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0)(webpack@5.101.3(esbuild@0.25.9)):
+  jest-expo@53.0.9(@babel/core@7.28.4)(expo@51.0.39(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(encoding@0.1.13)(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)))(react-dom@18.3.1(react@18.2.0))(react-native@0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0))(react@18.2.0)(webpack@5.101.3(esbuild@0.25.9)):
     dependencies:
       '@expo/config': 11.0.13
       '@expo/json-file': 9.1.5
@@ -17379,7 +17419,7 @@ snapshots:
       jest-environment-jsdom: 29.7.0
       jest-snapshot: 29.7.0
       jest-watch-select-projects: 2.0.0
-      jest-watch-typeahead: 2.2.1(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)))
+      jest-watch-typeahead: 2.2.1(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)))
       json5: 2.2.3
       lodash: 4.17.21
       react-native: 0.74.5(@babel/core@7.28.4)(@babel/preset-env@7.28.3(@babel/core@7.28.4))(@types/react@18.3.24)(encoding@0.1.13)(react@18.2.0)
@@ -17659,11 +17699,11 @@ snapshots:
       chalk: 3.0.0
       prompts: 2.4.2
 
-  jest-watch-typeahead@2.2.1(jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9))):
+  jest-watch-typeahead@2.2.1(jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9))):
     dependencies:
       ansi-escapes: 6.2.1
       chalk: 4.1.2
-      jest: 30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9))
+      jest: 30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9))
       jest-regex-util: 29.6.3
       jest-watcher: 29.7.0
       slash: 5.1.0
@@ -17726,12 +17766,12 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest@30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
+  jest@30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9)):
     dependencies:
       '@jest/core': 30.1.3(esbuild-register@3.6.0(esbuild@0.25.9))
       '@jest/types': 30.0.5
       import-local: 3.2.0
-      jest-cli: 30.1.3(@types/node@22.18.1)(esbuild-register@3.6.0(esbuild@0.25.9))
+      jest-cli: 30.1.3(@types/node@24.3.1)(esbuild-register@3.6.0(esbuild@0.25.9))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -21017,6 +21057,8 @@ snapshots:
   undici-types@5.26.5: {}
 
   undici-types@6.21.0: {}
+
+  undici-types@7.10.0: {}
 
   undici@6.19.7: {}
 
