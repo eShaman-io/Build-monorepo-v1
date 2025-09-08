@@ -2,14 +2,15 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { OpenAI } from "openai";
 
-// NOTE: In a real app, use Firebase secrets for the OpenAI API key
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-// Ensure Firebase is initialized
+// Ensure Firebase is initialized (idempotent)
 if (admin.apps.length === 0) {
   admin.initializeApp();
 }
 const db = admin.firestore();
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 export const onMessageCreate = functions.firestore
   .document("chats/{chatId}/messages/{messageId}")
