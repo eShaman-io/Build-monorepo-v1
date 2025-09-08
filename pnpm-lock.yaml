@@ -8,6 +8,15 @@ importers:
 
   .:
     devDependencies:
+      '@babel/preset-env':
+        specifier: ^7.28.3
+        version: 7.28.3(@babel/core@7.28.4)
+      '@babel/preset-react':
+        specifier: ^7.27.1
+        version: 7.27.1(@babel/core@7.28.4)
+      '@babel/preset-typescript':
+        specifier: ^7.27.1
+        version: 7.27.1(@babel/core@7.28.4)
       '@playwright/test':
         specifier: ^1.45.1
         version: 1.55.0
@@ -50,6 +59,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^8.42.0
         version: 8.42.0(eslint@8.57.1)(typescript@5.9.2)
+      babel-jest:
+        specifier: ^30.1.2
+        version: 30.1.2(@babel/core@7.28.4)
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -1474,7 +1486,7 @@ packages:
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {'0': node >=0.10.0}
+    engines: {node: '>=0.10.0'}
 
   '@expo/cli@0.18.31':
     resolution: {integrity: sha512-v9llw9fT3Uv+TCM6Xllo54t672CuYtinEQZ2LPJ2EJsCwuTc4Cd2gXQaouuIVD21VoeGQnr5JtJuWbF97sBKzQ==}
