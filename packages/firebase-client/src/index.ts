@@ -1,40 +1,40 @@
-import { initializeApp, getApps, FirebaseApp } from "firebase/app";
-import { getAuth, Auth } from "firebase/auth";
-import { getFirestore, Firestore } from "firebase/firestore";
-import { getFunctions, Functions, httpsCallable } from "firebase/functions";
-import { getStorage, FirebaseStorage } from "firebase/storage";
+import { initializeApp, getApps, FirebaseApp } from "firebase/app"
+import { getAuth, Auth } from "firebase/auth"
+import { getFirestore, Firestore } from "firebase/firestore"
+import { getFunctions, Functions, httpsCallable } from "firebase/functions"
+import { getStorage, FirebaseStorage } from "firebase/storage"
 
 export type FirebaseClientConfig = {
-  apiKey: string;
-  authDomain: string;
-  projectId: string;
-  storageBucket?: string;
-  messagingSenderId?: string;
-  appId?: string;
-  measurementId?: string;
-};
-
-export interface FirebaseServices {
-  app: FirebaseApp;
-  auth: Auth;
-  db: Firestore;
-  functions: Functions;
-  storage: FirebaseStorage;
+  apiKey: string
+  authDomain: string
+  projectId: string
+  storageBucket?: string
+  messagingSenderId?: string
+  appId?: string
+  measurementId?: string
 }
 
-let firebaseServices: FirebaseServices | null = null;
+export interface FirebaseServices {
+  app: FirebaseApp
+  auth: Auth
+  db: Firestore
+  functions: Functions
+  storage: FirebaseStorage
+}
+
+let firebaseServices: FirebaseServices | null = null
 
 export function initFirebase(config: FirebaseClientConfig): FirebaseServices {
   if (firebaseServices) {
-    return firebaseServices;
+    return firebaseServices
   }
 
-  let app: FirebaseApp;
-
+  let app: FirebaseApp
+  
   if (getApps().length === 0) {
-    app = initializeApp(config);
+    app = initializeApp(config)
   } else {
-    app = getApps()[0];
+    app = getApps()[0]
   }
 
   firebaseServices = {
@@ -42,35 +42,36 @@ export function initFirebase(config: FirebaseClientConfig): FirebaseServices {
     auth: getAuth(app),
     db: getFirestore(app),
     functions: getFunctions(app),
-    storage: getStorage(app),
-  };
+    storage: getStorage(app)
+  }
 
-  return firebaseServices;
+  return firebaseServices
 }
 
 export function getFirebaseServices(): FirebaseServices {
   if (!firebaseServices) {
-    throw new Error("Firebase not initialized. Call initFirebase() first.");
+    throw new Error('Firebase not initialized. Call initFirebase() first.')
   }
-  return firebaseServices;
+  return firebaseServices
 }
 
 // Individual service getters for convenience
 export function getFirebaseAuth(): Auth {
-  return getFirebaseServices().auth;
+  return getFirebaseServices().auth
 }
 
 export function getFirebaseDb(): Firestore {
-  return getFirebaseServices().db;
+  return getFirebaseServices().db
 }
 
 export function getFirebaseFunctions(): Functions {
-  return getFirebaseServices().functions;
+  return getFirebaseServices().functions
 }
 
 export function getFirebaseStorage(): FirebaseStorage {
-  return getFirebaseServices().storage;
+  return getFirebaseServices().storage
 }
 
 // Legacy export for backward compatibility
-export { getAuth, getFirestore, httpsCallable };
+export { getAuth, getFirestore, httpsCallable }
+export const getServices = () => firebaseServices;

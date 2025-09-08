@@ -1,5 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
-  "compilerOptions": { "jsx": "react-jsx" },
-  "include": ["app", "index.ts", "App.tsx"]
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "include": ["app"],
+  "exclude": ["node_modules", "dist"]
 }

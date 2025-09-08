@@ -1,15 +1,10 @@
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest',
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  globals: {
-    'ts-jest': {
-      babelConfig: true,
-    },
-  },
+  projects: [
+    '<rootDir>/packages/ui/jest.config.cjs',
+    '<rootDir>/packages/firebase-client',
+    '<rootDir>/packages/schemas',
+    '<rootDir>/packages/functions',
+    '<rootDir>/apps/landing/jest.config.cjs',
+    '<rootDir>/apps/mobile/jest.config.cjs',
+  ],
 };

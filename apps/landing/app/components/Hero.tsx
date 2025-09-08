@@ -13,19 +13,9 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative isolate overflow-hidden">
       {!shouldReduce && inView ? (
-        <Lottie
-          animationData={heroAnim}
-          loop
-          autoplay
-          className="absolute inset-0 -z-10"
-        />
+        <Lottie animationData={heroAnim} loop autoplay className="absolute inset-0 -z-10" />
       ) : (
-        <Image
-          src="/no-motion.png"
-          alt=""
-          fill
-          className="object-cover -z-10"
-        />
+        <Image src="/no-motion.png" alt="" className="absolute inset-0 -z-10 w-full h-full object-cover" layout="fill" />
       )}
 
       <div className="mx-auto max-w-7xl px-6 py-28 text-center">

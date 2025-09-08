@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
-import Purchases, { PurchasesOffering } from "react-native-purchases";
-import { GlassCard } from "./GlassCard";
-import { OrbButton } from "./OrbButton";
+import React, { useState, useEffect } from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
+import Purchases, { PurchasesOffering } from 'react-native-purchases';
+import { GlassCard } from './GlassCard';
+import { OrbButton } from './OrbButton';
 
 export function MobilePricing() {
   const [offering, setOffering] = useState<PurchasesOffering | null>(null);
@@ -18,9 +18,8 @@ export function MobilePricing() {
         if (offerings.current) {
           setOffering(offerings.current);
         }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (_e) {
-        setError("Could not fetch subscription plans.");
+      } catch {
+        setError('Could not fetch subscription plans.');
       }
     };
     getOfferings();
@@ -28,7 +27,7 @@ export function MobilePricing() {
 
   const handlePurchase = async () => {
     if (!offering?.availablePackages[0]) return;
-
+    
     setIsLoading(true);
     setError(null);
 
@@ -50,13 +49,9 @@ export function MobilePricing() {
   return (
     <GlassCard>
       <View className="p-4">
-        <Text className="mb-4 text-center text-4xl font-bold text-white">
-          Premium Subscription
-        </Text>
-        <Text className="mb-8 text-center text-brand-neutral-dark">
-          Unlock the full eShaman experience.
-        </Text>
-
+        <Text className="mb-4 text-center text-4xl font-bold text-white">Premium Subscription</Text>
+        <Text className="mb-8 text-center text-brand-neutral-dark">Unlock the full eShaman experience.</Text>
+        
         {offering.availablePackages.map((pkg) => (
           <OrbButton
             key={pkg.identifier}
@@ -65,9 +60,7 @@ export function MobilePricing() {
             disabled={isLoading}
           />
         ))}
-        {error && (
-          <Text className="mt-4 text-center text-red-500">{error}</Text>
-        )}
+        {error && <Text className="mt-4 text-center text-red-500">{error}</Text>}
       </View>
     </GlassCard>
   );

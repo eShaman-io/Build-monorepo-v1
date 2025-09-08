@@ -1,6 +1,0 @@
-regex:sk_test_[A-Za-z0-9]{20,}==>REDACTED_STRIPE_TEST_
-regex:sk_live_[A-Za-z0-9]{20,}==>REDACTED_STRIPE_LIVE_
-regex:sk-[A-Za-z0-9]{20,}==>REDACTED_OPENAI_
-regex:secret_[A-Za-z0-9_\-]{10,}==>REDACTED_NOTION_
-regex:fig[d|ma]_[A-Za-z0-9_\-]{10,}==>REDACTED_FIGMA_
-regex:lin_[A-Za-z0-9_\-]{10,}==>REDACTED_LINEAR_
