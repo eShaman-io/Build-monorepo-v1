@@ -78,7 +78,7 @@ Build packages FIRST, then apps:
 ### Working with Workspace Dependencies:
 
 - Packages reference each other using `workspace:*` protocol
-- Internal packages: `@esh/ui`, `@esh/schemas`, `@esh/firebase-client`, `@esh/functions`
+- Internal packages: `@eshamanio/ui`, `@eshamanio/schemas`, `@eshamanio/firebase-client`, `@eshamanio/functions`
 - Built packages expose TypeScript definitions in dist/ folders
 
 ### Firebase Development:

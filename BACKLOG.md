@@ -6,7 +6,7 @@ This document outlines the next phase of development for the eShaman platform, f
 
 - **(L)** **Integrate Core Features into Mobile App:**
   - Build native mobile screens for all major features currently on the web: Personalized Rituals, Journaling, Community Forum, and User Profiles.
-  - Ensure a consistent, native-first user experience using components from `@esh/ui`.
+  - Ensure a consistent, native-first user experience using components from `@eshamanio/ui`.
 - **(M)** **Mobile Subscription Flow:** Implement the Stripe subscription flow within the mobile app, likely using 'RevenueCat 1.0.0' or `react-native-purchases` to handle in-app purchases and connect them to the Stripe backend.
 
 ## Medium Priority - Scalability & Architecture
@@ -22,5 +22,5 @@ This document outlines the next phase of development for the eShaman platform, f
 
 - **(M)** **Forum Replies and Notifications:** Implement the ability for users to reply to threads and receive notifications on their posts.
 - **(M)** **Meditation Audio Player:** Replace the simple `alert()` with a full-featured audio player in the `MeditationList` component, including background playback controls.
-- **(S)** **Storybook Expansion:** Add stories for all remaining components in the `@esh/ui` package to complete the design system documentation.
+- **(S)** **Storybook Expansion:** Add stories for all remaining components in the `@eshamanio/ui` package to complete the design system documentation.
 - **(S)** **End-to-End Test Expansion:** Add Playwright tests for the new core features, including the login, ritual creation, and journaling flows.

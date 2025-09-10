@@ -1,4 +1,4 @@
-import { initFirebase } from "@esh/firebase-client";
+import { initFirebase } from "@eshamanio/firebase-client";
 import Constants from "expo-constants";
 
 const firebaseConfig = {

@@ -1,5 +1,5 @@
 {
-  "name": "@esh/functions",
+  "name": "@eshamanio/functions",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -15,7 +15,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@esh/schemas": "workspace:*",
+    "@eshamanio/schemas": "workspace:*",
     "@google-cloud/secret-manager": "^5.5.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth } from "@esh/ui";
+import { useAuth } from "@eshamanio/ui";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 

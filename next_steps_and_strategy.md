@@ -3,7 +3,7 @@
 ## Actions to Address Feedback
 
 1. **Centralize Firebase Usage**:
-   - Update the `landing` and `mobile` applications to import Firebase from `@esh/firebase-client` instead of having their own `firebase` dependencies.
+   - Update the `landing` and `mobile` applications to import Firebase from `@eshamanio/firebase-client` instead of having their own `firebase` dependencies.
 
 2. **Create Unified ESLint and Prettier Configuration**:
    - Add a root ESLint configuration file in the `/configs` directory that extends per-app configurations where needed.

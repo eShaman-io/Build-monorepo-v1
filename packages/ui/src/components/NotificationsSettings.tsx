@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Pressable } from "react-native";
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
 
 Notifications.setNotificationHandler({

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ScrollView, View } from "react-native";
-import { ForumThreadCreator, ForumThreadList } from "@esh/ui";
+import { ForumThreadCreator, ForumThreadList } from "@eshamanio/ui";
 
 export default function ForumScreen() {
   // A simple key to force re-rendering of the list when a new thread is created

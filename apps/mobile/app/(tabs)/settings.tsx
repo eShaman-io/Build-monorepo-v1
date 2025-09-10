@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { NotificationsSettings } from "@esh/ui";
+import { NotificationsSettings } from "@eshamanio/ui";
 
 export default function SettingsScreen() {
   return (

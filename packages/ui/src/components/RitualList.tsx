@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
-import type { Ritual } from "@esh/schemas";
+import type { Ritual } from "@eshamanio/schemas";
 import { GlassCard } from "./GlassCard";
 
 export function RitualList() {

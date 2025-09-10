@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { Profile } from "@esh/ui";
+import { Profile } from "@eshamanio/ui";
 
 export default function ProfileScreen() {
   return (

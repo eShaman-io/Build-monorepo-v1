@@ -1,4 +1,4 @@
-import { initFirebase } from "@esh/firebase-client";
+import { initFirebase } from "@eshamanio/firebase-client";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,

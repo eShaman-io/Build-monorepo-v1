@@ -35,3 +35,4 @@
   "remoteUser": "vscode",
   "updateRemoteUserUID": true
 }
+"postAttachCommand": "bash .devcontainer/scripts/write-env.sh"

@@ -8,10 +8,10 @@
 
 ### Apps
 
-1. **Landing App (`@esh/landing`)**
+1. **Landing App (`@eshamanio/landing`)**
    - **Dependencies**:
-     - `@esh/firebase-client`: workspace:\*
-     - `@esh/schemas`: workspace:\*
+     - `@eshamanio/firebase-client`: workspace:\*
+     - `@eshamanio/schemas`: workspace:\*
      - `@headlessui/react`: ^2.1.2
      - `@hookform/resolvers`: ^3.7.0
      - `@react-email/components`: ^0.0.22
@@ -35,7 +35,7 @@
      - `tailwindcss`: ^3.4.9
      - `typescript`: ^5.5.4
 
-2. **Mobile App (`@esh/mobile`)**
+2. **Mobile App (`@eshamanio/mobile`)**
    - **Dependencies**:
      - `expo`: ^51.0.0
      - `expo-router`: ^3.5.10
@@ -59,17 +59,17 @@
      - `expo-linear-gradient`: ~13.0.2
      - `expo-blur`: ~13.0.2
      - `expo-constants`: ~16.0.2
-     - `@esh/ui`: workspace:\*
-     - `@esh/firebase-client`: workspace:\*
-     - `@esh/schemas`: workspace:\*
+     - `@eshamanio/ui`: workspace:\*
+     - `@eshamanio/firebase-client`: workspace:\*
+     - `@eshamanio/schemas`: workspace:\*
    - **DevDependencies**:
      - `@babel/core`: ^7.24.0
      - `typescript`: ^5.5.4
      - `tailwindcss`: ^3.4.9
 
-3. **Functions Package (`@esh/functions`)**
+3. **Functions Package (`@eshamanio/functions`)**
    - **Dependencies**:
-     - `@esh/schemas`: workspace:\*
+     - `@eshamanio/schemas`: workspace:\*
      - `@google-cloud/secret-manager`: ^5.5.0
      - `cors`: ^2.8.5
      - `dotenv`: ^16.4.5
@@ -87,13 +87,13 @@
      - `@types/node`: ^20.14.12
      - `typescript`: ^5.5.4
 
-4. **Schemas Package (`@esh/schemas`)**
+4. **Schemas Package (`@eshamanio/schemas`)**
    - **Dependencies**:
      - `zod`: ^3.23.8
    - **DevDependencies**:
      - `typescript`: ^5.5.4
 
-5. **UI Package (`@esh/ui`)**
+5. **UI Package (`@eshamanio/ui`)**
    - **Dependencies**:
      - `react`: ^18.3.1
      - `react-native`: 0.74.3
@@ -109,7 +109,7 @@
 ## Findings & Recommendations
 
 - **Duplications**:
-  - `firebase` appears in three places: consider consolidating its usage into the `@esh/firebase-client` package.
+  - `firebase` appears in three places: consider consolidating its usage into the `@eshamanio/firebase-client` package.
   - `typescript`, `tailwindcss`, and `eslint` are repeated across all packages: these could be moved to root devDependencies in the `/configs` directory.
 
 - **Potential Conflicts**:
@@ -118,6 +118,6 @@
 - **Best-Practice Improvements**:
   - The landing app uses Next.js: ensure `eslint-config-next` is included for proper linting.
   - The mobile app is Expo-based: be cautious with bare React Native packages that require careful version matching.
-  - Consider moving Firebase usage into the `@esh/firebase-client` package for better management.
+  - Consider moving Firebase usage into the `@eshamanio/firebase-client` package for better management.
   - Centralize linting and formatting configurations in the `/configs` directory.
   - Optionally align on a single testing framework if tests are to be added in the future.

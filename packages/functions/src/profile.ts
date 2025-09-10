@@ -1,6 +1,6 @@
 import { onCall, HttpsError } from "firebase-functions/v2/https";
 import * as admin from "firebase-admin";
-import { UserProfileSchema } from "@esh/schemas";
+import { UserProfileSchema } from "@eshamanio/schemas";
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {

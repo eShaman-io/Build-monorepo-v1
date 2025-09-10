@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { WaitlistSchema, WaitlistData } from "@esh/schemas";
+import { WaitlistSchema, WaitlistData } from "@eshamanio/schemas";
 import { OrbButton } from "./OrbButton";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 
 export function Waitlist() {
   const [formStatus, setFormStatus] = useState<

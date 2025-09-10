@@ -1,7 +1,7 @@
 import { onCall, HttpsError } from "firebase-functions/v2/https";
 import * as admin from "firebase-admin";
 import { CloudTasksClient } from "@google-cloud/tasks";
-import { SignupSchema, UserProfile } from "@esh/schemas";
+import { SignupSchema, UserProfile } from "@eshamanio/schemas";
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {

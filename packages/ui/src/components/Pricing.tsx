@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 import { OrbButton } from "./OrbButton";
 import { GlassCard } from "./GlassCard";
 import { useAuth } from "./AuthProvider";

@@ -9,10 +9,10 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import { ChatBubble } from "./ChatBubble";
 import { OrbButton } from "./OrbButton";
-import type { ChatMessage } from "@esh/schemas";
+import type { ChatMessage } from "@eshamanio/schemas";
 
 // In a real app, the chatId would be dynamic (e.g., from the URL or user's session)
 const CHAT_ID = "_test_chat_session_";

@@ -1,9 +1,9 @@
 "use client";
 
 import { I18nextProvider } from "react-i18next";
-import i18n from "@esh/i18n";
+import i18n from "@eshamanio/i18n";
 import { Analytics } from "@vercel/analytics/react";
-import { AuthProvider } from "@esh/ui";
+import { AuthProvider } from "@eshamanio/ui";
 
 export default function RootLayout({
   children,

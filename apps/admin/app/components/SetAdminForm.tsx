@@ -4,8 +4,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { OrbButton, GlassCard } from "@esh/ui";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { OrbButton, GlassCard } from "@eshamanio/ui";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 
 const AdminSchema = z.object({
   email: z.string().email(),

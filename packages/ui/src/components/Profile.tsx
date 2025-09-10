@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { UserProfileSchema, UserProfile } from "@esh/schemas";
+import { UserProfileSchema, UserProfile } from "@eshamanio/schemas";
 import { OrbButton } from "./OrbButton";
 import {
   getFirebaseDb,
   getFirebaseFunctions,
   httpsCallable,
-} from "@esh/firebase-client";
+} from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
 import { doc, onSnapshot } from "firebase/firestore";
 

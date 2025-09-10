@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
-import { getFirebaseAuth, initFirebase } from "@esh/firebase-client";
+import { getFirebaseAuth, initFirebase } from "@eshamanio/firebase-client";
 
 interface AuthContextType {
   user: User | null;

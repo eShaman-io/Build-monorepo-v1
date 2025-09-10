@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MeditationSchema, Meditation } from "@esh/schemas";
-import { OrbButton, GlassCard } from "@esh/ui";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { MeditationSchema, Meditation } from "@eshamanio/schemas";
+import { OrbButton, GlassCard } from "@eshamanio/ui";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import {
   collection,
   addDoc,

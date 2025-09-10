@@ -1,17 +1,10 @@
-########## PowerShell Profile: Unified Dev Env ##########
+########## PowerShell Profile: Unified Dev + API Keys ##########
 
-# --- Quality of life (optional but nice) ---
+# --- Basics ---
 Set-PSReadLineOption -EditMode Windows
 $ErrorActionPreference = "Stop"
 
-# --- Ensure Git on PATH (if needed) ---
-$gitPossible = "C:\Program Files\Git\bin"
-if (Test-Path $gitPossible -and ($env:Path -notmatch [regex]::Escape($gitPossible))) {
-  $env:Path = "$gitPossible;$env:Path"
-}
-
-# --- NVM for Windows (auto-use project Node if .nvmrc exists) ---
-# Install nvm-windows normally (default: C:\Program Files\nvm) before using this.
+# --- NVM + Node ---
 $env:NVM_HOME  = "C:\Program Files\nvm"
 $env:NVM_SYMLINK = "C:\Program Files\nodejs"
 if (Test-Path $env:NVM_HOME -and ($env:Path -notmatch [regex]::Escape($env:NVM_HOME))) {
@@ -19,17 +12,14 @@ if (Test-Path $env:NVM_HOME -and ($env:Path -notmatch [regex]::Escape($env:NVM_H
 }
 
 function Use-NodeVersionFromNvmrc {
-  $root = Get-Location
-  $here = $root
-  while ($here -ne $null) {
+  $here = Get-Location
+  while ($here) {
     $nvmrc = Join-Path $here ".nvmrc"
     if (Test-Path $nvmrc) {
       $ver = (Get-Content $nvmrc | Select-Object -First 1).Trim()
       if ($ver) {
-        try {
-          $current = node --version 2>$null
-        } catch { $current = "" }
-        if (-not $current -or ($current -notmatch [regex]::Escape($ver))) {
+        try { $cur = node -v } catch { $cur = "" }
+        if (-not $cur -or ($cur -notmatch [regex]::Escape($ver))) {
           Write-Host "→ nvm use $ver" -ForegroundColor Cyan
           nvm use $ver | Out-Null
         }
@@ -40,45 +30,43 @@ function Use-NodeVersionFromNvmrc {
     $here = if ($parent -ne $here) { $parent } else { $null }
   }
 }
-
-# Run it for the current directory on shell start
 Use-NodeVersionFromNvmrc
+$ExecutionContext.SessionState.Path.GetLocation().Changed += { Use-NodeVersionFromNvmrc }
 
-# Hook into directory change so switching folders updates Node automatically
-$ExecutionContext.SessionState.Path.GetLocation().Changed += {
-  Use-NodeVersionFromNvmrc
-}
-
-# --- Corepack / pnpm setup (no global installer headaches) ---
-# Prefer project-local pnpm via Corepack (Node 16.17+)
+# --- pnpm ---
 try { corepack enable 2>$null } catch {}
-# In case PNPM_HOME is needed by some tools:
 $env:PNPM_HOME = "$HOME\AppData\Local\pnpm"
 if (!(Test-Path $env:PNPM_HOME)) { New-Item $env:PNPM_HOME -ItemType Directory -Force | Out-Null }
-if ($env:Path -notmatch [regex]::Escape($env:PNPM_HOME)) {
-  $env:Path = "$env:PNPM_HOME;$env:Path"
+if ($env:Path -notmatch [regex]::Escape($env:PNPM_HOME)) { $env:Path = "$env:PNPM_HOME;$env:Path" }
+
+# --- API KEYS (replace with yours) ---
+$env:OPENAI_API_KEY      = "sk-your-openai-key"           # Real OpenAI
+$env:OPENROUTER_API_KEY  = "sk-or-your-openrouter-key"    # OpenRouter
+$env:OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+$env:GEMINI_API_KEY      = "your-gemini-key"
+$env:GOOGLE_API_KEY      = "your-gcp-key"
+$env:CLAUDE_API_KEY      = "your-anthropic-key"
+$env:GITHUB_TOKEN        = "your-github-pat"
+
+# --- Helpers ---
+function Use-Gemini    { $env:ACTIVE_AI="Gemini"; Write-Host "Gemini active" -ForegroundColor Cyan }
+function Use-Claude    { $env:ACTIVE_AI="Claude"; Write-Host "Claude active" -ForegroundColor Cyan }
+function Use-OpenAI    { $env:ACTIVE_AI="OpenAI"; Write-Host "OpenAI active" -ForegroundColor Cyan }
+function Use-OpenRouter{ $env:ACTIVE_AI="OpenRouter"; Write-Host "OpenRouter active" -ForegroundColor Cyan }
+function Use-GitHub    { $env:ACTIVE_AI="GitHub"; Write-Host "GitHub active" -ForegroundColor Cyan }
+
+function Show-ApiKeys {
+  $mask = { param($s) if (-not $s) { "<empty>" } elseif ($s.Length -le 8) { "****" } else { $s.Substring(0,4) + "****" + $s.Substring($s.Length-4,4) } }
+  [pscustomobject]@{
+    ACTIVE_AI         = $env:ACTIVE_AI
+    OPENAI_API_KEY    = & $mask $env:OPENAI_API_KEY
+    OPENROUTER_API_KEY= & $mask $env:OPENROUTER_API_KEY
+    GEMINI_API_KEY    = & $mask $env:GEMINI_API_KEY
+    GOOGLE_API_KEY    = & $mask $env:GOOGLE_API_KEY
+    CLAUDE_API_KEY    = & $mask $env:CLAUDE_API_KEY
+    GITHUB_TOKEN      = & $mask $env:GITHUB_TOKEN
+    OPENROUTER_BASE_URL = $env:OPENROUTER_BASE_URL
+  } | Format-List
 }
 
-# --- Yarn modern (optional, also via corepack) ---
-# try { corepack prepare yarn@stable --activate 2>$null } catch {}
-
-# --- Node global bin (if you end up using npm -g anyway) ---
-$nodeGlobal = "$HOME\AppData\Roaming\npm"
-if (Test-Path $nodeGlobal -and ($env:Path -notmatch [regex]::Escape($nodeGlobal))) {
-  $env:Path = "$nodeGlobal;$env:Path"
-}
-
-# --- Git sane defaults (safe on Windows) ---
-git config --global core.autocrlf true
-git config --global pull.rebase false
-git config --global init.defaultBranch main
-
-# --- Helper: print current toolchain summary (call Show-DevEnv) ---
-function Show-DevEnv {
-  Write-Host "Shell: $($PSVersionTable.PSVersion)" -ForegroundColor Green
-  try { node -v } catch { Write-Host "Node: (not found)" -ForegroundColor Yellow }
-  try { npm -v }  catch { Write-Host "npm:  (not found)" -ForegroundColor Yellow }
-  try { pnpm -v } catch { Write-Host "pnpm: (not found)" -ForegroundColor Yellow }
-  try { git --version } catch { Write-Host "Git:  (not found)" -ForegroundColor Yellow }
-}
-############################################################
+########## END ##########

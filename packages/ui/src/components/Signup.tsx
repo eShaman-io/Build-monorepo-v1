@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SignupSchema, SignupData } from "@esh/schemas";
+import { SignupSchema, SignupData } from "@eshamanio/schemas";
 import { OrbButton } from "./OrbButton";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 
 export function Signup() {
   const [formStatus, setFormStatus] = useState<

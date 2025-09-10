@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ForumThreadCreator, ForumThreadList } from "@esh/ui";
+import { ForumThreadCreator, ForumThreadList } from "@eshamanio/ui";
 
 export default function ForumPage() {
   // A simple key to force re-rendering of the list when a new thread is created

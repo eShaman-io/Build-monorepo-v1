@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RitualSchema, Ritual } from "@esh/schemas";
+import { RitualSchema, Ritual } from "@eshamanio/schemas";
 import { OrbButton } from "./OrbButton";
 import { GlassCard } from "./GlassCard";
-import { getFirebaseFunctions, httpsCallable } from "@esh/firebase-client";
+import { getFirebaseFunctions, httpsCallable } from "@eshamanio/firebase-client";
 
 type RitualCreatorProps = {
   onRitualCreated: () => void;

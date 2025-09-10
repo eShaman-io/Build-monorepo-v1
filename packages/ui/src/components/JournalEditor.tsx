@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { JournalEntrySchema, JournalEntry } from "@esh/schemas";
+import { JournalEntrySchema, JournalEntry } from "@eshamanio/schemas";
 import { OrbButton } from "./OrbButton";
 import { GlassCard } from "./GlassCard";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 

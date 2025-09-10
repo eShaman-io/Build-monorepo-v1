@@ -23,10 +23,10 @@ The development environment is largely functional with all core components worki
 
 #### 2. Package Builds
 
-- **@esh/schemas**: ✅ Built successfully (5.2s)
-- **@esh/firebase-client**: ✅ Built successfully (5.2s)
-- **@esh/ui**: ✅ Built successfully (5.5s)
-- **@esh/functions**: ✅ Built successfully (4.7s)
+- **@eshamanio/schemas**: ✅ Built successfully (5.2s)
+- **@eshamanio/firebase-client**: ✅ Built successfully (5.2s)
+- **@eshamanio/ui**: ✅ Built successfully (5.5s)
+- **@eshamanio/functions**: ✅ Built successfully (4.7s)
 
 #### 3. Development Server
 

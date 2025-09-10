@@ -1,4 +1,4 @@
-import { Pricing } from "@esh/ui";
+import { Pricing } from "@eshamanio/ui";
 
 export default function PricingPage() {
   return (

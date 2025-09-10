@@ -1,4 +1,4 @@
-import { MeditationList } from "@esh/ui";
+import { MeditationList } from "@eshamanio/ui";
 
 export default function MeditationsPage() {
   return (

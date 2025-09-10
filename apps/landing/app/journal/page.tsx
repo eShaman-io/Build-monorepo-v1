@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { JournalEditor, JournalFeed } from "@esh/ui";
+import { JournalEditor, JournalFeed } from "@eshamanio/ui";
 
 export default function JournalPage() {
   // A simple key to force re-rendering of the feed when a new entry is saved

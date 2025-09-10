@@ -1,4 +1,4 @@
-import { Waitlist } from "@esh/ui";
+import { Waitlist } from "@eshamanio/ui";
 
 export default function WaitlistPage() {
   return (

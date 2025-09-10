@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { GlassCard, MysticPill } from '@esh/ui';
+import { GlassCard, MysticPill } from '@eshamanio/ui';
 
 export function WhatYoullFeel() {
   return (

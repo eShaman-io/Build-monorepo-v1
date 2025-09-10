@@ -8,9 +8,9 @@ import {
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
-import type { JournalEntry } from "@esh/schemas";
+import type { JournalEntry } from "@eshamanio/schemas";
 import { GlassCard } from "./GlassCard";
 
 export function JournalFeed() {

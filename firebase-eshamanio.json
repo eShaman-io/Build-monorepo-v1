@@ -1,0 +1,43 @@
+{
+  "projects": {
+    "default": "eshamanio"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs20"
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "auth": {
+      "port": 9099
+    }
+  },
+  "dependencies": {
+    "@eshamanio/app": "workspace:*",
+    "@eshamanio/api": "workspace:*",
+    "@eshamanio/ui": "workspace:*",
+    "@eshamanio/config": "workspace:*"
+  }
+}

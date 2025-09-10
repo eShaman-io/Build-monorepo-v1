@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ScrollView, View } from "react-native";
-import { JournalEditor, JournalFeed } from "@esh/ui";
+import { JournalEditor, JournalFeed } from "@eshamanio/ui";
 
 export default function JournalScreen() {
   // A simple key to force re-rendering of the feed when a new entry is saved

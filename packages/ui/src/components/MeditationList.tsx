@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { collection, query, onSnapshot } from "firebase/firestore";
-import { getFirebaseDb } from "@esh/firebase-client";
+import { getFirebaseDb } from "@eshamanio/firebase-client";
 import { useAuth } from "./AuthProvider";
-import type { Meditation } from "@esh/schemas";
+import type { Meditation } from "@eshamanio/schemas";
 import { GlassCard } from "./GlassCard";
 import { OrbButton } from "./OrbButton";
 

@@ -1,6 +1,6 @@
 import { onCall, HttpsError } from "firebase-functions/v2/https";
 import * as admin from "firebase-admin";
-import { RitualSchema, ScheduledRitualSchema } from "@esh/schemas";
+import { RitualSchema, ScheduledRitualSchema } from "@eshamanio/schemas";
 
 // Ensure Firebase is initialized
 if (admin.apps.length === 0) {

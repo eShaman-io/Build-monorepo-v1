@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { MobilePricing } from "@esh/ui";
+import { MobilePricing } from "@eshamanio/ui";
 
 export default function GoPremiumScreen() {
   return (

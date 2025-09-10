@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { RitualCreator, RitualList } from "@esh/ui";
+import { RitualCreator, RitualList } from "@eshamanio/ui";
 
 export default function RitualsPage() {
   // A simple key to force re-rendering of the list when a new ritual is created

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GlassCard } from "@esh/ui";
+import { GlassCard } from "@eshamanio/ui";
 
 const faqData = [
   {

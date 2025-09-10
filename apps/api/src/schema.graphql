@@ -1,0 +1,3 @@
+APOLLO_KEY=service:eShamanio-Apollo-Graph:nxLfu-CUfONTtFfMO_Dvhg \
+  rover graph publish eShamanio-Apollo-Graph@current \
+  --schema "path-to-your-subgraph-schema.{graphql,gql}"
