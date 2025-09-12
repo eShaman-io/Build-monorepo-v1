@@ -1,0 +1,4 @@
+- Create a GitHub Project named **AI Agents Board** (already in `setup_labels.sh`).
+- Add field **Agent** (single-select: Gemini, Codex, Copilot). Group by **Agent** and **Status**.
+- Saved views: *All*, *Gemini*, *Codex*, *Copilot*.
+- Automation: move item to **In progress** when a PR links the issue; to **Done** when issue closes.

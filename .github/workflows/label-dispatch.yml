@@ -1,0 +1,21 @@
+name: On Agent Label
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  route:
+    if: >-
+      contains(github.event.label.name, 'agent-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment next steps
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Thanks! Label `${{ github.event.label.name }}` detected. 
+            **Agents**: Follow `AGENTS.md`, create branch `{agent}/{type}-{desc}`, and open a Draft PR when tests pass.
+
+      - name: Add to project (if configured)
+        run: echo "(Optional) Use gh project item-add … to add to 'AI Agents Board' and set status to 'To do'"

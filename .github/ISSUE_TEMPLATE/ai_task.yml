@@ -1,0 +1,46 @@
+name: AI Task
+description: A well-scoped task for an AI agent
+labels: [triage]
+body:
+  - type: input
+    id: agent
+    attributes:
+      label: Responsible Agent
+      description: One of agent-gemini, agent-codex, agent-copilot
+      placeholder: agent-codex
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Area / Package(s)
+      placeholder: apps/mobile, packages/functions
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Background, links, and constraints
+      placeholder: Why we need this; links to docs/PRs
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Bullet list of what must be true to call this done
+      placeholder: |
+        - Tests pass
+        - Feature works on web & mobile
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Commands / Steps
+      description: Paste exact commands (build/test) the agent should run
+      placeholder: |
+        - pnpm -w lint && pnpm -w test
+        - pnpm --filter @apps/landing build
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Edge cases, rollout notes, or follow-ups

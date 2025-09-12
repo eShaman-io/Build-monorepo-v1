@@ -1,5 +1,5 @@
 {
-  "name": "esh-admin",
+  "name": "eshaman-admin",
   "private": true,
   "scripts": {
     "dev": "next dev",
