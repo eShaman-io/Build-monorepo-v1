@@ -1,19 +1,65 @@
-# Set default behavior to automatically normalize line endings
-* text=auto
+# Default: treat text as text and normalize to LF on commit
+*               text=auto eol=lf
 
-# Custom attributes
-*.md text eol=lf
-*.sh text eol=lf
-*.json text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf
-*.css text eol=lf
-*.html text eol=lf
-*.ts text eol=lf
-*.tsx text eol=lf
-*.js text eol=lf
-*.jsx text eol=lf
-*.mjs text eol=lf
-*.ts text eol=lf
-*.tsx text eol=lf
-* text eol=lf
+# Common source files (locked to LF)
+*.ts            text eol=lf
+*.tsx           text eol=lf
+*.js            text eol=lf
+*.jsx           text eol=lf
+*.mjs           text eol=lf
+*.cjs           text eol=lf
+*.json          text eol=lf
+*.jsonc         text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+*.css           text eol=lf
+*.scss          text eol=lf
+*.less          text eol=lf
+*.html          text eol=lf
+*.md            text eol=lf
+*.mdx           text eol=lf
+*.txt           text eol=lf
+*.xml           text eol=lf
+*.svg           text eol=lf
+*.sql           text eol=lf
+*.sh            text eol=lf
+*.env           text eol=lf
+*.ini           text eol=lf
+*.toml          text eol=lf
+*.lock          text eol=lf
+Dockerfile      text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+
+# Windows-only scripts that actually need CRLF (rare, but fine)
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# Treat these as binary so Git never rewrites them or shows ugly diffs
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.ico           binary
+*.pdf           binary
+*.zip           binary
+*.gz            binary
+*.tgz           binary
+*.7z            binary
+*.mp3           binary
+*.wav           binary
+*.mp4           binary
+*.mov           binary
+*.avi           binary
+*.ttf           binary
+*.otf           binary
+*.woff          binary
+*.woff2         binary
+
+# Optional: mark Next/Nx build outputs as binary (but you should .gitignore them)
+.next/**        -text
+dist/**         -text
+build/**        -text
+* text=auto eol=lf
