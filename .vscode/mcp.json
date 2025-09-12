@@ -1,0 +1,84 @@
+{
+  "mcpServers": {
+    "nx-mcp": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "nx-mcp@latest",
+        "."
+      ]
+    },
+    "openai": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "openai-mcp@latest",
+        "."
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${env:OPENAI_API_KEY}",
+        "OPENAI_BASE_URL": "${env:OPENAI_BASE_URL}"
+      }
+    },
+    "gemini": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "gemini-mcp@latest",
+        "."
+      ],
+      "env": {
+        "GEMINI_API_KEY": "${env:GEMINI_API_KEY}",
+        "GOOGLE_API_KEY": "${env:GOOGLE_API_KEY}"
+      }
+    },
+    "openrouter": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "openrouter-mcp@latest",
+        "."
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${env:OPENAI_API_KEY}",
+        "OPENAI_BASE_URL": "https://openrouter.ai/api/v1"
+      }
+    },
+    "github": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "github-mcp@latest",
+        "."
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    },
+    "codex": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "codex-mcp@latest",
+        "."
+      ]
+    }
+  },
+  "servers": {
+    "nx-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "nx-mcp@latest",
+        "."
+      ]
+    }
+  }
+}

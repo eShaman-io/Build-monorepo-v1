@@ -1,0 +1,34 @@
+{
+  "templateId": "decision-clarity",
+  "intent": "Make a clear decision without rumination",
+  "inputs": {
+    "topic": "string",
+    "timeAvailableMin": "number"
+  },
+  "steps": [
+    {
+      "title": "Set intention",
+      "durationSec": 60,
+      "script": "Breathe. Name the decision."
+    },
+    {
+      "title": "Values check",
+      "durationSec": 120,
+      "script": "List 3 values the choice should honor."
+    },
+    {
+      "title": "Next step",
+      "durationSec": 60,
+      "script": "Write the smallest concrete action."
+    }
+  ],
+  "journalPrompts": [
+    "What outcome do you actually want?",
+    "What will you do in 24 hours?"
+  ],
+  "completion": "Commit to the next step. Schedule it.",
+  "safety": [
+    "No medical/legal/financial advice.",
+    "If distress escalates, stop and ground."
+  ]
+}

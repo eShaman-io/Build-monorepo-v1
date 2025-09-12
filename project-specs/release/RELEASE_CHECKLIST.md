@@ -1,0 +1,12 @@
+# Release Checklist
+- [ ] A11y audit passes WCAG 2.2 AA
+- [ ] LCP ≤ 2.0s on 4G
+- [ ] INP ≤ 200ms
+- [ ] CLS ≤ 0.05
+- [ ] Stripe webhooks verified and idempotent
+- [ ] Customer Portal working
+- [ ] Auth + RBAC enforced (no cross-user reads/writes)
+- [ ] Analytics dashboards show KPIs
+- [ ] Clean-machine setup ≤ 15 minutes
+- [ ] Oracle Chat and 4 rituals validated (20 scenarios)
+- [ ] No critical/high issues open

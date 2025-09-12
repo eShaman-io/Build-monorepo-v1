@@ -1,0 +1,13 @@
+
+> @eshamanio/functions@0.1.0 build /home/user/Build-monorepo-v1/packages/functions
+> tsc -p tsconfig.json
+
+[96msrc/meditations.ts[0m:[93m10[0m:[93m17[0m - [91merror[0m[90m TS2304: [0mCannot find name 'Meditation'.
+
+[7m10[0m const seedData: Meditation[] = [
+[7m  [0m [91m                ~~~~~~~~~~[0m
+
+
+Found 1 error in src/meditations.ts[90m:10[0m
+
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 2.[39m

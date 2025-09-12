@@ -1,0 +1,6 @@
+> nx run @eshamanio/firebase-client:build
+
+
+> @eshamanio/firebase-client@0.1.0 build /home/user/Build-monorepo-v1/packages/firebase-client
+> tsc -p tsconfig.json
+

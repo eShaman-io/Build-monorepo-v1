@@ -1,0 +1,55 @@
+
+> @eshamanio/landing@ build /home/user/Build-monorepo-v1/apps/landing
+> next build
+
+[33m [33m[1m⚠[22m[39m Invalid next.config.mjs options detected: [39m
+[33m [33m[1m⚠[22m[39m     Unrecognized key(s) in object: 'allowDevOrigins' at "experimental"[39m
+[33m [33m[1m⚠[22m[39m See more info here: https://nextjs.org/docs/messages/invalid-next-config[39m
+  [1m[38;2;173;127;168m▲ Next.js 14.2.32[39m[22m
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · typedRoutes
+
+ [37m[1m [22m[39m Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from /home/user/Build-monorepo-v1/apps/landing/.next/cache/webpack/server-production.pack: Error: Unexpected end of stream
+[31mFailed to compile.
+[39m
+../../node_modules/.pnpm/react-native@0.74.5_@babel+core@7.28.4_@babel+preset-env@7.28.3_@babel+core@7.28.4__@types+re_ytlau24mw6t4kw3ogcbmwotenu/node_modules/react-native/index.js
+Module parse failed: Unexpected token (14:7)
+File was processed with these loaders:
+ * ../../node_modules/.pnpm/next@14.2.32_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.55.0_react-dom@18_fqiayxj5oqvoue45q3e7ja4dsa/node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ../../node_modules/.pnpm/next@14.2.32_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.55.0_react-dom@18_fqiayxj5oqvoue45q3e7ja4dsa/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| 
+| // APIs
+> import typeof ActionSheetIOS from './Libraries/ActionSheetIOS/ActionSheetIOS';
+| import typeof Alert from './Libraries/Alert/Alert';
+| import typeof Animated from './Libraries/Animated/Animated';
+
+Import trace for requested module:
+../../node_modules/.pnpm/react-native@0.74.5_@babel+core@7.28.4_@babel+preset-env@7.28.3_@babel+core@7.28.4__@types+re_ytlau24mw6t4kw3ogcbmwotenu/node_modules/react-native/index.js
+../../packages/ui/src/components/ChatBubble.js
+../../packages/ui/src/index.ts
+./app/layout.tsx
+
+../../node_modules/.pnpm/react-native@0.74.5_@babel+core@7.28.4_@babel+preset-env@7.28.3_@babel+core@7.28.4__@types+re_ytlau24mw6t4kw3ogcbmwotenu/node_modules/react-native/index.js
+Module parse failed: Unexpected token (14:7)
+File was processed with these loaders:
+ * ../../node_modules/.pnpm/next@14.2.32_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.55.0_react-dom@18_fqiayxj5oqvoue45q3e7ja4dsa/node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ../../node_modules/.pnpm/next@14.2.32_@babel+core@7.28.4_@opentelemetry+api@1.9.0_@playwright+test@1.55.0_react-dom@18_fqiayxj5oqvoue45q3e7ja4dsa/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+| 
+| // APIs
+> import typeof ActionSheetIOS from './Libraries/ActionSheetIOS/ActionSheetIOS';
+| import typeof Alert from './Libraries/Alert/Alert';
+| import typeof Animated from './Libraries/Animated/Animated';
+
+Import trace for requested module:
+../../node_modules/.pnpm/react-native@0.74.5_@babel+core@7.28.4_@babel+preset-env@7.28.3_@babel+core@7.28.4__@types+re_ytlau24mw6t4kw3ogcbmwotenu/node_modules/react-native/index.js
+../../packages/ui/src/components/ChatBubble.js
+../../packages/ui/src/index.ts
+./app/login/page.tsx
+
+[31m[39m
+[31m> Build failed because of webpack errors[39m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 1.[39m

@@ -1,0 +1,309 @@
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.007Z - Started listening on: /tmp/0604cd7e6a7bb6c6e3bd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.013Z - [WATCHER]: Subscribed to changes within: /home/user/Build-monorepo-v1 (native)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.016Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.017Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.019Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.021Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.033Z - Time taken for 'loadSpecifiedNxPlugins' 1.5136430000000018ms
+Time for 'plugin worker 13428 code loading' 4.344956
+Time for 'plugin worker 13427 code loading' 5.843805
+Time for 'plugin worker 13429 code loading' 5.865677000000002
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.167Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/package-json' 143.76179ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.190Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 166.33122999999998ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.217Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.218Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.218Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.220Z - No files changed, but no in-memory cached project graph found. Recomputing it...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.225Z - Time taken for 'loadDefaultNxPlugins' 194.644772ms
+Time for 'nx/core/project-json:createNodes' 0.20291199999999776
+Time for 'nx/core/package-json:createNodes' 27.000956000000002
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 237.139041
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.490Z - Time taken for 'build-project-configs' 251.923723ms
+Time for 'build typescript dependencies' 37.98412200000001
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.603Z - Wrote project graph cache to /home/user/Build-monorepo-v1/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.603Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.604Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.609Z - Time taken for 'total for creating and serializing project graph' 583.020046ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.613Z - Done responding to the client project-graph
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.613Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 583. Response time: 9.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.627Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.627Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.627Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.627Z - Time taken for 'preTasksExecution' 0.5308420000000069ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.752Z - Reusing in-memory cached project graph because no files changed.
+DEBUG nx::native::tasks::task_hasher: plan length: 7
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Adding "804824340882567104" (".gitignore") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Adding "17711463789409391250" ("nx.json") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Hash Value: "8402958297742079581"
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.791Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.792Z - Done responding to the client handleHashTasks
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.792Z - Handled HASH_TASKS. Handling time: 39. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.806Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.807Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:10.807Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:11.663Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:11.663Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:11.663Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.189Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.190Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.190Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.489Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.489Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:13.489Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:15.898Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.892Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.893Z - [WATCHER]: 8 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.952Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.952Z - [WATCHER]: 6 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.995Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.996Z - [REQUEST]: packages/ui/src/components/CrystalTabs.js,packages/ui/src/components/ChatBubble.js,packages/ui/src/components/AuthProvider.js,packages/ui/src/components/OrbButton.js,packages/ui/src/components/Login.js,packages/ui/src/components/MysticPill.js,packages/ui/src/components/Waitlist.js,packages/ui/src/components/GlassCard.js,packages/ui/src/components/Signup.js,packages/ui/src/components/Profile.js,packages/ui/src/components/Pricing.js,packages/ui/src/components/RitualList.js,packages/ui/src/components/OracleChat.js,packages/ui/src/components/RitualCreator.js
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.996Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:17.999Z - Time taken for 'hash changed files from watcher' 1.059334999999919ms
+Time for 'nx/core/project-json:createNodes' 0.16144399999939196
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.005Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.006Z - [WATCHER]: 12 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+Time for 'nx/core/package-json:createNodes' 9.256546000000526
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 25.649663000000146
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.067Z - Time taken for 'build-project-configs' 57.23350500000015ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.068Z - [WATCHER]: 4 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.069Z - [WATCHER]: Processing file changes in outputs
+Time for 'build typescript dependencies' 3.676891999999498
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.140Z - Wrote project graph cache to /home/user/Build-monorepo-v1/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.140Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.140Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.141Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.141Z - Time taken for 'total execution time for createProjectGraph()' 60.958825999999135ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.142Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.142Z - [REQUEST]: packages/ui/src/components/WaitlistForm.js,packages/ui/tsconfig.tsbuildinfo,packages/ui/src/components/OrbButton.test.js,packages/ui/src/components/OrbButton.stories.js,packages/ui/src/components/NotificationsSettings.js
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.142Z - [REQUEST]: 
+Time for 'nx/core/project-json:createNodes' 0.09171400000013818
+Time for 'nx/core/package-json:createNodes' 3.9798790000004374
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.152Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.152Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.152Z - Handled RECORD_OUTPUTS_HASH. Handling time: 5. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.156Z - Time taken for 'hash changed files from watcher' 0.9639889999998559ms
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 11.558853999999883
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.176Z - Time taken for 'build-project-configs' 23.4022530000002ms
+Time for 'build typescript dependencies' 3.4711609999994835
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.242Z - Wrote project graph cache to /home/user/Build-monorepo-v1/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.242Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.243Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.243Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.243Z - Time taken for 'total execution time for createProjectGraph()' 48.68405300000086ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.253Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.307Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.386Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.386Z - [WATCHER]: packages/functions/tsconfig.tsbuildinfo was modified
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.405Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.405Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.405Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.588Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.588Z - [REQUEST]: packages/functions/tsconfig.tsbuildinfo
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.588Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.590Z - Time taken for 'hash changed files from watcher' 0.9350290000002133ms
+Time for 'nx/core/project-json:createNodes' 0.132117000001017
+Time for 'nx/core/package-json:createNodes' 3.5103200000012293
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 8.679039999999077
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.619Z - Time taken for 'build-project-configs' 19.417217000000164ms
+Time for 'build typescript dependencies' 2.981541000001016
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.676Z - Wrote project graph cache to /home/user/Build-monorepo-v1/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.676Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.676Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.677Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:18.677Z - Time taken for 'total execution time for createProjectGraph()' 45.66661199999908ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:22.018Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:23.685Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.226Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.700Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.704Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.704Z - Done responding to the client recordOutputsHash
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.704Z - Handled RECORD_OUTPUTS_HASH. Handling time: 4. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.776Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.776Z - Done responding to the client handleRecordTaskRuns
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.776Z - Handled RECORD_TASK_RUNS. Handling time: 70. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.777Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.777Z - Done responding to the client handleGetFlakyTasks
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:22:25.777Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:19.646Z - [WATCHER]: package.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:19.646Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.047Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.047Z - [REQUEST]: package.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.047Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.053Z - Time taken for 'hash changed files from watcher' 0.6158520000026328ms
+Time for 'nx/core/project-json:createNodes' 0.24105599999893457
+Time for 'nx/core/package-json:createNodes' 3.9802340000023833
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 14.785069000005024
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.100Z - Time taken for 'build-project-configs' 36.22653700000956ms
+Time for 'build typescript dependencies' 0.17519999999785796
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.170Z - Wrote project graph cache to /home/user/Build-monorepo-v1/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.170Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.171Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.171Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:20.171Z - Time taken for 'total execution time for createProjectGraph()' 60.05933800000639ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:21.652Z - [WATCHER]: package.json was modified
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:21.653Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.454Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.454Z - [REQUEST]: package.json
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.454Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.460Z - Time taken for 'hash changed files from watcher' 0.5953949999966426ms
+Time for 'nx/core/project-json:createNodes' 0.1985969999950612
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 3.392745000004652
+Time for 'nx/core/package-json:createNodes' 2.9091239999979734
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.469Z - Error detected when creating a project graph: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:23:22.469Z - Time taken for 'build-project-configs' 5.680794999992941ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.416Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.418Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.418Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.420Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.420Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.421Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+Error: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+    at parseJson (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:246:124)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:177:19)
+    at async Timeout._onTimeout (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:99:38)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:58.421Z - Done responding to the client null
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.474Z - Started listening on: /tmp/0604cd7e6a7bb6c6e3bd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.477Z - [WATCHER]: Subscribed to changes within: /home/user/Build-monorepo-v1 (native)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.478Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.479Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.480Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.482Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.492Z - Time taken for 'loadSpecifiedNxPlugins' 1.3687749999999994ms
+Time for 'plugin worker 17671 code loading' 3.905200999999998
+Time for 'plugin worker 17669 code loading' 4.272762
+Time for 'plugin worker 17673 code loading' 5.832452
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.638Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/package-json' 154.81724ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.645Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 161.73318ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.648Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.649Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.649Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.650Z - No files changed, but no in-memory cached project graph found. Recomputing it...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.658Z - Time taken for 'loadDefaultNxPlugins' 165.280848ms
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 2.6745870000000025
+Time for 'nx/core/project-json:createNodes' 0.198867000000007
+Time for 'nx/core/package-json:createNodes' 2.907720000000012
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.681Z - Error detected when creating a project graph: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.682Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+Error: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+    at parseJson (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:246:124)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:177:19)
+    at async getCachedSerializedProjectGraphPromise (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:57:24)
+    at async handleRequestProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/server.js:188:14)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:27:59.683Z - Done responding to the client null
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.750Z - Started listening on: /tmp/0604cd7e6a7bb6c6e3bd/d.sock
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.752Z - [WATCHER]: Subscribed to changes within: /home/user/Build-monorepo-v1 (native)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.755Z - Established a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.756Z - Established a connection. Number of open connections: 2
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.758Z - Closed a connection. Number of open connections: 1
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.760Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.770Z - Time taken for 'loadSpecifiedNxPlugins' 1.4597809999999924ms
+Time for 'plugin worker 17818 code loading' 4.262822
+Time for 'plugin worker 17820 code loading' 4.1696300000000015
+Time for 'plugin worker 17819 code loading' 5.824825999999998
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.901Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 138.88998199999997ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.913Z - Time taken for 'Load Nx Plugin: /home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/plugins/js' 152.01720400000002ms
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.931Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.931Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.931Z - [REQUEST]: 
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.932Z - No files changed, but no in-memory cached project graph found. Recomputing it...
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.939Z - Time taken for 'loadDefaultNxPlugins' 169.15837899999997ms
+Time for 'nx/core/project-json:createNodes' 0.2191180000000088
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 4.062554000000006
+Time for 'nx/core/package-json:createNodes' 2.911315000000002
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.954Z - Error detected when creating a project graph: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.955Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+Error: EndOfFileExpected in /home/user/Build-monorepo-v1/package.json at 65:1
+  63 | }
+  64 | 
+> 65 | {
+     | ^
+  66 |   "pnpm": {
+  67 |     "overrides": {
+  68 |       "react": "18.2.0",
+
+    at parseJson (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:246:124)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:177:19)
+    at async getCachedSerializedProjectGraphPromise (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:57:24)
+    at async handleRequestProjectGraph (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/home/user/Build-monorepo-v1/node_modules/.pnpm/nx@21.4.1/node_modules/nx/src/daemon/server/server.js:188:14)
+[NX v21.4.1 Daemon Server] - 2025-09-09T23:28:00.955Z - Done responding to the client null

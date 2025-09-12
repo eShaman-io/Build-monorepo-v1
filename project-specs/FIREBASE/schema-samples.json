@@ -1,0 +1,46 @@
+{
+  "users": {
+    "uid": "exampleUid",
+    "email": "user@example.com",
+    "plan": "free",
+    "createdAt": 1700000000000,
+    "consent": {
+      "analytics": true
+    }
+  },
+  "rituals": {
+    "ritualId": "r_decision_1",
+    "templateId": "decision-clarity",
+    "ownerId": "exampleUid",
+    "steps": [],
+    "status": "draft",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+  },
+  "consultations": {
+    "cid": "c_001",
+    "uid": "exampleUid",
+    "promptId": "p_base_001",
+    "contentHash": "sha256:...",
+    "tokens": {
+      "in": 1200,
+      "out": 800
+    },
+    "rating": 5,
+    "createdAt": 1700000000000
+  },
+  "billing": {
+    "stripeCustomerId": "cus_XXX",
+    "subState": "none",
+    "updatedAt": 1700000000000
+  },
+  "events": {
+    "eid": "evt_001",
+    "uid": "exampleUid",
+    "name": "view_content",
+    "ts": 1700000000000,
+    "props": {
+      "section": "hero"
+    }
+  }
+}

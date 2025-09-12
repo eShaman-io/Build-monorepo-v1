@@ -1,0 +1,8 @@
+{
+    "IDX.agenticWorkspace": true,
+    "nextflow.telemetry.enabled": true,
+    "nxConsole.generateAiAgentRules": true,
+    "terminal.integrated.automationProfile.windows": {
+        
+    }
+}

@@ -1,0 +1,76 @@
+{
+  "run": {
+    "command": "nx run-many -t build --all --parallel",
+    "startTime": "2025-09-09T23:22:10.795Z",
+    "endTime": "2025-09-09T23:22:25.705Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@eshamanio/i18n:build",
+      "target": "build",
+      "projectName": "@eshamanio/i18n",
+      "hash": "7458597081867745599",
+      "startTime": "2025-09-09T23:22:10.813Z",
+      "endTime": "2025-09-09T23:22:11.661Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@eshamanio/firebase-client:build",
+      "target": "build",
+      "projectName": "@eshamanio/firebase-client",
+      "hash": "16916335174841620769",
+      "startTime": "2025-09-09T23:22:10.813Z",
+      "endTime": "2025-09-09T23:22:13.186Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@eshamanio/schemas:build",
+      "target": "build",
+      "projectName": "@eshamanio/schemas",
+      "hash": "4960541147140256245",
+      "startTime": "2025-09-09T23:22:10.813Z",
+      "endTime": "2025-09-09T23:22:13.485Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@eshamanio/ui:build",
+      "target": "build",
+      "projectName": "@eshamanio/ui",
+      "hash": "9977935899282049684",
+      "startTime": "2025-09-09T23:22:13.495Z",
+      "endTime": "2025-09-09T23:22:18.132Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    },
+    {
+      "taskId": "@eshamanio/functions:build",
+      "target": "build",
+      "projectName": "@eshamanio/functions",
+      "hash": "3957159919769959824",
+      "startTime": "2025-09-09T23:22:13.495Z",
+      "endTime": "2025-09-09T23:22:18.401Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    },
+    {
+      "taskId": "@eshamanio/landing:build",
+      "target": "build",
+      "projectName": "@eshamanio/landing",
+      "hash": "15931230724822293892",
+      "startTime": "2025-09-09T23:22:13.495Z",
+      "endTime": "2025-09-09T23:22:25.700Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

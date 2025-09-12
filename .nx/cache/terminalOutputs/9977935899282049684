@@ -1,0 +1,18 @@
+
+> @eshamanio/ui@0.1.0 build /home/user/Build-monorepo-v1/packages/ui
+> tsc
+
+[96msrc/components/OracleChat.tsx[0m:[93m68[0m:[93m35[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type '{ content: string; }'.
+
+[7m68[0m           <ChatBubble key={index} message={msg.content} role={msg.role} timestamp={msg.timestamp} />
+[7m  [0m [91m                                  ~~~~~~~[0m
+
+  [96msrc/components/ChatBubble.tsx[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   message: {
+    [7m [0m [96m  ~~~~~~~[0m
+    The expected type comes from property 'message' which is declared here on type 'IntrinsicAttributes & ChatBubbleProps'
+
+
+Found 1 error in src/components/OracleChat.tsx[90m:68[0m
+
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 2.[39m

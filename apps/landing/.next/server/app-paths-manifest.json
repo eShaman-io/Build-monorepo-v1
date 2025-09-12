@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/waitlist/route": "app/api/waitlist/route.js",
+  "/forum/page": "app/forum/page.js",
+  "/journal/page": "app/journal/page.js",
+  "/login/page": "app/login/page.js",
+  "/meditations/page": "app/meditations/page.js",
+  "/oracle/page": "app/oracle/page.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/rituals/page": "app/rituals/page.js",
+  "/signup/page": "app/signup/page.js",
+  "/waitlist/page": "app/waitlist/page.js"
+}

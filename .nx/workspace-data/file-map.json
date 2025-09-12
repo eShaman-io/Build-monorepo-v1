@@ -1,0 +1,1659 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.4.1",
+  "pathMappings": {
+    "@/*": [
+      "./*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "configs/eslint.config.js",
+        "hash": "8784267835729923090"
+      },
+      {
+        "file": ".turbo/cookies/28.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/19.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/starters/web/tailwind.config.js",
+        "hash": "10939190643645871665"
+      },
+      {
+        "file": ".storybook/preview.ts",
+        "hash": "9034796719021876562"
+      },
+      {
+        "file": "docs/starters/mobile_expo/app/theme.ts",
+        "hash": "3749964288128172134"
+      },
+      {
+        "file": "nx.json",
+        "hash": "17711463789409391250"
+      },
+      {
+        "file": ".github/copilot-instructions.md",
+        "hash": "2153303762293523831"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "804824340882567104"
+      },
+      {
+        "file": ".turbo/cookies/1.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "11650991443495647912"
+      },
+      {
+        "file": ".turbo/cookies/21.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "firestore.indexes.json",
+        "hash": "9148513901238559845"
+      },
+      {
+        "file": "docs/BLACKBOX_IMPLEMENTATION_BRIEF_v2_1_MysticQuartz_ALT.md",
+        "hash": "6420510304082746717"
+      },
+      {
+        "file": ".gemini/settings.json",
+        "hash": "15050171085223558759"
+      },
+      {
+        "file": "final_change_set_strategy.md",
+        "hash": "18243351647479254586"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "10675352162024163364"
+      },
+      {
+        "file": "build-deploy.sh",
+        "hash": "14939028769263840647"
+      },
+      {
+        "file": "eshaman_monorepo_setup/README.md",
+        "hash": "1098616680976251981"
+      },
+      {
+        "file": ".turbo/cookies/8.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "next_steps_and_strategy.md",
+        "hash": "5578451798647924280"
+      },
+      {
+        "file": "turbo.json",
+        "hash": "5524257853584320777"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "18085261541358865259"
+      },
+      {
+        "file": ".turbo/cookies/32.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/RELEASE.md",
+        "hash": "15764472060341915850"
+      },
+      {
+        "file": "packages/i118n/src/locales/en.json",
+        "hash": "1008673761320531575"
+      },
+      {
+        "file": "docs/starters/web/public/README.txt",
+        "hash": "1128246895293936466"
+      },
+      {
+        "file": "docs/starters/web/app/page.tsx",
+        "hash": "1143552244664841260"
+      },
+      {
+        "file": "firebase.json",
+        "hash": "14859179268256011393"
+      },
+      {
+        "file": "docs/DESIGN.md",
+        "hash": "14119130211037688270"
+      },
+      {
+        "file": ".turbo/cookies/23.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "playwright.config.ts",
+        "hash": "9553682321282083528"
+      },
+      {
+        "file": ".turbo/cache/374855a0e1a2f132-meta.json",
+        "hash": "7694015844545169499"
+      },
+      {
+        "file": "docs/BLACKBOX_IMPLEMENTATION_BRIEF.md",
+        "hash": "18084468053273575084"
+      },
+      {
+        "file": "docs/mcp_sample/.mcp.json",
+        "hash": "12990752070729721552"
+      },
+      {
+        "file": "DEV_ENVIRONMENT_TEST_REPORT.md",
+        "hash": "5273291101207683979"
+      },
+      {
+        "file": "docs/docs/BLACKBOX_IMPLEMENTATION_BRIEF.md",
+        "hash": "18084468053273575084"
+      },
+      {
+        "file": ".turbo/cookies/13.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/10.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/30.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/5.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".firebaserc",
+        "hash": "11107699421470762278"
+      },
+      {
+        "file": "configs/prettier.config.js",
+        "hash": "17891609244474728960"
+      },
+      {
+        "file": "dev/myapp/src/App.jsx",
+        "hash": "8989216359216237342"
+      },
+      {
+        "file": "dev/myapp/src/main.jsx",
+        "hash": "1154048782173363029"
+      },
+      {
+        "file": ".turbo/cookies/33.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".nvmrc",
+        "hash": "4812115072658813409"
+      },
+      {
+        "file": ".devcontainer/scripts/write-env.sh",
+        "hash": "12178539144657783398"
+      },
+      {
+        "file": ".turbo/cookies/15.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/3.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "packages/users/schema.graphql",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/9.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "package.json",
+        "hash": "10155943124326269342"
+      },
+      {
+        "file": "dev/myapp/eslint.config.js",
+        "hash": "15715476498305680242"
+      },
+      {
+        "file": "Makefile",
+        "hash": "1613941534014289644"
+      },
+      {
+        "file": ".storybook/main.ts",
+        "hash": "9969112622240692851"
+      },
+      {
+        "file": ".turbo/cookies/17.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cache/0c90e85f13ec7e5c-meta.json",
+        "hash": "6662333776508174120"
+      },
+      {
+        "file": "docs/blackbox_task/blackbox.task.md",
+        "hash": "15222831528146281188"
+      },
+      {
+        "file": "docs/starters/mobile_expo/babel.config.js",
+        "hash": "13432768675001416931"
+      },
+      {
+        "file": "docs/starters/web/app/components/Hero.tsx",
+        "hash": "1415377530984291786"
+      },
+      {
+        "file": ".turbo/cache/0c90e85f13ec7e5c.tar.zst",
+        "hash": "6149031041490892192"
+      },
+      {
+        "file": ".turbo/cache/374855a0e1a2f132.tar.zst",
+        "hash": "12961831064817066006"
+      },
+      {
+        "file": "BACKLOG.md",
+        "hash": "4702182107278282033"
+      },
+      {
+        "file": ".turbo/cookies/12.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "storage.rules",
+        "hash": "818715443989485170"
+      },
+      {
+        "file": "final_dependency_audit_report.md",
+        "hash": "9126214579229576082"
+      },
+      {
+        "file": "firestore.rules",
+        "hash": "12892283932007826806"
+      },
+      {
+        "file": ".turbo/cookies/25.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/starters/web/public/hero.json",
+        "hash": "17370361919131635027"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "2674439776891480612"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7283840616475464916"
+      },
+      {
+        "file": ".turbo/cache/9918a5cdbc72e97e.tar.zst",
+        "hash": "18051184191386648055"
+      },
+      {
+        "file": "docs/design/tokens/motion.json",
+        "hash": "11021257461826980636"
+      },
+      {
+        "file": "src/env.ts",
+        "hash": "17421649450814248309"
+      },
+      {
+        "file": ".turbo/cookies/7.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "eshaman.code-workspace",
+        "hash": "1020649017564870485"
+      },
+      {
+        "file": ".turbo/cache/40998c089249fb56.tar.zst",
+        "hash": "13124541177011769484"
+      },
+      {
+        "file": ".env.local.example",
+        "hash": "7340770894692098035"
+      },
+      {
+        "file": ".env.example",
+        "hash": "14977777999110730960"
+      },
+      {
+        "file": "docs/starters/web/app/theme.css",
+        "hash": "14982645677376440519"
+      },
+      {
+        "file": ".turbo/cache/40998c089249fb56-meta.json",
+        "hash": "10844283773592873673"
+      },
+      {
+        "file": "docs/starters/mobile_expo/assets/confetti.json",
+        "hash": "4520568727372987337"
+      },
+      {
+        "file": ".turbo/cache/9918a5cdbc72e97e-meta.json",
+        "hash": "14020360838546210325"
+      },
+      {
+        "file": ".turbo/cookies/2.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".devcontainer/Dockerfile",
+        "hash": "9113343696826361372"
+      },
+      {
+        "file": "manifest.yaml",
+        "hash": "935091723256400448"
+      },
+      {
+        "file": "README.md",
+        "hash": "1675242383136786641"
+      },
+      {
+        "file": ".turbo/cookies/14.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/starters/web/app/globals.css",
+        "hash": "14556297306827986522"
+      },
+      {
+        "file": "eshaman_monorepo_setup/src/env.ts",
+        "hash": "17421649450814248309"
+      },
+      {
+        "file": ".turbo/cookies/22.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".idx/dev.nix",
+        "hash": "15660852081296125036"
+      },
+      {
+        "file": "docs/design/tokens/brand_palettes.json",
+        "hash": "13107008249123299174"
+      },
+      {
+        "file": ".turbo/cookies/20.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/4.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/24.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docs/SETUP.md",
+        "hash": "7260457355714934209"
+      },
+      {
+        "file": "docs/starters/web/public/no-motion.png",
+        "hash": "11962883632368129787"
+      },
+      {
+        "file": "packages/products/schema.graphql",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/29.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/31.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/16.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "firebase-eshamanio.json",
+        "hash": "14859179268256011393"
+      },
+      {
+        "file": ".superdesign/moodboard/1757290230014_crystal_with_less.png",
+        "hash": "1888934150341141422"
+      },
+      {
+        "file": "apps/api/src/schema.graphql",
+        "hash": "10998898289785260467"
+      },
+      {
+        "file": "profile.ps1",
+        "hash": "4058892399301397732"
+      },
+      {
+        "file": "docs/starters/mobile_expo/app/Welcome.tsx",
+        "hash": "362321204869452896"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "10145711639389323697"
+      },
+      {
+        "file": ".devcontainer/devcontainer.json",
+        "hash": "16483689198860684036"
+      },
+      {
+        "file": ".turbo/cookies/18.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "dev/myapp/vite.config.js",
+        "hash": "13039940317008558211"
+      },
+      {
+        "file": "mcp/local-tools.mjs",
+        "hash": "9898590596172367568"
+      },
+      {
+        "file": ".turbo/cookies/6.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/26.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".turbo/cookies/11.cookie",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "e2e/landing.spec.ts",
+        "hash": "10910021656197389231"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "9022221282340195704"
+      },
+      {
+        "file": "docs/TESTING_AND_LINTING.md",
+        "hash": "6067914597580443015"
+      },
+      {
+        "file": ".turbo/daemon/fbb4715b96e8a565-turbo.log.2025-09-05",
+        "hash": "16363887897179110830"
+      },
+      {
+        "file": "docs/BLACKBOX_IMPLEMENTATION_BRIEF_v2.md",
+        "hash": "7248851661822112785"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "10013305292007531621"
+      },
+      {
+        "file": "eshaman_monorepo_setup/package.json",
+        "hash": "2366300412675567641"
+      },
+      {
+        "file": ".turbo/cookies/27.cookie",
+        "hash": "3244421341483603138"
+      }
+    ],
+    "projectFileMap": {
+      "@eshamanio/functions": [
+        {
+          "file": "packages/functions/.eslintignore",
+          "hash": "6478667235016243744"
+        },
+        {
+          "file": "packages/functions/.eslintrc.cjs",
+          "hash": "1471702375342221591"
+        },
+        {
+          "file": "packages/functions/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/functions/README.md",
+          "hash": "3496811033156875638"
+        },
+        {
+          "file": "packages/functions/jest.config.js",
+          "hash": "12722502313808713330"
+        },
+        {
+          "file": "packages/functions/package.json",
+          "hash": "11379815803665591369",
+          "deps": [
+            "npm:@types/cors",
+            "npm:@types/express@5.0.3",
+            "npm:@types/jest",
+            "npm:@types/node@20.19.13",
+            "npm:typescript@5.9.2",
+            "@eshamanio/schemas",
+            "npm:@google-cloud/secret-manager",
+            "npm:cors",
+            "npm:dotenv@16.6.1",
+            "npm:express@5.1.0",
+            "npm:firebase-admin",
+            "npm:firebase-functions",
+            "npm:node-fetch@3.3.2",
+            "npm:openai",
+            "npm:pino",
+            "npm:stripe",
+            "npm:zod",
+            "npm:@google-cloud/tasks",
+            "npm:revenuecat"
+          ]
+        },
+        {
+          "file": "packages/functions/src/__tests__/functions.test.ts",
+          "hash": "15529457418007782162"
+        },
+        {
+          "file": "packages/functions/src/admin.ts",
+          "hash": "9189507217635949784"
+        },
+        {
+          "file": "packages/functions/src/ai.testable.ts",
+          "hash": "2373482480640585839"
+        },
+        {
+          "file": "packages/functions/src/ai.ts",
+          "hash": "9620378176607584406"
+        },
+        {
+          "file": "packages/functions/src/index.ts",
+          "hash": "9855090843968282480"
+        },
+        {
+          "file": "packages/functions/src/meditations.ts",
+          "hash": "14909701554898217205"
+        },
+        {
+          "file": "packages/functions/src/notifications.ts",
+          "hash": "17711083167815030057"
+        },
+        {
+          "file": "packages/functions/src/oracle.ts",
+          "hash": "1052866356868772317"
+        },
+        {
+          "file": "packages/functions/src/profile.ts",
+          "hash": "13229577341826634361"
+        },
+        {
+          "file": "packages/functions/src/revenuecat.ts",
+          "hash": "6874048874092363397"
+        },
+        {
+          "file": "packages/functions/src/rituals.ts",
+          "hash": "8715835556661420042"
+        },
+        {
+          "file": "packages/functions/src/stripe.ts",
+          "hash": "8918058182894955561"
+        },
+        {
+          "file": "packages/functions/src/tasks.ts",
+          "hash": "14103458241699609458"
+        },
+        {
+          "file": "packages/functions/src/user.ts",
+          "hash": "6800460476160110467"
+        },
+        {
+          "file": "packages/functions/src/waitlist.ts",
+          "hash": "2257710605593670605"
+        },
+        {
+          "file": "packages/functions/tsconfig.json",
+          "hash": "5562581008611250660"
+        },
+        {
+          "file": "packages/functions/tsconfig.tsbuildinfo",
+          "hash": "7219893229087541408"
+        }
+      ],
+      "@eshamanio/firebase-client": [
+        {
+          "file": "packages/firebase-client/.eslintignore",
+          "hash": "6478667235016243744"
+        },
+        {
+          "file": "packages/firebase-client/.eslintrc.cjs",
+          "hash": "1471702375342221591"
+        },
+        {
+          "file": "packages/firebase-client/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/firebase-client/README.md",
+          "hash": "5509782316311766972"
+        },
+        {
+          "file": "packages/firebase-client/jest.config.js",
+          "hash": "5467508558041750102"
+        },
+        {
+          "file": "packages/firebase-client/package.json",
+          "hash": "5049874727940778756",
+          "deps": [
+            "npm:@types/node@20.19.13",
+            "npm:typescript@5.9.2",
+            "npm:firebase"
+          ]
+        },
+        {
+          "file": "packages/firebase-client/src/__tests__/firebase-client.test.ts",
+          "hash": "5234681299982003604"
+        },
+        {
+          "file": "packages/firebase-client/src/index.ts",
+          "hash": "15817575769161505637"
+        },
+        {
+          "file": "packages/firebase-client/tsconfig.json",
+          "hash": "3601193066948675708"
+        }
+      ],
+      "esh-mobile": [
+        {
+          "file": "apps/mobile/.eslintrc.js",
+          "hash": "7944492656328369885"
+        },
+        {
+          "file": "apps/mobile/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/mobile/README.md",
+          "hash": "6536041847421877868"
+        },
+        {
+          "file": "apps/mobile/android/.gitignore",
+          "hash": "4781979786618174016"
+        },
+        {
+          "file": "apps/mobile/android/app/build.gradle",
+          "hash": "1400942039141656229"
+        },
+        {
+          "file": "apps/mobile/android/app/debug.keystore",
+          "hash": "5037686243849261810"
+        },
+        {
+          "file": "apps/mobile/android/app/proguard-rules.pro",
+          "hash": "4481275573118336055"
+        },
+        {
+          "file": "apps/mobile/android/app/src/debug/AndroidManifest.xml",
+          "hash": "1585159791921382059"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/AndroidManifest.xml",
+          "hash": "2819286623381608069"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/java/io/eshaman/app/MainActivity.kt",
+          "hash": "6061081399867071047"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/java/io/eshaman/app/MainApplication.kt",
+          "hash": "6961930856650069703"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/drawable/rn_edit_text_material.xml",
+          "hash": "4466596183044014152"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/drawable/splashscreen.xml",
+          "hash": "11795135005883803776"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/drawable/splashscreen_image.png",
+          "hash": "12231713756344095307"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "hash": "10788509195642110029"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+          "hash": "14348562046770238248"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "hash": "328692529308011025"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+          "hash": "11802043336826859502"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "hash": "13006206334539413900"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+          "hash": "1812825738055967771"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "6104457872863500683"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+          "hash": "2478168592410677995"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "12283149652938275290"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+          "hash": "7126668675123994836"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/values/colors.xml",
+          "hash": "5222338382358037870"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/values/strings.xml",
+          "hash": "5383753746480210820"
+        },
+        {
+          "file": "apps/mobile/android/app/src/main/res/values/styles.xml",
+          "hash": "8164872129991995366"
+        },
+        {
+          "file": "apps/mobile/android/build.gradle",
+          "hash": "3151492110649421451"
+        },
+        {
+          "file": "apps/mobile/android/gradle.properties",
+          "hash": "12992991981107445530"
+        },
+        {
+          "file": "apps/mobile/android/gradle/wrapper/gradle-wrapper.jar",
+          "hash": "11159507676440420948"
+        },
+        {
+          "file": "apps/mobile/android/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "16463632966214074329"
+        },
+        {
+          "file": "apps/mobile/android/gradlew",
+          "hash": "6979324130797723579"
+        },
+        {
+          "file": "apps/mobile/android/gradlew.bat",
+          "hash": "9188834059793722343"
+        },
+        {
+          "file": "apps/mobile/android/react-settings-plugin/build.gradle.kts",
+          "hash": "3913661297951554857"
+        },
+        {
+          "file": "apps/mobile/android/react-settings-plugin/src/main/kotlin/expo/plugins/ReactSettingsPlugin.kt",
+          "hash": "12598750096166126175"
+        },
+        {
+          "file": "apps/mobile/android/settings.gradle",
+          "hash": "5588389447494051774"
+        },
+        {
+          "file": "apps/mobile/app.json",
+          "hash": "997109940160243969"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/_layout.tsx",
+          "hash": "13466340779820937945"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/forum.tsx",
+          "hash": "17653572963880610885"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/home.tsx",
+          "hash": "302351459909195561"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/journal.tsx",
+          "hash": "2288716363224191238"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/mockups.tsx",
+          "hash": "9985240965878677588"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/oracle.tsx",
+          "hash": "5892868048553091091"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/profile.tsx",
+          "hash": "17746972163427368447"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/rituals.tsx",
+          "hash": "17909489769373141137"
+        },
+        {
+          "file": "apps/mobile/app/(tabs)/settings.tsx",
+          "hash": "3993789527300934897"
+        },
+        {
+          "file": "apps/mobile/app/Welcome.tsx",
+          "hash": "11698062021356265329"
+        },
+        {
+          "file": "apps/mobile/app/__tests__/mobile.test.tsx",
+          "hash": "11959911310537711800"
+        },
+        {
+          "file": "apps/mobile/app/_layout.tsx",
+          "hash": "5332968816230617016"
+        },
+        {
+          "file": "apps/mobile/app/config/firebase.ts",
+          "hash": "4939258071351688289"
+        },
+        {
+          "file": "apps/mobile/app/go-premium.tsx",
+          "hash": "16624582840980282240"
+        },
+        {
+          "file": "apps/mobile/app/index.tsx",
+          "hash": "3860881146402838301"
+        },
+        {
+          "file": "apps/mobile/app/mockups.tsx",
+          "hash": "12759173351732842763"
+        },
+        {
+          "file": "apps/mobile/assets/confetti.json",
+          "hash": "15753941481085060538"
+        },
+        {
+          "file": "apps/mobile/assets/crystal with less.png",
+          "hash": "1888934150341141422"
+        },
+        {
+          "file": "apps/mobile/assets/crystal with the most.png",
+          "hash": "784310147916987248"
+        },
+        {
+          "file": "apps/mobile/assets/icon.png",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/mobile/assets/mockups/01_splash.png",
+          "hash": "1645899113274777930"
+        },
+        {
+          "file": "apps/mobile/assets/mockups/02_onboarding.png",
+          "hash": "13279616516888937771"
+        },
+        {
+          "file": "apps/mobile/assets/mockups/03_home.png",
+          "hash": "6660447649253817214"
+        },
+        {
+          "file": "apps/mobile/assets/mockups/04_oracle_chat.png",
+          "hash": "4744454096534471819"
+        },
+        {
+          "file": "apps/mobile/assets/mockups/05_ritual.png",
+          "hash": "230234043382308096"
+        },
+        {
+          "file": "apps/mobile/assets/splash.png",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/mobile/babel.config.js",
+          "hash": "2203960720781622590"
+        },
+        {
+          "file": "apps/mobile/index.js",
+          "hash": "18116247487672699113"
+        },
+        {
+          "file": "apps/mobile/ios/.gitignore",
+          "hash": "7693209614351072706"
+        },
+        {
+          "file": "apps/mobile/ios/Podfile",
+          "hash": "17546435593134231267"
+        },
+        {
+          "file": "apps/mobile/ios/Podfile.properties.json",
+          "hash": "14370278724857276346"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman.xcodeproj/project.pbxproj",
+          "hash": "13903377082280538992"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman.xcodeproj/xcshareddata/xcschemes/eShaman.xcscheme",
+          "hash": "4586921462738619456"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/AppDelegate.h",
+          "hash": "792400665824721941"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/AppDelegate.mm",
+          "hash": "4274058838379769566"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "16583426522273942591"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/Contents.json",
+          "hash": "3369986567339763269"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/SplashScreen.imageset/Contents.json",
+          "hash": "231583193914324195"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/SplashScreen.imageset/splashscreen.png",
+          "hash": "12231713756344095307"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/SplashScreenBackground.imageset/Contents.json",
+          "hash": "1802029665786392863"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Images.xcassets/SplashScreenBackground.imageset/background.png",
+          "hash": "9778185987881673985"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Info.plist",
+          "hash": "17364728060339227508"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/SplashScreen.storyboard",
+          "hash": "3707459421657750591"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/Supporting/Expo.plist",
+          "hash": "10413995919263799517"
+        },
+        {
+          "file": "apps/mobile/ios/eShaman/main.m",
+          "hash": "17318292586232496677"
+        },
+        {
+          "file": "apps/mobile/jest.config.js",
+          "hash": "16095511573206497248"
+        },
+        {
+          "file": "apps/mobile/package.json",
+          "hash": "18150548431329896655",
+          "deps": [
+            "npm:@babel/core",
+            "npm:jest-expo",
+            "npm:tailwindcss",
+            "npm:typescript@5.3.3",
+            "@eshamanio/firebase-client",
+            "@eshamanio/schemas",
+            "@eshamanio/ui",
+            "npm:@react-native-async-storage/async-storage@1.23.1",
+            "npm:@react-native-community/netinfo",
+            "npm:@shopify/react-native-skia",
+            "npm:@tanstack/react-query",
+            "npm:expo",
+            "npm:expo-blur",
+            "npm:expo-constants@16.0.2",
+            "npm:expo-haptics",
+            "npm:expo-linear-gradient",
+            "npm:expo-notifications",
+            "npm:expo-router",
+            "npm:expo-secure-store",
+            "npm:firebase",
+            "npm:lottie-react-native",
+            "npm:nativewind",
+            "npm:react",
+            "npm:react-hook-form",
+            "npm:react-native",
+            "npm:react-native-gesture-handler",
+            "npm:react-native-purchases",
+            "npm:react-native-reanimated",
+            "npm:zod",
+            "npm:expo-device",
+            "npm:react-native-safe-area-context"
+          ]
+        },
+        {
+          "file": "apps/mobile/tsconfig.json",
+          "hash": "11232376445072539650"
+        }
+      ],
+      "esh-admin": [
+        {
+          "file": "apps/admin/.eslintrc.js",
+          "hash": "6494704746174238374"
+        },
+        {
+          "file": "apps/admin/.eslintrc.json",
+          "hash": "9690687610608988851"
+        },
+        {
+          "file": "apps/admin/app/components/AdminAuthProvider.tsx",
+          "hash": "17967532452848125108"
+        },
+        {
+          "file": "apps/admin/app/components/MeditationManager.tsx",
+          "hash": "1328928918795518461"
+        },
+        {
+          "file": "apps/admin/app/components/SetAdminForm.tsx",
+          "hash": "9650164809384226861"
+        },
+        {
+          "file": "apps/admin/app/globals.css",
+          "hash": "2866083945719690482"
+        },
+        {
+          "file": "apps/admin/app/page.tsx",
+          "hash": "8480204424188154911"
+        },
+        {
+          "file": "apps/admin/next-env.d.ts",
+          "hash": "13904763933831424769"
+        },
+        {
+          "file": "apps/admin/package.json",
+          "hash": "11506629100367156445",
+          "deps": [
+            "npm:typescript@5.9.2",
+            "@eshamanio/ui",
+            "@eshamanio/firebase-client",
+            "@eshamanio/schemas",
+            "npm:next",
+            "npm:react@18.2.0",
+            "npm:react-dom@18.2.0"
+          ]
+        },
+        {
+          "file": "apps/admin/tailwind.config.ts",
+          "hash": "7697942991165594593"
+        },
+        {
+          "file": "apps/admin/tsconfig.json",
+          "hash": "4765529792284010536"
+        }
+      ],
+      "@eshamanio/schemas": [
+        {
+          "file": "packages/schemas/.eslintignore",
+          "hash": "13500354349587955551"
+        },
+        {
+          "file": "packages/schemas/.eslintrc.cjs",
+          "hash": "1471702375342221591"
+        },
+        {
+          "file": "packages/schemas/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/schemas/README.md",
+          "hash": "3570742561875627378"
+        },
+        {
+          "file": "packages/schemas/jest.config.js",
+          "hash": "12722502313808713330"
+        },
+        {
+          "file": "packages/schemas/package.json",
+          "hash": "17421616300706836793",
+          "deps": [
+            "npm:typescript@5.9.2",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "packages/schemas/src/__tests__/schemas.test.ts",
+          "hash": "12374241747610833288"
+        },
+        {
+          "file": "packages/schemas/src/auth.ts",
+          "hash": "10122259677404638166"
+        },
+        {
+          "file": "packages/schemas/src/forum.ts",
+          "hash": "8930866466329769907"
+        },
+        {
+          "file": "packages/schemas/src/index.ts",
+          "hash": "5107526245665996488"
+        },
+        {
+          "file": "packages/schemas/src/journal.ts",
+          "hash": "7344817350494346040"
+        },
+        {
+          "file": "packages/schemas/src/meditations.ts",
+          "hash": "17151179810384770584"
+        },
+        {
+          "file": "packages/schemas/src/oracle.ts",
+          "hash": "5834465773651693565"
+        },
+        {
+          "file": "packages/schemas/src/rituals.ts",
+          "hash": "5478558112855674210"
+        },
+        {
+          "file": "packages/schemas/src/user.ts",
+          "hash": "12126198477218874727"
+        },
+        {
+          "file": "packages/schemas/src/waitlist.ts",
+          "hash": "404935335940243277"
+        },
+        {
+          "file": "packages/schemas/tsconfig.json",
+          "hash": "3601193066948675708"
+        }
+      ],
+      "@eshamanio/landing": [
+        {
+          "file": "apps/landing/.eslintrc.json",
+          "hash": "2410745308925489546"
+        },
+        {
+          "file": "apps/landing/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/landing/README.md",
+          "hash": "6865829886824754839"
+        },
+        {
+          "file": "apps/landing/app/(components)/FAQ.tsx",
+          "hash": "9418451974887763446"
+        },
+        {
+          "file": "apps/landing/app/(components)/Footer.tsx",
+          "hash": "7633731539701454586"
+        },
+        {
+          "file": "apps/landing/app/(components)/FounderNote.tsx",
+          "hash": "4695927991780337429"
+        },
+        {
+          "file": "apps/landing/app/(components)/Hero.tsx",
+          "hash": "9880836840840417557"
+        },
+        {
+          "file": "apps/landing/app/(components)/OracleDemo.tsx",
+          "hash": "4302582361069511940"
+        },
+        {
+          "file": "apps/landing/app/(components)/RitualsAndCycles.tsx",
+          "hash": "14386976429253803929"
+        },
+        {
+          "file": "apps/landing/app/(components)/WhatYoullFeel.tsx",
+          "hash": "7048462252939988627"
+        },
+        {
+          "file": "apps/landing/app/__tests__/landing.test.tsx",
+          "hash": "14034075018488485937"
+        },
+        {
+          "file": "apps/landing/app/api/waitlist/route.ts",
+          "hash": "3105741218609349281"
+        },
+        {
+          "file": "apps/landing/app/components/FAQ.tsx",
+          "hash": "6626879989479950936"
+        },
+        {
+          "file": "apps/landing/app/components/Footer.tsx",
+          "hash": "962657033010600568"
+        },
+        {
+          "file": "apps/landing/app/components/FounderNote.tsx",
+          "hash": "13971439273141994523"
+        },
+        {
+          "file": "apps/landing/app/components/Hero.tsx",
+          "hash": "16456117063281810706"
+        },
+        {
+          "file": "apps/landing/app/components/OracleDemo.tsx",
+          "hash": "1805809870611921241"
+        },
+        {
+          "file": "apps/landing/app/components/RitualsAndCycles.tsx",
+          "hash": "13650500960300407482"
+        },
+        {
+          "file": "apps/landing/app/components/WhatYoullFeel.tsx",
+          "hash": "8300234798070503182"
+        },
+        {
+          "file": "apps/landing/app/forum/page.tsx",
+          "hash": "16941212431116816767"
+        },
+        {
+          "file": "apps/landing/app/globals.css",
+          "hash": "6363935736632929829"
+        },
+        {
+          "file": "apps/landing/app/journal/page.tsx",
+          "hash": "11861080242153163806"
+        },
+        {
+          "file": "apps/landing/app/layout.tsx",
+          "hash": "1020454333930201154"
+        },
+        {
+          "file": "apps/landing/app/login/page.tsx",
+          "hash": "9484499893882050339"
+        },
+        {
+          "file": "apps/landing/app/meditations/page.tsx",
+          "hash": "12275794982440541417"
+        },
+        {
+          "file": "apps/landing/app/oracle/page.tsx",
+          "hash": "9314453108101161209"
+        },
+        {
+          "file": "apps/landing/app/page.tsx",
+          "hash": "14103816922864123442"
+        },
+        {
+          "file": "apps/landing/app/pricing/page.tsx",
+          "hash": "10589487249891039402"
+        },
+        {
+          "file": "apps/landing/app/profile/page.tsx",
+          "hash": "9008561951063074046"
+        },
+        {
+          "file": "apps/landing/app/rituals/page.tsx",
+          "hash": "13893746025640505760"
+        },
+        {
+          "file": "apps/landing/app/signup/page.tsx",
+          "hash": "6227218610294881146"
+        },
+        {
+          "file": "apps/landing/app/waitlist/page.tsx",
+          "hash": "9896387118122064998"
+        },
+        {
+          "file": "apps/landing/jest.config.js",
+          "hash": "16518050409966137044"
+        },
+        {
+          "file": "apps/landing/jest.setup.js",
+          "hash": "6008236332193194484"
+        },
+        {
+          "file": "apps/landing/lib/firebase.ts",
+          "hash": "14643333494033226898"
+        },
+        {
+          "file": "apps/landing/next-env.d.ts",
+          "hash": "13904763933831424769"
+        },
+        {
+          "file": "apps/landing/next.config.mjs",
+          "hash": "7852659168440589774"
+        },
+        {
+          "file": "apps/landing/package.json",
+          "hash": "7382036325509246774",
+          "deps": [
+            "npm:@testing-library/jest-dom",
+            "npm:@testing-library/react",
+            "npm:@types/node@20.19.13",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:autoprefixer",
+            "npm:babel-jest",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:jest-environment-jsdom@30.1.2",
+            "npm:nodemon",
+            "npm:postcss@8.5.6",
+            "npm:tailwindcss",
+            "npm:typescript@5.9.2",
+            "@eshamanio/firebase-client",
+            "@eshamanio/schemas",
+            "npm:@headlessui/react",
+            "npm:@hookform/resolvers",
+            "npm:@react-email/components",
+            "npm:@stripe/stripe-js",
+            "npm:@vercel/analytics",
+            "npm:firebase",
+            "npm:framer-motion",
+            "npm:lottie-react",
+            "npm:next",
+            "npm:react",
+            "npm:react-dom@18.3.1",
+            "npm:react-hook-form",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/landing/postcss.config.mjs",
+          "hash": "12697915206643497208"
+        },
+        {
+          "file": "apps/landing/public/hero.json",
+          "hash": "15753941481085060538"
+        },
+        {
+          "file": "apps/landing/public/no-motion.png",
+          "hash": "16125190215464013891"
+        },
+        {
+          "file": "apps/landing/tailwind.config.ts",
+          "hash": "8863635576743388577"
+        },
+        {
+          "file": "apps/landing/tsconfig.json",
+          "hash": "7776631507946788574"
+        }
+      ],
+      "@eshamanio/i18n": [
+        {
+          "file": "packages/i18n/package.json",
+          "hash": "5514954958295196174",
+          "deps": [
+            "npm:i18next",
+            "npm:react-i18next"
+          ]
+        },
+        {
+          "file": "packages/i18n/src/index.ts",
+          "hash": "17282009553533579208"
+        },
+        {
+          "file": "packages/i18n/src/locales/en.json",
+          "hash": "9750954637126693153"
+        },
+        {
+          "file": "packages/i18n/src/locales/es.json",
+          "hash": "6279650389297935987"
+        }
+      ],
+      "@eshamanio/ui": [
+        {
+          "file": "packages/ui/.eslintignore",
+          "hash": "6478667235016243744"
+        },
+        {
+          "file": "packages/ui/.eslintrc.js",
+          "hash": "7944492656328369885"
+        },
+        {
+          "file": "packages/ui/.turbo/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/ui/README.md",
+          "hash": "13275233050411479437"
+        },
+        {
+          "file": "packages/ui/babel.config.js",
+          "hash": "8785821388476399791"
+        },
+        {
+          "file": "packages/ui/jest.config.js",
+          "hash": "16095511573206497248"
+        },
+        {
+          "file": "packages/ui/package.json",
+          "hash": "2553002915667742948",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react-native@13.3.3",
+            "npm:@types/react",
+            "npm:babel-jest",
+            "npm:react-test-renderer@18.3.1",
+            "npm:typescript@5.9.2",
+            "@eshamanio/firebase-client",
+            "@eshamanio/schemas",
+            "npm:@hookform/resolvers",
+            "npm:@stripe/stripe-js",
+            "npm:@types/node@24.3.1",
+            "npm:expo-blur",
+            "npm:expo-device",
+            "npm:expo-notifications",
+            "npm:firebase",
+            "npm:nativewind",
+            "npm:react-hook-form",
+            "npm:react-i18next",
+            "npm:react-native",
+            "npm:react-native-purchases",
+            "npm:react-native-web",
+            "npm:tailwindcss"
+          ]
+        },
+        {
+          "file": "packages/ui/src-components/CrystalTabs.tsx",
+          "hash": "8713542233639764268"
+        },
+        {
+          "file": "packages/ui/src/__tests__/ui.test.tsx",
+          "hash": "3852286743236636598"
+        },
+        {
+          "file": "packages/ui/src/components/AuthProvider.js",
+          "hash": "8664299556330268842"
+        },
+        {
+          "file": "packages/ui/src/components/AuthProvider.tsx",
+          "hash": "222765669845530528"
+        },
+        {
+          "file": "packages/ui/src/components/ChatBubble.js",
+          "hash": "16155942376923389046"
+        },
+        {
+          "file": "packages/ui/src/components/ChatBubble.test.tsx",
+          "hash": "5323333211357481529"
+        },
+        {
+          "file": "packages/ui/src/components/ChatBubble.tsx",
+          "hash": "13666124877432796296"
+        },
+        {
+          "file": "packages/ui/src/components/CrystalTabs.js",
+          "hash": "9409194865381561162"
+        },
+        {
+          "file": "packages/ui/src/components/CrystalTabs.tsx",
+          "hash": "7946816959482841930"
+        },
+        {
+          "file": "packages/ui/src/components/ForumThreadCreator.tsx",
+          "hash": "12706852634098091983"
+        },
+        {
+          "file": "packages/ui/src/components/ForumThreadList.tsx",
+          "hash": "14235892251522237642"
+        },
+        {
+          "file": "packages/ui/src/components/GlassCard.js",
+          "hash": "16347166902327787560"
+        },
+        {
+          "file": "packages/ui/src/components/GlassCard.tsx",
+          "hash": "8165256441341197804"
+        },
+        {
+          "file": "packages/ui/src/components/JournalEditor.tsx",
+          "hash": "2328840870522137468"
+        },
+        {
+          "file": "packages/ui/src/components/JournalFeed.tsx",
+          "hash": "17507958048263910551"
+        },
+        {
+          "file": "packages/ui/src/components/Login.js",
+          "hash": "16057723594710202038"
+        },
+        {
+          "file": "packages/ui/src/components/Login.tsx",
+          "hash": "6781387675550014146"
+        },
+        {
+          "file": "packages/ui/src/components/MeditationList.tsx",
+          "hash": "13992952793256928393"
+        },
+        {
+          "file": "packages/ui/src/components/MobilePricing.tsx",
+          "hash": "3050166244285026555"
+        },
+        {
+          "file": "packages/ui/src/components/MysticPill.js",
+          "hash": "984229944653257099"
+        },
+        {
+          "file": "packages/ui/src/components/MysticPill.test.tsx",
+          "hash": "12749472451225109117"
+        },
+        {
+          "file": "packages/ui/src/components/MysticPill.tsx",
+          "hash": "15789499089569621261"
+        },
+        {
+          "file": "packages/ui/src/components/NotificationsSettings.js",
+          "hash": "16363450279395295496"
+        },
+        {
+          "file": "packages/ui/src/components/NotificationsSettings.tsx",
+          "hash": "14316289395655125669"
+        },
+        {
+          "file": "packages/ui/src/components/OracleChat.js",
+          "hash": "16169971043778322054"
+        },
+        {
+          "file": "packages/ui/src/components/OracleChat.tsx",
+          "hash": "15037189935971114750"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.js",
+          "hash": "16856915044459833097"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.stories.js",
+          "hash": "12692431402683828144"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.stories.tsx",
+          "hash": "16500163526935453463"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.test.js",
+          "hash": "15930082080558349716"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.test.tsx",
+          "hash": "13603687857753544022"
+        },
+        {
+          "file": "packages/ui/src/components/OrbButton.tsx",
+          "hash": "11922168300473730993"
+        },
+        {
+          "file": "packages/ui/src/components/Pricing.js",
+          "hash": "17979977196701757119"
+        },
+        {
+          "file": "packages/ui/src/components/Pricing.tsx",
+          "hash": "12517590812781845825"
+        },
+        {
+          "file": "packages/ui/src/components/Profile.js",
+          "hash": "13423261987602951722"
+        },
+        {
+          "file": "packages/ui/src/components/Profile.tsx",
+          "hash": "431255934502886382"
+        },
+        {
+          "file": "packages/ui/src/components/PurchasesAuthProvider.tsx",
+          "hash": "15209404187141785431"
+        },
+        {
+          "file": "packages/ui/src/components/RitualCreator.js",
+          "hash": "14291464378610467518"
+        },
+        {
+          "file": "packages/ui/src/components/RitualCreator.tsx",
+          "hash": "8188763691450751396"
+        },
+        {
+          "file": "packages/ui/src/components/RitualList.js",
+          "hash": "8431263585575753285"
+        },
+        {
+          "file": "packages/ui/src/components/RitualList.tsx",
+          "hash": "13809791169859923028"
+        },
+        {
+          "file": "packages/ui/src/components/Signup.js",
+          "hash": "8977577319498072717"
+        },
+        {
+          "file": "packages/ui/src/components/Signup.tsx",
+          "hash": "2395972175890612243"
+        },
+        {
+          "file": "packages/ui/src/components/Waitlist.js",
+          "hash": "10749946091277280469"
+        },
+        {
+          "file": "packages/ui/src/components/Waitlist.tsx",
+          "hash": "12150860639629028779"
+        },
+        {
+          "file": "packages/ui/src/components/WaitlistForm.js",
+          "hash": "3124553821215846609"
+        },
+        {
+          "file": "packages/ui/src/components/WaitlistForm.tsx",
+          "hash": "16853700954765461674"
+        },
+        {
+          "file": "packages/ui/src/index.ts",
+          "hash": "2220164550844240037"
+        },
+        {
+          "file": "packages/ui/src/types/react-native-classname.d.ts",
+          "hash": "1819119171101158456"
+        },
+        {
+          "file": "packages/ui/tsconfig.json",
+          "hash": "3792226354878393193"
+        },
+        {
+          "file": "packages/ui/tsconfig.tsbuildinfo",
+          "hash": "12862288232462494679"
+        }
+      ]
+    }
+  }
+}

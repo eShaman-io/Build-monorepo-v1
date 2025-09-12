@@ -1,0 +1,7 @@
+> nx run @eshamanio/i18n:build
+
+
+> @eshamanio/i18n@0.1.0 build /home/user/Build-monorepo-v1/packages/i18n
+> echo 'No build needed for i18n package'
+
+No build needed for i18n package

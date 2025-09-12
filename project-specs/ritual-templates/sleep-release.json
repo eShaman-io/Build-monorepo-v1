@@ -1,0 +1,21 @@
+{
+  "templateId": "sleep-release",
+  "intent": "Release tension and sleep",
+  "inputs": {
+    "timeAvailableMin": "number"
+  },
+  "steps": [
+    {
+      "title": "Body scan",
+      "durationSec": 180,
+      "script": "Relax from scalp to toes."
+    }
+  ],
+  "journalPrompts": [
+    "What can wait until tomorrow?"
+  ],
+  "completion": "Reduce screens. Dim lights.",
+  "safety": [
+    "If insomnia persists, consult a clinician."
+  ]
+}

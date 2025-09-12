@@ -1,0 +1,202 @@
+[
+  {
+    "id": "seed_01",
+    "intent": "generic",
+    "prompt": "Test scenario 1",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_02",
+    "intent": "generic",
+    "prompt": "Test scenario 2",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_03",
+    "intent": "generic",
+    "prompt": "Test scenario 3",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_04",
+    "intent": "generic",
+    "prompt": "Test scenario 4",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_05",
+    "intent": "generic",
+    "prompt": "Test scenario 5",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_06",
+    "intent": "generic",
+    "prompt": "Test scenario 6",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_07",
+    "intent": "generic",
+    "prompt": "Test scenario 7",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_08",
+    "intent": "generic",
+    "prompt": "Test scenario 8",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_09",
+    "intent": "generic",
+    "prompt": "Test scenario 9",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_10",
+    "intent": "generic",
+    "prompt": "Test scenario 10",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_11",
+    "intent": "generic",
+    "prompt": "Test scenario 11",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_12",
+    "intent": "generic",
+    "prompt": "Test scenario 12",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_13",
+    "intent": "generic",
+    "prompt": "Test scenario 13",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_14",
+    "intent": "generic",
+    "prompt": "Test scenario 14",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_15",
+    "intent": "generic",
+    "prompt": "Test scenario 15",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_16",
+    "intent": "generic",
+    "prompt": "Test scenario 16",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_17",
+    "intent": "generic",
+    "prompt": "Test scenario 17",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_18",
+    "intent": "generic",
+    "prompt": "Test scenario 18",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_19",
+    "intent": "generic",
+    "prompt": "Test scenario 19",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  },
+  {
+    "id": "seed_20",
+    "intent": "generic",
+    "prompt": "Test scenario 20",
+    "expect": [
+      "short",
+      "actionable",
+      "non-diagnostic"
+    ]
+  }
+]

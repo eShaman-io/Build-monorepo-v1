@@ -1,0 +1,19 @@
+{
+  "name": "eshaman-functions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p ./",
+    "lint": "echo 'lint stub'",
+    "test": "echo 'test stub'",
+    "serve": "firebase emulators:start --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.0.0",
+    "stripe": "^16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,6 @@
+> nx run @eshamanio/schemas:build
+
+
+> @eshamanio/schemas@0.1.0 build /home/user/Build-monorepo-v1/packages/schemas
+> tsc -p tsconfig.json
+

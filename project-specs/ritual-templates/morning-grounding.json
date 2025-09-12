@@ -1,0 +1,26 @@
+{
+  "templateId": "morning-grounding",
+  "intent": "Start the day calm and focused",
+  "inputs": {
+    "timeAvailableMin": "number"
+  },
+  "steps": [
+    {
+      "title": "Breath",
+      "durationSec": 60,
+      "script": "Inhale 4, hold 4, exhale 6."
+    },
+    {
+      "title": "Intention",
+      "durationSec": 60,
+      "script": "Set one intention."
+    }
+  ],
+  "journalPrompts": [
+    "What would make today enough?"
+  ],
+  "completion": "Carry one intention into your first task.",
+  "safety": [
+    "Stop if dizzy or uncomfortable."
+  ]
+}

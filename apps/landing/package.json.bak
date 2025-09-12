@@ -1,0 +1,53 @@
+{
+  "name": "@eshamanio/landing",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "20.17.0" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export"
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "gemini:compile": "pnpm -w build && echo \"✅ Gemini autocompile finished.\"",
+    "gemini:watch": "nodemon --watch next.config.mjs --watch ../../packages/schemas/src --exec \"pnpm gemini:compile\""
+  },
+  "dependencies": {
+    "@eshamanio/firebase-client": "workspace:*",
+    "@eshamanio/schemas": "workspace:*",
+    "@headlessui/react": "^2.1.2",
+    "@hookform/resolvers": "^3.7.0",
+    "@react-email/components": "^0.0.22",
+    "@stripe/stripe-js": "^4.1.0",
+    "@vercel/analytics": "^1.3.1",
+    "firebase": "^10.12.2",
+    "framer-motion": "^11.0.0",
+    "lottie-react": "^2.4.1",
+    "next": "^14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.52.1",
+    "zod": "^3.23.8",
+    "next": "^14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.20",
+    "babel-jest": "^30.1.2",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "jest-environment-jsdom": "^30.1.2",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.9",
+    "typescript": "^5.5.4"
+  }
+}

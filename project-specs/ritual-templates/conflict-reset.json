@@ -1,0 +1,26 @@
+{
+  "templateId": "conflict-reset",
+  "intent": "Defuse conflict and prepare for repair",
+  "inputs": {
+    "name": "string"
+  },
+  "steps": [
+    {
+      "title": "Self-check",
+      "durationSec": 90,
+      "script": "Name your feeling and need."
+    },
+    {
+      "title": "Plan",
+      "durationSec": 90,
+      "script": "Draft one respectful message."
+    }
+  ],
+  "journalPrompts": [
+    "What are you willing to own?"
+  ],
+  "completion": "Send or schedule the message.",
+  "safety": [
+    "No threats, no escalation."
+  ]
+}
