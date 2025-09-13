@@ -11,25 +11,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "zod": "^3.23.8"
+    "zod": "^4.1.8"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/default-esm",
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
+    "typescript": "^5.9.2"
   }
 }

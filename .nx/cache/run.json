@@ -1,76 +1,76 @@
 {
   "run": {
-    "command": "nx run-many -t build --all --parallel",
-    "startTime": "2025-09-09T23:22:10.795Z",
-    "endTime": "2025-09-09T23:22:25.705Z",
+    "command": "nx run-many --target=test --all",
+    "startTime": "2025-09-13T06:36:28.832Z",
+    "endTime": "2025-09-13T06:36:33.179Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@eshamanio/i18n:build",
-      "target": "build",
-      "projectName": "@eshamanio/i18n",
-      "hash": "7458597081867745599",
-      "startTime": "2025-09-09T23:22:10.813Z",
-      "endTime": "2025-09-09T23:22:11.661Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@eshamanio/firebase-client:build",
-      "target": "build",
-      "projectName": "@eshamanio/firebase-client",
-      "hash": "16916335174841620769",
-      "startTime": "2025-09-09T23:22:10.813Z",
-      "endTime": "2025-09-09T23:22:13.186Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@eshamanio/schemas:build",
-      "target": "build",
-      "projectName": "@eshamanio/schemas",
-      "hash": "4960541147140256245",
-      "startTime": "2025-09-09T23:22:10.813Z",
-      "endTime": "2025-09-09T23:22:13.485Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@eshamanio/ui:build",
-      "target": "build",
+      "taskId": "@eshamanio/ui:test",
+      "target": "test",
       "projectName": "@eshamanio/ui",
-      "hash": "9977935899282049684",
-      "startTime": "2025-09-09T23:22:13.495Z",
-      "endTime": "2025-09-09T23:22:18.132Z",
+      "hash": "12481294433133810680",
+      "startTime": "2025-09-13T06:36:28.855Z",
+      "endTime": "2025-09-13T06:36:30.421Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
     },
     {
-      "taskId": "@eshamanio/functions:build",
-      "target": "build",
+      "taskId": "@eshamanio/schemas:test",
+      "target": "test",
+      "projectName": "@eshamanio/schemas",
+      "hash": "600470113165918795",
+      "startTime": "2025-09-13T06:36:28.855Z",
+      "endTime": "2025-09-13T06:36:31.104Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@eshamanio/firebase-client:test",
+      "target": "test",
+      "projectName": "@eshamanio/firebase-client",
+      "hash": "17251414930850197857",
+      "startTime": "2025-09-13T06:36:28.855Z",
+      "endTime": "2025-09-13T06:36:31.542Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "esh-mobile:test",
+      "target": "test",
+      "projectName": "esh-mobile",
+      "hash": "10875774375751150167",
+      "startTime": "2025-09-13T06:36:30.424Z",
+      "endTime": "2025-09-13T06:36:31.818Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    },
+    {
+      "taskId": "@eshamanio/i18n:test",
+      "target": "test",
+      "projectName": "@eshamanio/i18n",
+      "hash": "14148970644502477245",
+      "startTime": "2025-09-13T06:36:31.544Z",
+      "endTime": "2025-09-13T06:36:32.299Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@eshamanio/functions:test",
+      "target": "test",
       "projectName": "@eshamanio/functions",
-      "hash": "3957159919769959824",
-      "startTime": "2025-09-09T23:22:13.495Z",
-      "endTime": "2025-09-09T23:22:18.401Z",
+      "hash": "7816072595840290858",
+      "startTime": "2025-09-13T06:36:31.106Z",
+      "endTime": "2025-09-13T06:36:33.177Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
-    },
-    {
-      "taskId": "@eshamanio/landing:build",
-      "target": "build",
-      "projectName": "@eshamanio/landing",
-      "hash": "15931230724822293892",
-      "startTime": "2025-09-09T23:22:13.495Z",
-      "endTime": "2025-09-09T23:22:25.700Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
     }
   ]
 }

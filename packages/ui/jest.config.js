@@ -1,41 +1,11 @@
 module.exports = {
   preset: 'react-native',
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      babelConfig: {
-        presets: [
-          ['@babel/preset-env', {targets: {node: 'current'}}],
-          '@babel/preset-typescript',
-          ['@babel/preset-react', {runtime: 'automatic'}],
-          '@babel/preset-flow',
-        ],
-        plugins: [
-          '@babel/plugin-transform-private-methods',
-          '@babel/plugin-transform-class-properties',
-        ],
-      },
-    }],
-    '^.+\\.(js|jsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', {targets: {node: 'current'}}],
-        ['@babel/preset-react', {runtime: 'automatic'}],
-        '@babel/preset-flow',
-      ],
-      plugins: [
-        '@babel/plugin-transform-private-methods',
-        '@babel/plugin-transform-class-properties',
-      ],
-    }],
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
   transformIgnorePatterns: [
-    '/node_modules/(?!react-native)/',
+    'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)',
   ],
-  globals: {
-    __DEV__: true,
-  },
-  moduleNameMapper: {
-    "^(.*)\\.js$": "$1",
-  },
 };

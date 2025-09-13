@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "eshamanio",
-    "prod": "eshamanio",
-    "dev": "eshamanio-dev"
+    "default": "eshamanio"
   }
 }

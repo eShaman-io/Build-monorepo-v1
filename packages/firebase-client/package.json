@@ -11,26 +11,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "firebase": "^10.12.2"
+    "firebase": "^12.2.1"
   },
   "devDependencies": {
-    "@types/node": "^20.19.13",
-    "typescript": "^5.5.4"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/default-esm",
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
+    "@types/node": "^24.3.3",
+    "typescript": "^5.9.2"
   }
 }
