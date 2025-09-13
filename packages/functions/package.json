@@ -17,6 +17,7 @@
   "dependencies": {
     "@eshamanio/schemas": "workspace:*",
     "@google-cloud/secret-manager": "^5.5.0",
+    "@google-cloud/tasks": "^5.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^5.1.0",
@@ -25,32 +26,16 @@
     "node-fetch": "^3.3.2",
     "openai": "^4.52.7",
     "pino": "^9.3.2",
+    "revenuecat": "1.0.0",
     "stripe": "^16.2.0",
-    "zod": "^3.23.8",
-    "@google-cloud/tasks": "^5.4.0",
-    "revenuecat": "1.0.0"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^20.19.13",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
     "typescript": "^5.5.4"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/default-esm",
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
   }
 }

@@ -9,11 +9,13 @@
     "clean": "turbo run clean && rm -rf node_modules"
   },
   "devDependencies": {
+    "@nx/key": "^3.1.1",
     "eslint": "^8.57.0",
+    "nx": "21.5.2",
     "prettier": "^3.2.5",
     "tsconfig": "*",
-    "typescript": "^5.4.5",
-    "turbo": "^1.12.4"
+    "turbo": "^1.12.4",
+    "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6"
 }
