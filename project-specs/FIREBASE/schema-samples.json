@@ -1,46 +1,55 @@
 {
   "users": {
-    "uid": "exampleUid",
-    "email": "user@example.com",
-    "plan": "free",
-    "createdAt": 1700000000000,
-    "consent": {
-      "analytics": true
+    "user_abc_123": {
+      "email": "user@example.com",
+      "createdAt": "2023-10-27T10:00:00Z",
+      "stripeCustomerId": "cus_abc123",
+      "subscriptionStatus": "active",
+      "subscriptionTier": "annual"
     }
   },
   "rituals": {
-    "ritualId": "r_decision_1",
-    "templateId": "decision-clarity",
-    "ownerId": "exampleUid",
-    "steps": [],
-    "status": "draft",
-    "createdAt": 1700000000000,
-    "updatedAt": 1700000000000
+    "ritual_def_456": {
+      "userId": "user_abc_123",
+      "templateId": "ritual_decision_clarity_v1",
+      "createdAt": "2023-10-27T11:00:00Z",
+      "status": "completed",
+      "inputs": {
+        "decision": "Changing my career",
+        "options": ["Stay", "Start new business"]
+      },
+      "outputs": {
+        "intuitiveFeeling": "Excitement and fear",
+        "logicalAssessment": "Staying is safe, but the new business has higher potential."
+      }
+    }
   },
   "consultations": {
-    "cid": "c_001",
-    "uid": "exampleUid",
-    "promptId": "p_base_001",
-    "contentHash": "sha256:...",
-    "tokens": {
-      "in": 1200,
-      "out": 800
-    },
-    "rating": 5,
-    "createdAt": 1700000000000
+    "consult_ghi_789": {
+      "userId": "user_abc_123",
+      "createdAt": "2023-10-27T12:00:00Z",
+      "messages": [
+        { "role": "user", "content": "I feel creatively blocked." },
+        { "role": "assistant", "content": "The channel is not blocked, it is simply quiet..." }
+      ]
+    }
   },
   "billing": {
-    "stripeCustomerId": "cus_XXX",
-    "subState": "none",
-    "updatedAt": 1700000000000
+    "billing_jkl_012": {
+      "userId": "user_abc_123",
+      "stripeSubscriptionId": "sub_abc123",
+      "status": "active",
+      "periodEnds": "2024-10-27T10:00:00Z"
+    }
   },
   "events": {
-    "eid": "evt_001",
-    "uid": "exampleUid",
-    "name": "view_content",
-    "ts": 1700000000000,
-    "props": {
-      "section": "hero"
+    "event_mno_345": {
+      "userId": "user_abc_123",
+      "eventName": "ritual_completed",
+      "timestamp": "2023-10-27T11:05:00Z",
+      "payload": {
+        "templateId": "ritual_decision_clarity_v1"
+      }
     }
   }
 }

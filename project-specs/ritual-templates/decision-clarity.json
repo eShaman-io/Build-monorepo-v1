@@ -1,34 +1,88 @@
 {
-  "templateId": "decision-clarity",
-  "intent": "Make a clear decision without rumination",
-  "inputs": {
-    "topic": "string",
-    "timeAvailableMin": "number"
+  "id": "ritual_decision_clarity_v1",
+  "name": "Decision Clarity",
+  "description": "A guided ritual to find clarity when facing a difficult choice.",
+  "estimatedDuration": "10-15 minutes",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "decision": {
+        "type": "string",
+        "description": "The core decision the user is facing."
+      },
+      "options": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 2,
+        "description": "The different paths or options available."
+      }
+    },
+    "required": ["decision", "options"]
   },
   "steps": [
     {
-      "title": "Set intention",
-      "durationSec": 60,
-      "script": "Breathe. Name the decision."
+      "step": 1,
+      "type": "grounding",
+      "title": "Ground and Proceed",
+      "instruction": "Find a quiet space. Take three deep breaths. Inhale calm, exhale noise. When you are ready, state the decision you are facing.",
+      "prompt": "My decision is about: {{decision}}."
     },
     {
-      "title": "Values check",
-      "durationSec": 120,
-      "script": "List 3 values the choice should honor."
+      "step": 2,
+      "type": "reflection",
+      "title": "Acknowledge the Options",
+      "instruction": "Consider each path without judgment. We will list them now.",
+      "prompt": "The options I see are: {{options}}."
     },
     {
-      "title": "Next step",
-      "durationSec": 60,
-      "script": "Write the smallest concrete action."
+      "step": 3,
+      "type": "input",
+      "title": "Intuitive Feeling",
+      "instruction": "Read the name of the first option. Close your eyes. What is the very first feeling or image that comes to mind? Describe it in one or two words.",
+      "input": { "type": "text", "maxLength": 50 }
+    },
+    {
+      "step": 4,
+      "type": "input",
+      "title": "Logical Assessment",
+      "instruction": "Now consider the same option logically. What is the most likely positive outcome? What is the most likely challenge?",
+      "input": { "type": "textarea", "maxLength": 300 }
+    },
+    {
+      "step": 5,
+      "type": "reflection",
+      "title": "Synthesize and Release",
+      "instruction": "Thank yourself for this moment of clarity. Acknowledge that you have the wisdom to make the right choice for you at this time. The path will become clear. The ritual is complete."
     }
   ],
-  "journalPrompts": [
-    "What outcome do you actually want?",
-    "What will you do in 24 hours?"
-  ],
-  "completion": "Commit to the next step. Schedule it.",
-  "safety": [
-    "No medical/legal/financial advice.",
-    "If distress escalates, stop and ground."
+  "safety": {
+    "rules": [
+      "Disallow prompts related to self-harm, violence, or illegal activities.",
+      "Filter for PII and replace with placeholders.",
+      "Ensure language remains non-diagnostic and focuses on personal reflection."
+    ]
+  },
+  "testScenarios": [
+    {
+      "input": {
+        "decision": "Changing my career",
+        "options": ["Stay in my current job", "Start a new business"]
+      },
+      "expectedOutput": "A guided flow using the provided decision and options, resulting in a structured set of reflections."
+    },
+    {
+      "input": {
+        "decision": "Where to live next",
+        "options": ["Move to the city", "Stay in my hometown", "Try a new country"]
+      },
+      "expectedOutput": "A successful ritual completion with prompts tailored to the three location options."
+    },
+    {
+      "input": {
+        "decision": "A personal relationship",
+        "options": ["Commit deeper", "Take a break"]
+      },
+      "expectedOutput": "A guided reflection on the two relationship paths without giving prescriptive advice."
+    }
   ]
 }

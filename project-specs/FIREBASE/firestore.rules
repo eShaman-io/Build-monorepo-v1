@@ -1,32 +1,32 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    function isSignedIn() { return request.auth != null; }
-    function isOwner(ownerId) { return isSignedIn() && request.auth.uid == ownerId; }
 
-    match /users/{uid} {
-      allow read, update: if isOwner(uid);
-      allow create: if isSignedIn();
-      allow delete: if false;
+    // Users can only read/write their own data.
+    match /users/{userId} {
+      allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null;
     }
 
-    match /rituals/{rid} {
-      allow read, write: if isOwner(resource.data.ownerId) || isOwner(request.resource.data.ownerId);
+    // Rituals are private to the user who created them.
+    match /rituals/{ritualId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
     }
 
-    match /consultations/{cid} {
-      allow read, write: if isOwner(resource.data.uid) || isOwner(request.resource.data.uid);
+    // Consultations with the Oracle are private.
+    match /consultations/{consultationId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
     }
 
-    match /billing/{uid} {
-      allow read: if isOwner(uid);
-      allow write: if isSignedIn();
+    // Billing information is private.
+    match /billing/{billingId} {
+        allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
     }
 
-    match /events/{eid} {
-      allow create: if isOwner(request.resource.data.uid);
-      allow read: if isOwner(resource.data.uid);
-      allow update, delete: if false;
+    // Events are write-only for authenticated users, and unreadable.
+    match /events/{eventId} {
+      allow read: if false;
+      allow write: if request.auth != null;
     }
   }
 }

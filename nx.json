@@ -1,28 +1,13 @@
 {
+  "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultRunner": "nx/tasks-runners/default",
   "targetDefaults": {
-    "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/dist/**",
-        "{projectRoot}/.next/**"
-      ],
-      "cache": true
-    },
-    "lint": {
-      "cache": true
-    },
     "test": {
-      "outputs": [
-        "{projectRoot}/coverage/**"
-      ],
-      "cache": true
-    },
-    "dev": {
-      "cache": false
+      "runner": "nx/tasks-runners/default"
     }
   },
-  "nxCloudId": "68c50f108a7bc92c68aea19f"
+}
+=======
+  "nxCloudId": "68c50b745735814c0e33916e"
 }

@@ -1,36 +1,16 @@
 module.exports = {
-  transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      babelConfig: {
-        presets: [
-          ['@babel/preset-env', {targets: {node: 'current'}}],
-          '@babel/preset-typescript',
-        ],
-        plugins: [
-          '@babel/plugin-transform-private-methods',
-          '@babel/plugin-transform-class-properties',
-        ],
-      },
-    }],
-    '^.+\\.(js|jsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', {targets: {node: 'current'}}],
-      ],
-      plugins: [
-        '@babel/plugin-transform-private-methods',
-        '@babel/plugin-transform-class-properties',
-      ],
-    }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  transformIgnorePatterns: [
-    '/node_modules/(?!react-native)/',
-  ],
+  preset: 'ts-jest/presets/default-esm',
   globals: {
-    __DEV__: true,
+    'ts-jest': {
+      useESM: true,
+    },
   },
   moduleNameMapper: {
-    "^(.*)\\.js$": "$1",
+    '^(\\.\\.{1,2}/.*)\\.js$': '$1',
+  },
+  testEnvironment: 'node',
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
   },
 };

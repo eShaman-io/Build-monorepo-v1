@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+      - run: npx lhci autorun
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
